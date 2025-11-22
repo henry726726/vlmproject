@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "outdoor pants",
+    "material": "soft fabric",
+    "design": "casual, comfortable fit",
+    "features": "lightweight, breathable"
+  },
+  "background": {
+    "prompt": "a grassy field with a blurred background of trees and a wooden bench, soft lighting, eye-level shot",
+    "negative_prompt": "blurry, dark, indoor, close-up, low-quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7CFC00",
+      "#D3D3D3",
+      "#8E44AD"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "户外轻量",
+        "bbox": [
+          0.08,
+          0.65,
+          0.45,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "NEW LEFT HAND CO.",
+        "bbox": [
+          0.7,
+          0.25,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

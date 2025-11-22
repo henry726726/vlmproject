@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "golf pants",
+    "material": "lightweight insulation",
+    "design": "professional golf trousers",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "A person wearing light gray golf pants and white shoes holding a golf club, standing against a plain background.",
+    "negative_prompt": "any other objects or elements not related to golf or clothing",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#C0C0C0",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "+℃",
+        "bbox": [
+          0.1,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "PAGE&TUTTLE GOLF",
+        "bbox": [
+          0.1,
+          0.1,
+          0.2,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

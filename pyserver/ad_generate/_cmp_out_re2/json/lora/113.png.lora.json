@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "knitwear",
+    "material": "Merino wool",
+    "design": "Floral lace collar, pearl embellishments",
+    "features": "Crystal-like hem, shell pattern"
+  },
+  "background": {
+    "prompt": "A model wearing a white knit sweater with a floral lace collar and pearl accessories. The background is plain white.",
+    "negative_prompt": "any object other than the model and the sweater",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.2,
+          0.4,
+          0.8,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "DOUBLOVE",
+        "bbox": [
+          0.05,
+          0.1,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

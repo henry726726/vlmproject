@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Baby Probiotic Toothpaste",
+    "material": "Plastic",
+    "design": "Squeeze bottle with pump",
+    "features": "Easy-to-use pump design, suitable for babies"
+  },
+  "background": {
+    "prompt": "A baby's hand holding a squeeze bottle of toothpaste, with a cartoon character on the bottle, and a toothbrush nearby.",
+    "negative_prompt": "No other objects or people in the background.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFD700",
+      "#FFC0CB",
+      "#FFDAB9"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "按压式设计\n让刷牙变的更简单",
+        "bbox": [
+          0.25,
+          0.1,
+          0.75,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "青蛙王子",
+        "bbox": [
+          0.5,
+          0.5,
+          0.9,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "product": {
+    "type": "neck pillow",
+    "material": "soft fabric",
+    "design": "cushion shape",
+    "features": "high density, comfortable sleep"
+  },
+  "background": {
+    "prompt": "a woman sleeping on a blue neck pillow against a light blue background, soft lighting, eye-level camera angle.",
+    "negative_prompt": "blurry, dark, low resolution, distorted.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#87CEEB",
+      "#F0F8FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "硬枕高枕 深度呵护颈椎",
+        "bbox": [
+          0.3,
+          0.2,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "骨科医生推荐",
+        "bbox": [
+          0.3,
+          0.3,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.4,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

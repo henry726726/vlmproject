@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "shoulder strap",
+    "material": "silk",
+    "design": "pearl chain",
+    "features": "elegant, adjustable"
+  },
+  "background": {
+    "prompt": "A woman wearing a white dress with a pearl chain shoulder strap. The background is neutral.",
+    "negative_prompt": "any other objects, people, or distractions.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FECFCF",
+      "#ECECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "吊带裙替换肩带",
+        "bbox": [
+          0.3,
+          0.15,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "knitwear",
+    "material": "pure woolen yarn",
+    "design": "round neck, long sleeves",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "A woman wearing a beige cable-knit sweater, standing in front of a clothing rack.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#ECECEC",
+      "#D3D3D3"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "捡漏正在清仓 纯羊绒针织打底",
+        "bbox": [
+          0.15,
+          0.6,
+          0.85,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

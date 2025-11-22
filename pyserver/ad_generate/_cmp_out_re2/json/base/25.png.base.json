@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "TEMPUR Pillow",
+    "material": "全新泰普尔材质",
+    "design": "舒适设计，适合各种睡眠姿势",
+    "features": "限抢买一送一"
+  },
+  "background": {
+    "prompt": "A woman sitting on a bed with a TEMPUR pillow, surrounded by soft lighting and a cozy atmosphere.",
+    "negative_prompt": "The woman is not wearing pajamas.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全新泰普尔材质",
+        "bbox": [
+          0.1,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "限抢买一送一",
+        "bbox": [
+          0.25,
+          0.3,
+          0.75,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "TEMPUR",
+        "bbox": [
+          0.05,
+          0.1,
+          0.15,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

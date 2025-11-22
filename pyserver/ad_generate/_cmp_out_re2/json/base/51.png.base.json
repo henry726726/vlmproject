@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "cat-eye glasses",
+    "material": "plastic",
+    "design": "fashionable and个性ized",
+    "features": "cat-eye shape, stylish design"
+  },
+  "background": {
+    "prompt": "A woman wearing cat-eye glasses, with a soft lighting and a neutral background.",
+    "negative_prompt": "blurry, low resolution, distorted, out of focus",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#ECECEC"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "俏皮猫眼时尚个性",
+        "bbox": [
+          0.05,
+          0.7,
+          0.6,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "羊绒衫",
+    "material": "羊绒",
+    "design": "高领，长袖，条纹图案",
+    "features": "不起球，不掉色，不变形"
+  },
+  "background": {
+    "prompt": "一位穿着时尚的女性模特，背景为柔和的棕色调。",
+    "negative_prompt": "模糊，杂乱，不清晰。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#D2B48C",
+      "#F0E68C",
+      "#BDB76B"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "断码羊绒",
+        "bbox": [
+          0.35,
+          0.6,
+          0.65,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

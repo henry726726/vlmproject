@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "jeans",
+    "material": "denim",
+    "design": "wide-leg",
+    "features": "slouchy fit, high waist, comfortable"
+  },
+  "background": {
+    "prompt": "a person wearing wide-legged jeans in a modern interior setting",
+    "negative_prompt": "blurry, low resolution, out of focus",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "巨显瘦 不挑身材",
+        "bbox": [
+          0.1,
+          0.2,
+          0.8,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

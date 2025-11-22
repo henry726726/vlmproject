@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "Bluetooth earbuds",
+    "material": "Wireless",
+    "design": "In-ear",
+    "features": "Hi-Fi sound quality, 48 hours of continuous music playback"
+  },
+  "background": {
+    "prompt": "A man playing tennis with a wireless earbud in his ear, wearing a casual outfit.",
+    "negative_prompt": "No tennis racket, no earbud, no man playing tennis",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0C0A0",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "运动狂甩不掉",
+        "bbox": [
+          0.1,
+          0.6,
+          0.8,
+          0.75
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "48小时连续听歌",
+        "bbox": [
+          0.1,
+          0.75,
+          0.8,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "无线耳塞图标",
+        "bbox": [
+          0.7,
+          0.3,
+          0.75,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

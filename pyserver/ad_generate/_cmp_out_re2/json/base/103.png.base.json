@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "casual pants",
+    "material": "stretch fabric",
+    "design": "straight leg",
+    "features": "comfortable fit, high waist"
+  },
+  "background": {
+    "prompt": "A person wearing a pair of black straight-leg pants standing in a modern living room with a beige sofa and a wooden floor.",
+    "negative_prompt": "blurry, low resolution, distorted, abstract",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#C0C0C0",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一条属于胖 mm 的裤子",
+        "bbox": [
+          0.15,
+          0.25,
+          0.85,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

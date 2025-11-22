@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Coffee cup",
+    "material": "Plastic",
+    "design": "Modern and sleek",
+    "features": "Flip-top lid, easy to drink from"
+  },
+  "background": {
+    "prompt": "A woman holding a light blue coffee cup against a soft pink background.",
+    "negative_prompt": "Blurry image | Distorted colors | Low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#E6DDEE",
+      "#C2B2A4"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "优雅直饮",
+        "bbox": [
+          0.08,
+          0.55,
+          0.4,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Coffee cup",
+        "bbox": [
+          0.65,
+          0.15,
+          0.85,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "Gift Box",
+    "material": "Cardboard",
+    "design": "Traditional Chinese landscape illustration with characters and scenes depicting the production process of Jinyi Ham",
+    "features": "Elegant red color, traditional Chinese motifs, and detailed illustrations"
+  },
+  "background": {
+    "prompt": "A woman in a black Nike sweatshirt standing behind a red gift box with a traditional Chinese design. The background features a wooden wall with circular cutouts and warm lighting.",
+    "negative_prompt": "The woman is not wearing a Nike sweatshirt, the gift box has no traditional Chinese design, the background does not have warm lighting.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFD700",
+      "#800080",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "你知道有的国潮礼盒",
+        "bbox": [
+          0.3,
+          0.5,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.3,
+          0.6,
+          0.7,
+          0.1
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "NIKE",
+        "bbox": [
+          0.5,
+          0.5,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

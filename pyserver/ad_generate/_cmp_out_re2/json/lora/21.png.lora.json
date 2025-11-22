@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "婴儿睡袋",
+    "material": "柔软舒适",
+    "design": "星空图案",
+    "features": "防惊跳，产科医生推荐"
+  },
+  "background": {
+    "prompt": "温馨的室内环境，柔和的灯光，婴儿床或地板上。",
+    "negative_prompt": "模糊的背景，不相关的物体，恶劣的天气。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FECFCF",
+      "#ECECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "投降式防惊跳",
+        "bbox": [
+          0.5,
+          0.2,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "壳迪 Qiaodi",
+        "bbox": [
+          0.05,
+          0.1,
+          0.15,
+          0.08
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

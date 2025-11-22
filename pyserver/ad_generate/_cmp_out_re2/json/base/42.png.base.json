@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Baby Teether",
+    "material": "Silicone",
+    "design": "Round Shape with Handle",
+    "features": "Safe for Infants, BPA-Free"
+  },
+  "background": {
+    "prompt": "A baby wearing a yellow hat is holding a silicone teether.",
+    "negative_prompt": "Blurry background, distorted objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全硅胶随意咬",
+        "bbox": [
+          0.05,
+          0.15,
+          0.45,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "婴儿用品",
+        "bbox": [
+          0.75,
+          0.8,
+          0.85,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

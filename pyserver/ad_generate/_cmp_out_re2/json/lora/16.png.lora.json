@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "婴儿车",
+    "material": "金属和布料",
+    "design": "时尚简约，适合家庭使用",
+    "features": "双向推行，增强宝宝安全感"
+  },
+  "background": {
+    "prompt": "一对父母推着婴儿车在户外散步，背景是湖泊和树木。天气晴朗，光线柔和。",
+    "negative_prompt": "模糊的图像，不清晰的文本，不合适的主题。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#C0C0C0",
+      "#808080",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "亲子互动，时刻陪伴",
+        "bbox": [
+          0.5,
+          0.15,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "增强宝宝安全感",
+        "bbox": [
+          0.5,
+          0.3,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "JINTONG",
+        "bbox": [
+          0.5,
+          0.6,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

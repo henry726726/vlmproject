@@ -1,0 +1,61 @@
+{
+  "product": {
+    "type": "美容院接待前台",
+    "material": "九分设计气质"
+  },
+  "background": {
+    "prompt": "绿意盎然的户外环境，背景为草地和树木，营造自然舒适的氛围。",
+    "negative_prompt": "模糊的人像，不清晰的背景。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7CFC00",
+      "#00FF00",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "美容院接待前台",
+        "bbox": [
+          0.05,
+          0.65,
+          0.95,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.45,
+          0.6,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

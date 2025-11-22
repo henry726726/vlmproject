@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "青少年外套",
+    "material": "棉质",
+    "design": "拼接设计，简约风格",
+    "features": "保暖，时尚"
+  },
+  "background": {
+    "prompt": "一个穿着黑色和白色拼接外套的青少年，背景是教室或办公室。",
+    "negative_prompt": "模糊图像，不清晰，杂乱背景。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一家只做青少年的店",
+        "bbox": [
+          0.1,
+          0.5,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "阿尼三 ANISAN",
+        "bbox": [
+          0.1,
+          0.1,
+          0.2,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

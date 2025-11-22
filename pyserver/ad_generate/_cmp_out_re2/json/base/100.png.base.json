@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sleeveless dress",
+    "material": "silk",
+    "design": "mock neck, buttoned front",
+    "features": "high waist, fitted silhouette"
+  },
+  "background": {
+    "prompt": "a woman wearing a black and white sleeveless dress standing in a modern living room with a wooden floor, soft lighting, and minimalistic decor.",
+    "negative_prompt": "blurry, low resolution, out of focus, distorted colors, unnatural lighting, cluttered background, unrealistic elements",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#C0C0C0",
+      "#ECECEC"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "上身展现蚂蚁腰 假两件X版型",
+        "bbox": [
+          0.25,
+          0.7,
+          0.75,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

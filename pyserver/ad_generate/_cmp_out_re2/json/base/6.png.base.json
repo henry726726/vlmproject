@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "Shark pants",
+    "material": "Warm fleece",
+    "design": "High waist, slim fit",
+    "features": "Waterproof, breathable"
+  },
+  "background": {
+    "prompt": "A close-up of a person wearing black shark pants with a white and blue striped sweater and white sneakers.",
+    "negative_prompt": "Blurry, out-of-focus, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#FF0000",
+      "#00FF00"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "加绒鲨鱼裤",
+        "bbox": [
+          0.03,
+          0.15,
+          0.6,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "HUANQIU",
+        "bbox": [
+          0.05,
+          0.85,
+          0.15,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

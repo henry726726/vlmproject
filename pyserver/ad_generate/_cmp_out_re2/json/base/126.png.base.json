@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Chinese-style gift box",
+    "material": "Red paper",
+    "design": "Traditional Chinese landscape illustration",
+    "features": "Handcrafted, high-quality"
+  },
+  "background": {
+    "prompt": "A woman in a black Nike shirt standing behind a red gift box with traditional Chinese illustrations.",
+    "negative_prompt": "No people, no background elements",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FF6B6B",
+      "#F7D7E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "你知道有的国潮礼盒",
+        "bbox": [
+          0.2,
+          0.5,
+          0.8,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Nike",
+        "bbox": [
+          0.15,
+          0.4,
+          0.18,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

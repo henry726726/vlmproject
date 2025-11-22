@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "neck pillow",
+    "material": "memory foam",
+    "design": "contoured shape",
+    "features": "high density, ergonomic design"
+  },
+  "background": {
+    "prompt": "A woman sleeping on a blue neck pillow against a light blue background.",
+    "negative_prompt": "a person standing or sitting",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#87CEEB",
+      "#F0F8FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "硬枕高枕 深度呵护颈椎",
+        "bbox": [
+          0.2,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.3,
+          0.45,
+          0.35,
+          0.5
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

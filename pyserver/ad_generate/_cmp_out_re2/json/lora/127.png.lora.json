@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "book",
+    "material": "paper",
+    "design": "plain cover",
+    "features": "educational content, colorful title"
+  },
+  "background": {
+    "prompt": "a young woman holding a book in front of a bookshelf filled with books.",
+    "negative_prompt": "blurry background, distorted text, unrecognizable objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FFD700",
+      "#008000",
+      "#800080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "初中知识图解",
+        "bbox": [
+          0.35,
+          0.85,
+          0.65,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "logo",
+        "content": "教育出版社",
+        "bbox": [
+          0.7,
+          0.6,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": []
+  }
+}

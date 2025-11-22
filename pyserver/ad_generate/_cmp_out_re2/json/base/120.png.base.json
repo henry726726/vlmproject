@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Women's Sleepwear",
+    "material": "Cotton",
+    "design": "Classic and Elegant",
+    "features": "Soft and Comfortable"
+  },
+  "background": {
+    "prompt": "A woman wearing a light purple sleepwear set with lace details on the collar and cuffs. The background is a soft beige color.",
+    "negative_prompt": "The woman is not wearing any sleepwear.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EDEDED",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.25
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "立现随性优雅",
+        "bbox": [
+          0.3,
+          0.6,
+          0.7,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

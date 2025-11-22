@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "underwear",
+    "material": "soft",
+    "design": "crop top",
+    "features": "small bust support, slim waist"
+  },
+  "background": {
+    "prompt": "a woman wearing a beige crop top and light blue jeans, standing in front of a bookshelf with various items.",
+    "negative_prompt": "blurry, low resolution, out-of-focus, distorted, incorrect colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#C0C0C0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "小胸聚拢内衣",
+        "bbox": [
+          0.03,
+          0.7,
+          0.8,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.7,
+          0.75,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

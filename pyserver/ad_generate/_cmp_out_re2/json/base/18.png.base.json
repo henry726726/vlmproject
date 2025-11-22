@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "outdoor lightweight pants",
+    "material": "soft and breathable fabric",
+    "design": "casual and comfortable fit",
+    "features": "lightweight, durable, and stylish"
+  },
+  "background": {
+    "prompt": "A person wearing outdoor pants standing on grass with a scenic background.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7CFC00",
+      "#F0F8FF",
+      "#87CEFA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "户外轻量",
+        "bbox": [
+          0.05,
+          0.6,
+          0.4,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "NEW LIFE",
+        "bbox": [
+          0.7,
+          0.2,
+          0.75,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

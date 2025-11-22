@@ -1,0 +1,25 @@
+{
+  "raw": "```json\n{\n  \"product\": {\n    \"type\": \"knitwear\",\n    \"material\": \"Merino wool\",\n    \"design\": \"Floral lace trim, pearl embellishments\",\n    \"features\": \"Crystal-like leaf edge, shell pattern hem\"\n  },\n  \"background\": {\n    \"prompt\": \"A woman wearing a white knit sweater with floral lace trim and pearl embellishments, standing against a plain background.\",\n    \"negative_prompt\": \"The woman is not wearing a sweater.\",\n    \"camera\": {\n      \"angle\": \"eye-level\",\n      \"distance\": \"medium\"\n    },\n    \"lighting\": {\n      \"type\": \"soft\",\n      \"direction\": \"front\"\n    },\n    \"palette\": [\"#FFFFFF\", \"#F0F0F0\"]\n  },\n  \"layout\": {\n    \"subject_layout\": {\n      \"center\": [0.45, 0.45],\n      \"ratio\": [0.6, 0.6]\n    },\n    \"nongraphic_layout\": [\n      {\n        \"type\": \"headline\",\n        \"content\": \"美利奴羊毛\",\n        \"bbox\": [0.1, 0.45, 0.4, 0.55],\n        \"confidence\": 0.9\n      },\n      {\n        \"type\": \"headline\",\n        \"content\": \"玫瑰纹提花\",\n        \"bbox\": [0.1, 0.55, 0.35, 0.65],\n        \"confidence\": 0.9\n      },\n      {\n        \"type\": \"headline\",\n        \"content\": \"水晶感荷叶边领\",\n        \"bbox\": [0.1, 0.65, 0.35, 0.75],\n        \"confidence\": 0.9\n      },\n      {\n        \"type\": \"headline\",\n        \"content\": \"贝壳纹下摆\",\n        \"bbox\": [0.1, 0.75, 0.35, 0.85],\n        \"confidence\": 0.9\n      }\n    ],\n    \"graphic_layout\": [\n      {\n        \"type\": \"logo\",\n        \"content\": \"DOUBLOVE\",\n        \"bbox\": [0.05, 0.1, 0.3, 0.15],\n        \"confidence\": 0.9\n      }\n    ]\n ",
+  "product": {},
+  "background": {
+    "prompt": "",
+    "negative_prompt": "",
+    "camera": {},
+    "lighting": {},
+    "palette": []
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.3,
+        0.3
+      ]
+    },
+    "nongraphic_layout": [],
+    "graphic_layout": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "men's pajama pants",
+    "material": "white goose down",
+    "design": "longer length",
+    "features": "90% white goose down, plus 3cm longer"
+  },
+  "background": {
+    "prompt": "a green background with a man wearing black pajama pants, soft lighting from front, eye-level camera angle.",
+    "negative_prompt": "blurry, dark, low resolution, distorted colors, incorrect object placement",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#808080",
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全身鹅绒",
+        "bbox": [
+          0.15,
+          0.2,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "HPHW®",
+        "bbox": [
+          0.1,
+          0.1,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

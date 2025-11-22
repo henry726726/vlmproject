@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "bead hair clip",
+    "material": "light奢",
+    "design": "闪烁珠光",
+    "features": "轻奢设计"
+  },
+  "background": {
+    "prompt": "一位女性背对镜头，展示一个闪亮的发夹。",
+    "negative_prompt": "模糊背景，不清晰的头发。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FAD7D7",
+      "#C0C0C0",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "不要再抓头散发了",
+        "bbox": [
+          0.1,
+          0.1,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "闪闪轻奢贝珠抓夹",
+        "bbox": [
+          0.1,
+          0.85,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

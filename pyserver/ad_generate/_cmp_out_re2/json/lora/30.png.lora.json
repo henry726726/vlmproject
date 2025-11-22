@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "soft and breathable",
+    "design": "square neck, long sleeves",
+    "features": "warmth, light weight, soft touch"
+  },
+  "background": {
+    "prompt": "A warm, neutral-toned background with a soft lighting effect.",
+    "negative_prompt": "distorted, blurry, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#E0E0C0",
+      "#D0D0B0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "保暖内衣天花板",
+        "bbox": [
+          0.4,
+          0.8,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "美雅碧·更轻·更柔·更暖",
+        "bbox": [
+          0.4,
+          1000,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "ECONICE",
+        "bbox": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "jacket",
+    "material": "cotton",
+    "design": "casual",
+    "features": "waterproof, breathable"
+  },
+  "background": {
+    "prompt": "A man wearing a green jacket standing against a blue sky with clouds.",
+    "negative_prompt": "a man wearing a casual outfit, a plain background, a close-up shot, a low-angle view, a macro shot, an oblique angle",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#8C9E9F",
+      "#BDBDBD",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.1
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起！",
+        "bbox": [
+          0.2,
+          0.7,
+          0.8,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "AMC",
+        "bbox": [
+          0.5,
+          0.5,
+          0.55,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

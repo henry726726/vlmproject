@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "baby hat",
+    "material": "cotton",
+    "design": "double-layered fine silk, floral design",
+    "features": "warm, soft, comfortable"
+  },
+  "background": {
+    "prompt": "a baby sitting on a pink surface with white fluffy decorations, wearing a pink hat with floral details.",
+    "negative_prompt": "any other objects or background elements that do not match the description.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFC0CB",
+      "#F0E68C",
+      "#E0C46F"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "双层细纱尖尖帽",
+        "bbox": [
+          0.05,
+          0.6,
+          0.5,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "momobox",
+        "bbox": [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "pregnancy protection vest",
+    "material": "soft fabric",
+    "design": "double-layered design",
+    "features": "screening + absorption, two-in-one protection"
+  },
+  "background": {
+    "prompt": "A pregnant woman sitting in a car, wearing a gray protective vest over her white top. The background shows a blurred view of a road and trees outside the window.",
+    "negative_prompt": "The woman is not pregnant, or the vest is not protective.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#808080",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "屏蔽+吸收\n二合一 双层防护",
+        "bbox": [
+          0.08,
+          0.2,
+          0.5,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "BabyPort",
+        "bbox": [
+          0.08,
+          0.1,
+          0.3,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

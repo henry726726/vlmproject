@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Canvas Sneakers",
+    "material": "Leather",
+    "design": "Vintage Style",
+    "features": "Anti-Odor Technology"
+  },
+  "background": {
+    "prompt": "A young woman holding a pair of black and white sneakers against a plain background.",
+    "negative_prompt": "Blurry image | Distorted colors | Low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "脚臭脱鞋不怕",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Adidas",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

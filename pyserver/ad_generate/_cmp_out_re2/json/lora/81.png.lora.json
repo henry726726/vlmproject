@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "knitwear set",
+    "material": "wool",
+    "design": "casual",
+    "features": "long sleeves, high-waisted skirt"
+  },
+  "background": {
+    "prompt": "A woman wearing a dark blue knit sweater and matching skirt in a cozy indoor setting with wooden furniture and soft lighting.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6C1",
+      "#BDB7BD",
+      "#8B4513"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一家属于胖子的店铺",
+        "bbox": [
+          0.3,
+          0.4,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

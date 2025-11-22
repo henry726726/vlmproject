@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "连衣裙",
+    "material": "丝绸",
+    "design": "假两件X版型",
+    "features": "展现蚂蚁腰"
+  },
+  "background": {
+    "prompt": "室内场景，木质地板，浅色墙壁，柔和自然光线。",
+    "negative_prompt": "模糊背景，不清晰的物体，阴暗环境。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6D0",
+      "#EAE0C8",
+      "#C4A08B"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "上身展现蚂蚁腰",
+        "bbox": [
+          0.3,
+          0.8,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.08
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "soft and breathable",
+    "design": "square neck, long sleeves",
+    "features": "warmth, light weight, soft touch"
+  },
+  "background": {
+    "prompt": "a warm, neutral-toned background with a minimalist design, featuring two models wearing thermal underwear.",
+    "negative_prompt": "any distracting elements, such as clutter or busy backgrounds.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#E0E0C8"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "保暖内衣天花板",
+        "bbox": [
+          0.2,
+          0.8,
+          0.8,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "ECONICE",
+        "bbox": [
+          0.1,
+          0.1,
+          0.15,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

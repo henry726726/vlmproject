@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "卫衣",
+    "material": "棉质",
+    "design": "宽松版型",
+    "features": "舒适保暖"
+  },
+  "background": {
+    "prompt": "一个穿着时尚的女性站在服装店前，背景是货架和衣物。",
+    "negative_prompt": "模糊不清或不相关的物体",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF0000",
+      "#00FF00",
+      "#0000FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起\n一家属于胖mm的店铺",
+        "bbox": [
+          0.25,
+          0.3,
+          0.75,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "ANRORR",
+        "bbox": [
+          0.45,
+          0.2,
+          0.55,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

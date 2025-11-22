@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "真空压缩袋",
+    "material": "塑料",
+    "design": "简约设计，适合收纳衣物",
+    "features": "快速压缩，节省空间"
+  },
+  "background": {
+    "prompt": "室内环境，衣架和储物箱作为背景。",
+    "negative_prompt": "模糊不清的背景，不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#ECECEC",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.8,
+        0.2
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "快试试这款太力的",
+        "bbox": [
+          0.25,
+          0.65,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "真空压缩袋",
+        "bbox": [
+          0.45,
+          0.65,
+          0.3,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "太力",
+        "bbox": [
+          0.5,
+          0.5,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

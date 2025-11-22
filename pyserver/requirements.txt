@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+diffusers[torch]
+transformers
+accelerate
+controlnet_aux
+torch
+torchvision
+torchaudio
+opencv-python
+Pillow

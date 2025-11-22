@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "运动裤",
+    "material": "棉质",
+    "design": "直筒宽松版型",
+    "features": "休闲宽松"
+  },
+  "background": {
+    "prompt": "简洁灰色背景，突出裤子和品牌。",
+    "negative_prompt": "杂乱元素，不相关物品。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#C0C0C0",
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "休闲宽松运动裤",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

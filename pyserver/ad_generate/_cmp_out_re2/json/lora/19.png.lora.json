@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Fashion Jacket",
+    "material": "Polyester",
+    "design": "Casual, Loose-Fitting",
+    "features": "Waterproof, Windproof"
+  },
+  "background": {
+    "prompt": "A woman wearing an orange jacket indoors, smiling and holding the hood up.",
+    "negative_prompt": "Blurry, low resolution, distorted, unrecognizable objects, irrelevant background elements.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6C4",
+      "#E6D2B4",
+      "#B29168"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "时尚外套",
+        "bbox": [
+          0.3,
+          0.6,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.8,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

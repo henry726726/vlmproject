@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "美容院接待前台",
+    "material": "布料",
+    "design": "简约现代",
+    "features": "九分设计气质"
+  },
+  "background": {
+    "prompt": "一位优雅的女性坐在户外，背景是绿色的草坪和树木，阳光明媚。",
+    "negative_prompt": "模糊的人像，不清晰的背景，非自然光线。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7CFC00",
+      "#808080",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "美容院接待前台",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

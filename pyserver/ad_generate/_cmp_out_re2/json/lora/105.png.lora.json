@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sleeping mat",
+    "material": "soft",
+    "design": "simple and comfortable",
+    "features": "adjustable, suitable for large tonsils, mouth breathing correction"
+  },
+  "background": {
+    "prompt": "a child sleeping on a bed with a pink blanket and white pillow, soft lighting, eye-level camera angle.",
+    "negative_prompt": "child not sleeping, unusual lighting, out-of-focus, blurry.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FAD7D7",
+      "#EAE0C8",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "调理毯",
+        "bbox": [
+          0.4,
+          0.15,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "aiwarm",
+        "bbox": [
+          0.05,
+          0.05,
+          0.08,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

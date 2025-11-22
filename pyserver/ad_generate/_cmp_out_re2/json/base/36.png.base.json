@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Fashion",
+    "material": "Lace",
+    "design": "Formal",
+    "features": "Slimming effect, suitable for M-4XL"
+  },
+  "background": {
+    "prompt": "A woman wearing a formal outfit taking a mirror selfie in a well-lit room.",
+    "negative_prompt": "Blurry, low resolution, distorted, out-of-focus, poor lighting, dark background, cluttered, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6D0",
+      "#C0C0C0",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "显瘦30斤",
+        "bbox": [
+          0.2,
+          0.4,
+          0.8,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.5,
+          0.5,
+          0.6,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

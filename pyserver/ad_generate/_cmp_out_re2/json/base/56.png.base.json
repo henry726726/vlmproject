@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Women's Underwear",
+    "material": "Wool + Silk",
+    "design": "V-neck, Lace Trim",
+    "features": "Warmth, Invisible Wear"
+  },
+  "background": {
+    "prompt": "A woman wearing a beige V-neck undergarment with lace trim, standing against a neutral background.",
+    "negative_prompt": "Blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5F5",
+      "#ECECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "保暖不臃肿",
+        "bbox": [
+          0.1,
+          0.85,
+          0.5,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.3,
+          0.2,
+          0.35,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

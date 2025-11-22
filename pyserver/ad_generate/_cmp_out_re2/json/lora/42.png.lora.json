@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "baby teether",
+    "material": "silicone",
+    "design": "smooth, ergonomic shape",
+    "features": "safe for babies, easy to clean"
+  },
+  "background": {
+    "prompt": "a baby wearing a yellow hat, holding a silicone teether, against a plain background.",
+    "negative_prompt": "any object other than the baby and the teether.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全硅胶随意咬",
+        "bbox": [
+          0.08,
+          0.15,
+          0.65,
+          0.25
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "(placeholder for brand logo)",
+        "bbox": [
+          0.7,
+          0.85,
+          0.08,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

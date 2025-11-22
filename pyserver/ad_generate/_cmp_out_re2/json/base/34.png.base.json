@@ -1,0 +1,59 @@
+{
+  "product": {
+    "type": "children's leggings",
+    "material": "fleece",
+    "design": "thickened sharkskin pattern",
+    "features": "high waist, comfortable fit"
+  },
+  "background": {
+    "prompt": "a child wearing thickened sharkskin pattern leggings, standing on a kitchen counter, with a close-up view of the leggings and a text box with promotional information.",
+    "negative_prompt": "blurry image, out-of-focus, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": "#F0E6D2, #C0C0C0, #FFFFFF"
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.35,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "升级版加绒.鲨鱼裤（高腰护肚，舒适贴合）",
+        "bbox": [
+          0.5,
+          0.05,
+          0.9,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Rabbit",
+        "bbox": [
+          0.1,
+          0.15,
+          0.15,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

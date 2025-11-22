@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "underwear",
+    "material": "wool + silk",
+    "design": "v-neck, lace trim, seamless",
+    "features": "warmth, invisible, comfortable"
+  },
+  "background": {
+    "prompt": "A woman wearing a beige undergarment with a delicate lace trim. The background is a neutral, soft-colored room.",
+    "negative_prompt": "blurry, distorted, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5F5",
+      "#ECECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "保暖不臃肿",
+        "bbox": [
+          0.3,
+          0.85,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.5,
+          0.1,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

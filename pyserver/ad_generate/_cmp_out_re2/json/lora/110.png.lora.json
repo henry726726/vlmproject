@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "婴儿汽车座椅",
+    "material": "合成纤维",
+    "design": "简约现代，适合儿童使用",
+    "features": "安全带设计，可调节角度"
+  },
+  "background": {
+    "prompt": "车内环境，婴儿坐在汽车座椅上，背景模糊。",
+    "negative_prompt": "清晰的文本、复杂的图案、不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#808080",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.4,
+          0.3,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "猫头鹰",
+        "bbox": [
+          0.4,
+          0.1,
+          0.2,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

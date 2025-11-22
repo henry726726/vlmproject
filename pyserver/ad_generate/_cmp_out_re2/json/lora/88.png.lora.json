@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "pearl necklace",
+    "material": "silk",
+    "design": "simple elegance",
+    "features": "high-quality pearls, delicate design"
+  },
+  "background": {
+    "prompt": "A close-up shot of a woman wearing a pearl necklace, focusing on the jewelry's details.",
+    "negative_prompt": "blurry, out-of-focus, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#ECECEC",
+      "#F2F2F2"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "致爱·时光",
+        "bbox": [
+          0.4,
+          0.7,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

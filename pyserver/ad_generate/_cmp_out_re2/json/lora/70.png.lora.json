@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "beauty drink",
+    "material": "plastic tube",
+    "design": "tall, cylindrical shape with orange label",
+    "features": "contains tissue culture extract"
+  },
+  "background": {
+    "prompt": "a dark background with a woman holding two tubes of beauty drink, focus on the product and text",
+    "negative_prompt": "blurry, out-of-focus, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFD700"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "睡前喝醒来褪红",
+        "bbox": [
+          0.3,
+          0.2,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "SPECNAZ",
+        "bbox": [
+          0.7,
+          0.8,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

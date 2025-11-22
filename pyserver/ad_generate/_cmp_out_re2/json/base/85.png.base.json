@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "Classic Menswear",
+    "material": "Comfortable and durable",
+    "design": "Classic and stylish",
+    "features": "Elegant and timeless"
+  },
+  "background": {
+    "prompt": "A man wearing a blue classic menswear shirt with a small logo on the chest.",
+    "negative_prompt": "Blurry, low resolution, distorted, abstract, out of focus, noise, artifacts",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#4A4A4A",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "Classic Menswear",
+        "bbox": [
+          0.1,
+          0.5,
+          0.9,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Small logo on the chest of the shirt",
+        "bbox": [
+          0.5,
+          0.25,
+          0.55,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

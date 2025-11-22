@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "ancient costume",
+    "material": "silk",
+    "design": "traditional Chinese style",
+    "features": "handmade, exquisite details"
+  },
+  "background": {
+    "prompt": "a woman wearing an ancient Chinese costume with intricate embroidery and a floral headdress, set against a dark background with traditional Chinese characters on the wall.",
+    "negative_prompt": "the woman is not wearing an ancient Chinese costume, the background does not have traditional Chinese characters.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#FFC0CB",
+      "#FFD700",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "拼团永宁一日游",
+        "bbox": [
+          0.1,
+          0.6,
+          0.9,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.7,
+          0.8,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

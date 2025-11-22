@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Silk Pillow Core",
+    "material": "Silk",
+    "design": "Seven Hole",
+    "features": "Comfortable"
+  },
+  "background": {
+    "prompt": "A woman in a white dress standing in a minimalist room with a small table and a plant.",
+    "negative_prompt": "Blurry image | Distorted colors | Unrecognizable objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#ECECEC",
+      "#D3D3D3"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.35,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "AYANYA SENIOR SEVEN HOLE SILK PILLOW CORE + Comfortable",
+        "bbox": [
+          0.2,
+          0.35,
+          0.8,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "AYANYA",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

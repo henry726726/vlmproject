@@ -1,0 +1,25 @@
+{
+  "raw": "{\n  \"product\": {\n    \"type\": \"leggings\",\n    \"material\": \"thick cotton\",\n    \"design\": \"plain color\",\n    \"features\": \"soft, comfortable,不起球,不掉档\"\n  },\n  \"background\": {\n    \"prompt\": \"A young girl wearing beige leggings, a stack of folded leggings in different colors, soft lighting, eye-level shot.\",\n    \"negative_prompt\": \"blurry, low resolution, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy, blurry, distorted, dark lighting, close-up shot, macro shot, oblique angle, top-down view, macro shot, low-resolution, out-of-focus, grainy,",
+  "product": {},
+  "background": {
+    "prompt": "",
+    "negative_prompt": "",
+    "camera": {},
+    "lighting": {},
+    "palette": []
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.3,
+        0.3
+      ]
+    },
+    "nongraphic_layout": [],
+    "graphic_layout": []
+  }
+}

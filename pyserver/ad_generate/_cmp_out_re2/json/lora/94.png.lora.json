@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "jacket",
+    "material": "unknown",
+    "design": "casual, hooded, cargo pockets",
+    "features": "water-resistant, adjustable"
+  },
+  "background": {
+    "prompt": "A man wearing a green jacket against a blue sky with clouds. The jacket has a hood and multiple pockets.",
+    "negative_prompt": "any other objects or people in the background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#8C5E2D",
+      "#87CEEB",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.48,
+        0.48
+      ],
+      "ratio": [
+        0.65,
+        0.65
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起！一家属于胖子的店铺",
+        "bbox": [
+          0.35,
+          0.65,
+          0.65,
+          0.25
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "AMC",
+        "bbox": [
+          0.5,
+          0.5,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

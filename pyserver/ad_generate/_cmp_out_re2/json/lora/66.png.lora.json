@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "未指定产品",
+    "material": "未知材料",
+    "design": "传统风格，可能为服饰或配件",
+    "features": "匠心品质，放心入手"
+  },
+  "background": {
+    "prompt": "一位穿着传统服饰的女性，背景为中国古典建筑。",
+    "negative_prompt": "模糊不清，非人物。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#FFD700",
+      "#800080",
+      "#008000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "拼团永宁一日游",
+        "bbox": [
+          0.5,
+          0.9,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

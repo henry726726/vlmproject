@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "sunscreen cream",
+    "material": "water-resistant",
+    "design": "smooth texture",
+    "features": "high SPF, long-lasting protection"
+  },
+  "background": {
+    "prompt": "A woman holding a tube of sunscreen cream, smiling and looking directly at the camera.",
+    "negative_prompt": "a blurry background, a person other than the woman, a dark room, a person not holding a product",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "防晒界的扛把子选手！",
+        "bbox": [
+          0.1,
+          0.15,
+          0.85,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Parasol",
+        "bbox": [
+          0.7,
+          0.45,
+          0.8,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

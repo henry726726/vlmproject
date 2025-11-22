@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Baby Product",
+    "material": "Soft Cotton",
+    "design": "Comfortable Sleepwear",
+    "features": "Anti-irritation, Breathable, Soft Touch"
+  },
+  "background": {
+    "prompt": "A baby lying on its back on a soft blanket, wearing comfortable sleepwear.",
+    "negative_prompt": "Blurry, Distorted, Unrecognizable Text",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#C0C0C0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "宝宝胀气的表现：肚子涨涨的 咕噜咕噜响 小胳膊小腿乱蹬 小脸憋通红 扭来扭去 每天晚上哭闹不止 睡觉睡不踏实 老是醒 大口大口吐奶 大便有奶瓣",
+        "bbox": [
+          0.2,
+          0.2,
+          0.8,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "👶",
+        "bbox": [
+          0.5,
+          0.5,
+          0.6,
+          0.6
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

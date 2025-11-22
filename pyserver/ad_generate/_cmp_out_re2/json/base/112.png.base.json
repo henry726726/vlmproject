@@ -1,0 +1,68 @@
+{
+  "product": {
+    "type": "Memory Foam Pillow",
+    "material": "Memory Foam",
+    "design": "Cushion Shape",
+    "features": [
+      "Relieve Pressure",
+      "Support Neck",
+      "Full Coverage Comfort",
+      "Easy to Sleep"
+    ]
+  },
+  "background": {
+    "prompt": "A woman sleeping on a memory foam pillow with a blue background.",
+    "negative_prompt": "No people, no pillows, no blue background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#87CEEB",
+      "#ADD8E6",
+      "#F0F8FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "缓解压力 承托颈椎 全方位包裹感 轻松入睡",
+        "bbox": [
+          0.25,
+          0.15,
+          0.85,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.1,
+          0.85,
+          0.15,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

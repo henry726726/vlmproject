@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "children's clothing",
+    "material": "soft",
+    "design": "animal embroidery",
+    "features": "soft and cute"
+  },
+  "background": {
+    "prompt": "a grassy outdoor setting with two children wearing sweaters and pants, one holding a basket.",
+    "negative_prompt": "blurry, distorted, unrecognizable text, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7CFC00",
+      "#87CEFA",
+      "#D3D3D3"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "软糯有型",
+        "bbox": [
+          0.5,
+          0.6,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Milla Baby",
+        "bbox": [
+          0.05,
+          0.15,
+          0.15,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

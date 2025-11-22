@@ -1,0 +1,66 @@
+{
+  "product": {
+    "type": "children's clothing",
+    "material": "fleece",
+    "design": "thickened shark pants",
+    "features": "high waist, comfortable fit"
+  },
+  "background": {
+    "prompt": "a child wearing thickened shark pants in a kitchen setting, with a focus on the pants' design and comfort features.",
+    "negative_prompt": "blurry, out-of-focus, low quality, distorted colors, incorrect clothing items, irrelevant background elements",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6C1",
+      "#E0A000",
+      "#B07400",
+      "#804000",
+      "#F0F0F0",
+      "#D0D0D0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.5
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "升级版加绒.鲨鱼裤（高腰护肚，舒适贴合）",
+        "bbox": [
+          0.5,
+          0.1,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Rabbit",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

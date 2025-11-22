@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "baby car seat",
+    "material": "soft fabric",
+    "design": "modern and comfortable",
+    "features": "airbag support, adjustable headrest"
+  },
+  "background": {
+    "prompt": "a baby sitting in a car seat with a mountainous background",
+    "negative_prompt": "blurry image, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#808080",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "送享享椅 单品追加50名",
+        "bbox": [
+          0.35,
+          0.25,
+          0.7,
+          0.4
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "猫头鹰",
+        "bbox": [
+          0.35,
+          0.1,
+          0.6,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

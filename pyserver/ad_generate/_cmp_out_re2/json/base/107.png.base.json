@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "Backpack",
+    "material": "Nylon",
+    "design": "Modern, Functional",
+    "features": "Large Capacity, Multiple Pockets, Adjustable Straps"
+  },
+  "background": {
+    "prompt": "A woman wearing a gray backpack against a white fence background.",
+    "negative_prompt": "Blurry image, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "超大容量\n'家庭分舱'",
+        "bbox": [
+          0.1,
+          0.15,
+          0.6,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "DOROB",
+        "bbox": [
+          0.35,
+          0.55,
+          0.45,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

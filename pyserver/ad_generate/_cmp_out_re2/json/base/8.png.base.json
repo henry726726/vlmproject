@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "children's clothing",
+    "material": "mini fabric",
+    "design": "relaxed fit",
+    "features": "slimming effect"
+  },
+  "background": {
+    "prompt": "A child wearing black pants with a blue logo, standing against a plain background.",
+    "negative_prompt": "child wearing other types of clothing, background with complex patterns or objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#0F2C4D"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "显瘦",
+        "bbox": [
+          0.1,
+          0.35,
+          0.4,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Clothes",
+        "bbox": [
+          0.5,
+          0.4,
+          0.55,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

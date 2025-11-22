@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Jeep SPIRIT Men's Cargo Shorts",
+    "material": "Cotton",
+    "design": "Multi-Pocket, Loose Fit",
+    "features": "Comfortable, Breathable"
+  },
+  "background": {
+    "prompt": "A man wearing green cargo shorts with multiple pockets, a brown belt, and a watch on his left wrist. The background is a plain gray color.",
+    "negative_prompt": "The man is not wearing shorts, the shorts are not green, the man is not wearing a watch, the background is not gray.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#808080",
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "纯棉亲肤舒适",
+        "bbox": [
+          0.75,
+          0.65,
+          0.95,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Jeep SPIRIT",
+        "bbox": [
+          0.01,
+          0.05,
+          0.25,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

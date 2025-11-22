@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Fashion",
+    "material": "unknown",
+    "design": "casual",
+    "features": "显瘦效果"
+  },
+  "background": {
+    "prompt": "A woman taking a mirror selfie in a stylish outfit. The background is a modern interior with warm lighting.",
+    "negative_prompt": "blurry|out-of-focus|distorted|unrecognizable|incomplete",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FDE6C1",
+      "#E0B080",
+      "#D0A060"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "胖妞专场 显瘦30斤",
+        "bbox": [
+          0.35,
+          0.45,
+          0.65,
+          0.25
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "未知品牌",
+        "bbox": [
+          0.5,
+          0.5,
+          0.2,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

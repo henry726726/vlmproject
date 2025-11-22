@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "加绒鲨鱼裤",
+    "material": "加绒",
+    "design": "时尚设计",
+    "features": "保暖舒适"
+  },
+  "background": {
+    "prompt": "展示加绒鲨鱼裤的细节，突出其保暖和舒适特点。",
+    "negative_prompt": "模糊不清、不相关元素",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF0000",
+      "#00FF00",
+      "#800080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.3,
+          0.2,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

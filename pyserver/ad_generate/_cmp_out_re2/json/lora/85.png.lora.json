@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "menswear",
+    "material": "knit",
+    "design": "casual",
+    "features": "classic, comfortable, durable"
+  },
+  "background": {
+    "prompt": "a man wearing a blue classic menswear shirt, soft lighting, eye-level shot, medium distance",
+    "negative_prompt": "blurry, low resolution, distorted, unrecognizable text, irrelevant background elements",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#2E4053",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "Classic Menswear",
+        "bbox": [
+          0.2,
+          0.6,
+          0.8,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "brand logo",
+        "bbox": [
+          0.5,
+          0.25,
+          0.7,
+          0.2
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

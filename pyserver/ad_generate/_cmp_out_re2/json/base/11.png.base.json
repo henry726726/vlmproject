@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "tank top",
+    "material": "soft",
+    "design": "square neck",
+    "features": "breast pad, slimming, hiding double breasts"
+  },
+  "background": {
+    "prompt": "a minimalist white background with two women wearing tank tops and jeans, one in pink and the other in black, both smiling.",
+    "negative_prompt": "any background elements that are not related to the product or the model's appearance.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0",
+      "#0000FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.5,
+        0.5
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "显瘦遮副乳",
+        "bbox": [
+          0.1,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "PUNLIEN 半练",
+        "bbox": [
+          0.3,
+          0.1,
+          0.7,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

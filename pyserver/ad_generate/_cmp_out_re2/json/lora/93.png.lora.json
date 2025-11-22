@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Coffee cup",
+    "material": "Plastic",
+    "design": "Modern, sleek design with ribbed texture",
+    "features": "Flip-top lid for easy drinking, durable construction"
+  },
+  "background": {
+    "prompt": "A close-up of a person holding a pastel-colored coffee cup against a soft pink background. The lighting is soft and even.",
+    "negative_prompt": "Blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#E6DCEB",
+      "#CDDC39"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "上翻开盖优雅直饮",
+        "bbox": [
+          0.1,
+          0.6,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Coffee cup",
+        "bbox": [
+          0.65,
+          0.15,
+          0.2,
+          0.08
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

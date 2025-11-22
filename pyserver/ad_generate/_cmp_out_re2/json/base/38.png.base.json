@@ -1,0 +1,84 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "stretchable fabric",
+    "design": "fitting and breathable",
+    "features": "warmth retention, moisture-wicking"
+  },
+  "background": {
+    "prompt": "A woman wearing a beige thermal underwear, standing against a light background with a soft lighting effect.",
+    "negative_prompt": "The woman is not wearing any clothing.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "升温≥10℃",
+        "bbox": [
+          0.25,
+          0.45,
+          0.75,
+          0.55
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "持续发热",
+        "bbox": [
+          0.25,
+          0.58,
+          0.75,
+          0.68
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "恒温肌底衣",
+        "bbox": [
+          0.25,
+          0.71,
+          0.75,
+          0.81
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

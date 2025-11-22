@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "knitwear",
+    "material": "100% pure wool",
+    "design": "round neck, long sleeves",
+    "features": "soft, warm, comfortable"
+  },
+  "background": {
+    "prompt": "a woman wearing a beige knit sweater, soft lighting, close-up shot, eye-level angle",
+    "negative_prompt": "blurry, low resolution, dark background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#ECECEC"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "100%纯羊绒",
+        "bbox": [
+          0.15,
+          0.85,
+          0.75,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

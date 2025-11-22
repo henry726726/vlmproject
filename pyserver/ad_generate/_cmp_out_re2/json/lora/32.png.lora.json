@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "Hair styling tool",
+    "material": "Plastic",
+    "design": "Cute cat design, ergonomic handle",
+    "features": "32mm deep U-shaped barrel, 2X deep U effect, voluminous and three-dimensional"
+  },
+  "background": {
+    "prompt": "A soft beige background with a cute cat hair styling tool on a white table. A young woman is holding the tool, showcasing its features.",
+    "negative_prompt": "The background is not soft beige, the table is not white, the woman is not holding the tool, the hair styling tool is not cute cat design.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FAD7D4",
+      "#EAE0C8"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "法式深U蛋卷",
+        "bbox": [
+          0.1,
+          0.35,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "HUAMEI",
+        "bbox": [
+          0.2,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

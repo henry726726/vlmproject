@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "折叠椅",
+    "material": "航空铝合金",
+    "design": "高承重",
+    "features": "高强度，最大承重400斤"
+  },
+  "background": {
+    "prompt": "简洁的大理石纹理背景，突出产品细节。",
+    "negative_prompt": "杂乱的背景，模糊的焦点。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FEC0E6",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.3,
+          0.15,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.7,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "休闲裤",
+    "material": "棉质",
+    "design": "宽松直筒",
+    "features": "舒适保暖"
+  },
+  "background": {
+    "prompt": "简洁的室内环境，灰色地板和背景墙。",
+    "negative_prompt": "杂乱的背景、不合适的服装、模糊的焦点",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一条属于胖 mm 的裤子",
+        "bbox": [
+          0.2,
+          0.3,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

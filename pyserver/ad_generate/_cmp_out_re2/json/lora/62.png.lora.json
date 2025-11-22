@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sleepwear",
+    "material": "velvet",
+    "design": "soft and cozy",
+    "features": "quick-warming"
+  },
+  "background": {
+    "prompt": "A young woman taking a mirror selfie in a cozy room, wearing a pink velvet sleepwear set. The background is a modern kitchen with dark cabinets and a light countertop. The lighting is soft and ambient.",
+    "negative_prompt": "unrecognizable objects, people not taking a selfie, poor lighting, out-of-focus",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FAD7D7",
+      "#2C2C2C",
+      "#ECECEC"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.47,
+        0.47
+      ],
+      "ratio": [
+        0.85,
+        0.85
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.25,
+          0.75,
+          0.5,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.6,
+          0.1,
+          0.1
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "women's pajamas",
+    "material": "fleece",
+    "design": "fluffy, cartoon bear pattern",
+    "features": "warm, anti-static, heat retention"
+  },
+  "background": {
+    "prompt": "a cozy living room setting with a white sofa, soft lighting, and a relaxed woman wearing pink pajamas.",
+    "negative_prompt": "unrecognizable objects, dark lighting, cluttered background, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#F5F5DC",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "暖暖熊 自保暖",
+        "bbox": [
+          0.4,
+          0.7,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "EMXEE",
+        "bbox": [
+          0.1,
+          0.1,
+          0.2,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

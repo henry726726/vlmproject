@@ -1,0 +1,73 @@
+{
+  "product": {
+    "type": "leggings",
+    "material": "soft",
+    "design": "high waist, full-length",
+    "features": "customized for tall individuals, 110CM length"
+  },
+  "background": {
+    "prompt": "A woman wearing a pair of olive green leggings, highlighting the high waist and full-length design. The background is plain white.",
+    "negative_prompt": "any other objects or distractions",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#8C9E9F"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "不够长我包退",
+        "bbox": [
+          0.2,
+          0.5,
+          0.8,
+          0.25
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "高个子专属定制「裤长110CM」",
+        "bbox": [
+          0.2,
+          0.7,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Soft.clouds",
+        "bbox": [
+          0.5,
+          0.5,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "golf pants",
+    "material": "lightweight & warm",
+    "design": "professional golf trousers",
+    "features": "lightweight, warm"
+  },
+  "background": {
+    "prompt": "A person wearing Page & Tuttle Golf trousers standing with one hand in pocket, holding a golf club. The background is plain white.",
+    "negative_prompt": "any object other than the person, golf club, trousers, or logo.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#0000FF",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "+℃",
+        "bbox": [
+          0.2,
+          0.35,
+          0.4,
+          0.2
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Page & Tuttle GOLF",
+        "bbox": [
+          0.1,
+          0.1,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

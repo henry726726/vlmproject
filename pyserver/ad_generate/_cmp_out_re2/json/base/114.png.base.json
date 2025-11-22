@@ -1,0 +1,76 @@
+{
+  "product": {
+    "type": "seat cushion",
+    "material": "velvet",
+    "design": "six-layer plush",
+    "features": "long-lasting warmth, comfortable, no shedding"
+  },
+  "background": {
+    "prompt": "a man holding a seat cushion in front of a car, with a building in the background",
+    "negative_prompt": "blurry image, low quality, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF0000",
+      "#FFFF00",
+      "#00FF00"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.5,
+        0.5
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "六倍加绒保暖坐垫",
+        "bbox": [
+          0.1,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "持久锁温 舒适不掉毛",
+        "bbox": [
+          0.1,
+          0.25,
+          0.8,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Adidas",
+        "bbox": [
+          0.5,
+          0.4,
+          0.6,
+          0.5
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sweater",
+    "material": "cotton",
+    "design": "streetwear",
+    "features": "vintage, bold lettering"
+  },
+  "background": {
+    "prompt": "a young man wearing a red sweater with black lettering, sunglasses, and a chain necklace against a plain white background.",
+    "negative_prompt": "any other objects or people in the image",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FF0000",
+      "#000000",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起！",
+        "bbox": [
+          0.2,
+          0.7,
+          0.8,
+          0.85
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LB",
+        "bbox": [
+          0.4,
+          0.3,
+          0.6,
+          0.45
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

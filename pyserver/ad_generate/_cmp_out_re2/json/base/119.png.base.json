@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "Sneakers",
+    "material": "Canvas",
+    "design": "Vintage",
+    "features": "Water-resistant, Lightweight"
+  },
+  "background": {
+    "prompt": "A person wearing sneakers sitting on a shelf, showcasing the shoe's design and features.",
+    "negative_prompt": "Blurry image, low resolution, out-of-focus, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF0000",
+      "#00FF00",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "可承重300斤左右",
+        "bbox": [
+          0.05,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.8,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

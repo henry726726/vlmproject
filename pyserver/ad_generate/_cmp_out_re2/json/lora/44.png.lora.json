@@ -1,0 +1,73 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "wool × silk × velvet",
+    "design": "long-sleeved, round neck",
+    "features": "warmth, skin-nourishing"
+  },
+  "background": {
+    "prompt": "a warm, neutral background with two models wearing thermal underwear, highlighting the product's features.",
+    "negative_prompt": "any other objects or distractions.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5ECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "羊毛×蚕丝×德绒发热羊毛 蚕丝养肤",
+        "bbox": [
+          0.35,
+          0.7,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.5,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "莎瑞诗",
+        "bbox": [
+          0.05,
+          0.1,
+          0.08,
+          0.08
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "运动防护品牌",
+    "material": "无感服贴",
+    "design": "稳定髌骨",
+    "features": "新一代运动防护"
+  },
+  "background": {
+    "prompt": "城市天际线背景，男性运动员形象。",
+    "negative_prompt": "模糊图像|不清晰的背景|人物模糊不清",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#808080",
+      "#C0C0C0",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "无感服贴, 稳定髌骨",
+        "bbox": [
+          0.05,
+          0.7,
+          0.7,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LONGYM",
+        "bbox": [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

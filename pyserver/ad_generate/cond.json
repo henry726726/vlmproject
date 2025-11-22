@@ -1,0 +1,19 @@
+{
+  "input_cond": {
+    "text_rules": {
+      "min_margin": 0.03,
+      "min_ar": 1.6,
+      "max_area": 0.25,
+      "max_iou_with_subject": 0.25
+    },
+    "logo_rules": {
+      "min_margin": 0.03,
+      "max_area": 0.14,
+      "ar_range": [0.7, 3.0],
+      "max_iou_with_subject": 0.25,
+      "max_iou_with_text": 0.3
+    },
+    "headline_hint": { "approx_chars": 14, "lines": 1 },
+    "logo_hint": { "target_area": 0.05, "aspect_ratio": 2.2 }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sweatshirt",
+    "material": "cotton",
+    "design": "hooded",
+    "features": "high-quality, high-value"
+  },
+  "background": {
+    "prompt": "a man wearing a white hoodie with black stripes on the sleeves, standing in front of a white background, with a red banner at the bottom displaying 'Sell well' and '服从你的渴望 高品质 高颜值'",
+    "negative_prompt": "blurry|out-of-focus|incorrect color",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#FF0000",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "高品质 高颜值",
+        "bbox": [
+          0.2,
+          0.7,
+          0.8,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "BAGENCKBGE",
+        "bbox": [
+          0.5,
+          0.35,
+          0.55,
+          0.38
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

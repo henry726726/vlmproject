@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "flared jeans",
+    "material": "denim",
+    "design": "bell-bottoms",
+    "features": "stretchable, comfortable"
+  },
+  "background": {
+    "prompt": "A person wearing flared jeans standing on a tiled floor.",
+    "negative_prompt": "blurry, out-of-focus, low-quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#000000",
+      "#222222"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起\n一条属于胖 mm 的裤子",
+        "bbox": [
+          0.1,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

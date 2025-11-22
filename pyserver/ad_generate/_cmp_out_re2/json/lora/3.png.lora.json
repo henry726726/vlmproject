@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "lightweight",
+    "design": "fitting",
+    "features": "warmth, elasticity"
+  },
+  "background": {
+    "prompt": "A woman wearing a brown and green thermal underwear against a plain background. Soft lighting from the front.",
+    "negative_prompt": "any object other than the woman and the thermal underwear.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FEC0C0",
+      "#D3D3D3"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "37°恒温肌底衣",
+        "bbox": [
+          0.45,
+          0.7,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "MIIOW官方旗舰店",
+        "bbox": [
+          0.05,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

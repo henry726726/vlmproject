@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "children's clothing",
+    "material": "cotton",
+    "design": "long-sleeved striped",
+    "features": "comfortable, elastic, easy to wear"
+  },
+  "background": {
+    "prompt": "A young girl wearing a pink and white striped long-sleeved shirt, smiling and laughing. The background is a soft pastel color.",
+    "negative_prompt": "blurry, distorted, unrecognizable text, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F8FF",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "领口保持微笑 弹力加固 不易脱散",
+        "bbox": [
+          0.15,
+          0.45,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

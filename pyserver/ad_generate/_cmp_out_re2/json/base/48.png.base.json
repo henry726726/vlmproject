@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "hat",
+    "material": "cotton",
+    "design": "plain",
+    "features": "comfortable, stylish"
+  },
+  "background": {
+    "prompt": "A woman wearing a black hat and holding a phone, with a white background.",
+    "negative_prompt": "a person wearing a hat in a dark room",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "专为大头大脸设计",
+        "bbox": [
+          0.25,
+          0.6,
+          0.75,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "YAO",
+        "bbox": [
+          0.7,
+          0.4,
+          0.75,
+          0.5
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

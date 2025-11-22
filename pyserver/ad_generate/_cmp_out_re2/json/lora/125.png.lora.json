@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "懒人椅",
+    "material": "布艺",
+    "design": "舒适设计",
+    "features": "贴合腰窝"
+  },
+  "background": {
+    "prompt": "简洁的室内环境，木质地板和白色墙壁，植物点缀。",
+    "negative_prompt": "杂乱的背景，不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#CCCCCC",
+      "#A9A9A9"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "白领福音 舒适再现葛优躺",
+        "bbox": [
+          0.1,
+          0.1,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.2,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "unknown",
+    "material": "unknown",
+    "design": "unknown",
+    "features": "unknown"
+  },
+  "background": {
+    "prompt": "A person in green scrubs holding a blue object, standing in front of a white wall with a wooden shelf and a plant.",
+    "negative_prompt": "person not in scrubs, object not blue, background not white, different setting",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#E0E0E0",
+      "#000000",
+      "#00FF00",
+      "#FF0000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "如果你总是爱发脾气",
+        "bbox": [
+          0.4,
+          0.8,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "logo",
+        "content": "未知品牌",
+        "bbox": [
+          0.7,
+          0.1,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": []
+  }
+}

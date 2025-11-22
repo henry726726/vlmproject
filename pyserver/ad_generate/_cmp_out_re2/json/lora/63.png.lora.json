@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "unknown",
+    "material": "unknown",
+    "design": "unknown",
+    "features": "unknown"
+  },
+  "background": {
+    "prompt": "A collage of children wearing glasses, with a red heart symbol and Chinese text promoting quality and baby products.",
+    "negative_prompt": "No people, no text, no heart symbol, out-of-focus background, low resolution.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#FF0000",
+      "#000000",
+      "#008000",
+      "#800000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "好品质买家说了算",
+        "bbox": [
+          0.2,
+          0.1,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

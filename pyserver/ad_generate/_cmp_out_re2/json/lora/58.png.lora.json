@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "fashion",
+    "material": "unknown",
+    "design": "casual",
+    "features": "versatile, stylish"
+  },
+  "background": {
+    "prompt": "a neutral background with soft lighting, eye-level camera angle, medium distance.",
+    "negative_prompt": "blurry, low resolution, distorted colors, cluttered, dark, overexposed, incorrect lighting, wrong camera angle, out-of-focus, poor composition, unprofessional.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F2F2F2",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "怎么搭 都好看",
+        "bbox": [
+          0.45,
+          0.5,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "unknown",
+        "bbox": [
+          0.5,
+          0.5,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

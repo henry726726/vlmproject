@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "sunglasses",
+    "material": "plastic",
+    "design": "square frame",
+    "features": "UV400 protection"
+  },
+  "background": {
+    "prompt": "A woman wearing sunglasses and a white tank top, holding a flower arrangement.",
+    "negative_prompt": "No people, no flowers, no sunglasses",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FFC107"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "UV400防紫外线",
+        "bbox": [
+          0.25,
+          0.6,
+          0.75,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Fragrance Series",
+        "bbox": [
+          0.2,
+          0.8,
+          0.8,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

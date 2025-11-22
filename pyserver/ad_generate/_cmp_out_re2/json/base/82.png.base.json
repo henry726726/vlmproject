@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Fluffy Pajamas",
+    "material": "Soft Fleece",
+    "design": "Cute Bear Pattern",
+    "features": "Warmth, Anti-static, Heat Retention"
+  },
+  "background": {
+    "prompt": "A cozy living room setting with a soft, plush sofa and a neutral color palette.",
+    "negative_prompt": "Any elements that do not fit the cozy and warm theme.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EDEDED",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "暖暖熊 自保暖",
+        "bbox": [
+          0.3,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "EMXEE",
+        "bbox": [
+          0.05,
+          0.1,
+          0.35,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

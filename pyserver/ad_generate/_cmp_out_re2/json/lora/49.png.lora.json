@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "皮衣",
+    "material": "皮革",
+    "design": "时尚潮流",
+    "features": "鳄鱼纹设计，拉链开合"
+  },
+  "background": {
+    "prompt": "简洁的白色背景，突出产品和促销信息。",
+    "negative_prompt": "杂乱的背景，模糊的主体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "店铺首页 活动专区 买一送一",
+        "bbox": [
+          0.15,
+          0.95,
+          0.85,
+          0.12
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.3,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

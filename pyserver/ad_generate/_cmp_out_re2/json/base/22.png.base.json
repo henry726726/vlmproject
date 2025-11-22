@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "high-quality fabric",
+    "design": "one-piece design",
+    "features": "breathable, moisture-wicking"
+  },
+  "background": {
+    "prompt": "a person wearing a pair of thermal underwear, focusing on the lower half of the body.",
+    "negative_prompt": "blurry, out-of-focus, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一裤两穿\n不必穿内裤的秋裤",
+        "bbox": [
+          0.25,
+          0.3,
+          0.75,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.5,
+          0.1,
+          0.55,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

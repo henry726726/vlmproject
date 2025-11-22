@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "sleepwear",
+    "material": "cotton",
+    "design": "casual elegance",
+    "features": "base大方版型"
+  },
+  "background": {
+    "prompt": "A woman wearing a light purple sleepwear set against a plain background. The lighting is soft and even.",
+    "negative_prompt": "any object other than the woman and her sleepwear.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EAEAD2"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "立现随性优雅",
+        "bbox": [
+          0.35,
+          0.6,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

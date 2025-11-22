@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Jump Rope Mat",
+    "material": "EVA Foam",
+    "design": "Round Shape",
+    "features": "Anti-Slip Surface, Shock Absorption, Non-Slip Bottom"
+  },
+  "background": {
+    "prompt": "A woman is jumping rope on a pink mat in a pink room with curtains.",
+    "negative_prompt": "No people, No jumping rope, No pink background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFC1C1",
+      "#F0E6E6",
+      "#E0D3D3"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "减震隔音跳绳/跳操专用垫",
+        "bbox": [
+          0.05,
+          0.2,
+          0.5,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "YOTTOY",
+        "bbox": [
+          0.05,
+          0.1,
+          0.2,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

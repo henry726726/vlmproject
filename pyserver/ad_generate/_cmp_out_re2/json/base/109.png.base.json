@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "knitwear",
+    "material": "wool",
+    "design": "high-neck, cable-knit",
+    "features": "no pilling, no color fading, no deformation"
+  },
+  "background": {
+    "prompt": "A woman wearing a cozy, high-neck knit sweater with a patterned skirt and a delicate necklace.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5C6A3",
+      "#E0B080",
+      "#D3A068"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.35,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "断码羊绒",
+        "bbox": [
+          0.2,
+          0.6,
+          0.8,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.1,
+          0.55,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "T-shirt",
+    "material": "Cotton",
+    "design": "Simple and casual design with patches on the sleeves",
+    "features": "Comfortable fit, breathable material"
+  },
+  "background": {
+    "prompt": "A man wearing a black T-shirt with patches on the sleeves, a black cap, and a black face mask. The background is a plain light blue color.",
+    "negative_prompt": "The man is not wearing a T-shirt, the background is not light blue, the man is not wearing a cap, the man is not wearing a face mask, the man is not wearing a T-shirt with patches on the sleeves",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#808080",
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全店大码",
+        "bbox": [
+          0.03,
+          0.7,
+          0.83,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "R",
+        "bbox": [
+          0.03,
+          0.5,
+          0.07,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

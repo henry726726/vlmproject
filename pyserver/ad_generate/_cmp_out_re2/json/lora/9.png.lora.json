@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "winter coat",
+    "material": "unknown",
+    "design": "classic",
+    "features": "double-breasted, long length"
+  },
+  "background": {
+    "prompt": "A woman wearing a black winter coat against a plain background.",
+    "negative_prompt": "any other objects, people, or distractions.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#000000",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "入会尊享",
+        "bbox": [
+          0.45,
+          0.65,
+          0.55,
+          0.1
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "即刻探索>",
+        "bbox": [
+          0.45,
+          0.75,
+          0.55,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LANCY FROM25",
+        "bbox": [
+          0.5,
+          0.4,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

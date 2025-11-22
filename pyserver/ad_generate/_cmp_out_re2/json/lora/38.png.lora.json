@@ -1,0 +1,84 @@
+{
+  "product": {
+    "type": "thermal undergarment",
+    "material": "stretchable",
+    "design": "body-hugging",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "A woman wearing a beige thermal undergarment against a soft, blurred background.",
+    "negative_prompt": "distorted, blurry, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FEC0E6",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "升温≥10℃",
+        "bbox": [
+          0.3,
+          0.45,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "持续发热",
+        "bbox": [
+          0.3,
+          0.58,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "恒温肌底衣",
+        "bbox": [
+          0.3,
+          0.7,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

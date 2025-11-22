@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "knitwear",
+    "material": "cotton",
+    "design": "casual",
+    "features": "soft, comfortable"
+  },
+  "background": {
+    "prompt": "a person wearing black pants and white slippers standing in front of a closet with shoes.",
+    "negative_prompt": "unrecognizable objects, blurry, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#C0C0C0",
+      "#000000",
+      "#FF0000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起\n一家属于胖子的店铺",
+        "bbox": [
+          0.35,
+          0.45,
+          0.65,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "（虚构品牌标志）",
+        "bbox": [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "tank top",
+    "material": "knit",
+    "design": "square neck, fitted",
+    "features": "breast pad, slimming, coverage"
+  },
+  "background": {
+    "prompt": "a plain white background with two women wearing tank tops and jeans, one in pink and the other in black.",
+    "negative_prompt": "any object or person not related to the product or advertisement.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "带胸垫背心 显瘦遮副乳",
+        "bbox": [
+          0.12,
+          0.15,
+          0.82,
+          0.12
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "PUNLIEN 半练",
+        "bbox": [
+          0.5,
+          0.15,
+          0.5,
+          0.08
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

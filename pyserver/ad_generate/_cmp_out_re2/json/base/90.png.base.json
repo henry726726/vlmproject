@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "Tennis Racket",
+    "material": "Composite",
+    "design": "Stylish Design",
+    "features": "Lightweight, Durable, Comfortable Grip"
+  },
+  "background": {
+    "prompt": "A person in green scrubs holding a blue tennis racket, standing in front of a wooden shelf with a plant on the left.",
+    "negative_prompt": "Blurry image | Distorted colors | Low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#00FF00",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "如果你总是爱发脾气",
+        "bbox": [
+          0.2,
+          0.7,
+          0.8,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Your Brand Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.8,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

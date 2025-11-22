@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "winter jacket",
+    "material": "down",
+    "design": "hooded",
+    "features": "thick, warm"
+  },
+  "background": {
+    "prompt": "A man wearing a black down jacket with a hood, standing against a plain background.",
+    "negative_prompt": "The man is not wearing a jacket.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#0000FF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.1
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全店大码",
+        "bbox": [
+          0.15,
+          0.6,
+          0.75,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "soft and comfortable",
+    "design": "long-sleeved, seamless",
+    "features": "warmth, no bumps"
+  },
+  "background": {
+    "prompt": "a man wearing light blue thermal underwear against a plain background, soft lighting, eye-level shot.",
+    "negative_prompt": "blurry, low resolution, distorted colors, incorrect object placement",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FEC0E6",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "-5~5℃恒暖",
+        "bbox": [
+          0.7,
+          0.15,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "THREEGUN三枪",
+        "bbox": [
+          0.05,
+          0.15,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

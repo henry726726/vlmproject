@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "sunglasses",
+    "material": "plastic",
+    "design": "square frame, pink lenses",
+    "features": "UV400 protection"
+  },
+  "background": {
+    "prompt": "A woman wearing sunglasses and a white tank top, holding flowers, with green foliage in the background.",
+    "negative_prompt": "blurry, distorted, unrecognizable text, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#00FF00",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "UV400防紫外线",
+        "bbox": [
+          0.35,
+          0.6,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "FRAGRANCE SERIES",
+        "bbox": [
+          0.35,
+          0.7,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

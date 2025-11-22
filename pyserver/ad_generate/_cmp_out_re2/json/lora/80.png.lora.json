@@ -1,0 +1,79 @@
+{
+  "product": {
+    "type": "knee support bandage",
+    "material": "neoprene",
+    "design": "粘扣带设计",
+    "features": [
+      "可双向加压",
+      "确保整体稳固",
+      "随意调节贴合膝部曲线"
+    ]
+  },
+  "background": {
+    "prompt": "A close-up of a person wearing a knee support bandage, focusing on the adjustable design and secure fit.",
+    "negative_prompt": "blurry background, out-of-focus, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#000000",
+      "#FF0000",
+      "#00FF00"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "1. 粘扣带设计 随意调节贴合膝部曲线",
+        "bbox": [
+          0.07,
+          0.15,
+          0.65,
+          0.1
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "2. 可双向加压 确保整体稳固",
+        "bbox": [
+          0.07,
+          0.25,
+          0.65,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LP SUPPORT",
+        "bbox": [
+          0.7,
+          0.65,
+          0.08,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

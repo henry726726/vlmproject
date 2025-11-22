@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "耳套",
+    "material": "羊毛",
+    "design": "从养羊开始",
+    "features": "真·保暖"
+  },
+  "background": {
+    "prompt": "一位穿着棕色外套的女性，背景为深色。",
+    "negative_prompt": "模糊的人像，不清晰的背景，非耳套产品。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一只从养羊开始的真·羊毛保暖耳套",
+        "bbox": [
+          0.1,
+          0.1,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

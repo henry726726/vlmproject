@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "handbag",
+    "material": "leather",
+    "design": "classic, simple, minimalist",
+    "features": "large capacity, single shoulder strap"
+  },
+  "background": {
+    "prompt": "a person wearing a beige coat standing indoors, holding a brown leather handbag. The background includes a tiled floor, a wooden wall, and some furniture.",
+    "negative_prompt": "unrecognizable objects, blurry, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FEC6C1",
+      "#D3A07E",
+      "#B08050"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.47,
+        0.47
+      ],
+      "ratio": [
+        0.65,
+        0.65
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "经典纯色百搭",
+        "bbox": [
+          0.45,
+          0.88,
+          0.65,
+          0.12
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

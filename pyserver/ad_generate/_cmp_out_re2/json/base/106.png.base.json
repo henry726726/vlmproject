@@ -1,0 +1,70 @@
+{
+  "product": {
+    "type": "Tights",
+    "material": "Thick Velvet",
+    "design": "Solid Color",
+    "features": [
+      "A Class Comfort",
+      "No Balling",
+      "No Slipping"
+    ]
+  },
+  "background": {
+    "prompt": "A person wearing beige tights sitting on a white chair with a stack of folded tights next to them.",
+    "negative_prompt": "Blurry image | Distorted colors | Unrecognizable text",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EAEAD2",
+      "#C4B49D",
+      "#9C7B5A",
+      "#6B4C33",
+      "#4A3528"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.35,
+        0.35
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "10-22℃",
+        "bbox": [
+          0.6,
+          0.2,
+          0.9,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.9,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

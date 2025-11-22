@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Leather Jacket",
+    "material": "Leather",
+    "design": "Crocodile Pattern",
+    "features": "Thick Padding, Zipper Closure"
+  },
+  "background": {
+    "prompt": "A person wearing a stylish black leather jacket with a crocodile pattern, standing against a plain white background.",
+    "negative_prompt": "Blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "店铺首页 活动专区 买一送一",
+        "bbox": [
+          0.1,
+          0.85,
+          0.8,
+          0.95
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.5,
+          0.3,
+          0.6,
+          0.4
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

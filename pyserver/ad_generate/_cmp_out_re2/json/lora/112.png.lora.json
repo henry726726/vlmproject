@@ -1,0 +1,68 @@
+{
+  "product": {
+    "type": "neck pillow",
+    "material": "memory foam",
+    "design": "contoured shape",
+    "features": [
+      "relieves pressure",
+      "supports cervical spine",
+      "full-body envelopment",
+      "easy to fall asleep"
+    ]
+  },
+  "background": {
+    "prompt": "A woman sleeping on a white memory foam pillow against a blue background. The pillow has a label with text.",
+    "negative_prompt": "unrecognizable objects, distorted text, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#87CEEB",
+      "#F0F8FF",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.4,
+          0.2,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

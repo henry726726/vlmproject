@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "underwear",
+    "material": "stretchy",
+    "design": "form-fitting",
+    "features": "thick but warm, skin-friendly"
+  },
+  "background": {
+    "prompt": "A woman wearing a form-fitting beige top, standing indoors with a soft light source behind her.",
+    "negative_prompt": "blurry|out-of-focus|distorted|unrecognizable",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#ECECEC",
+      "#F5F5F5"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "「薄暖时代」",
+        "bbox": [
+          0.2,
+          0.4,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

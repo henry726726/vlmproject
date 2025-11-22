@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "T-shirt",
+    "material": "unknown",
+    "design": "plain with patches",
+    "features": "large size, casual style"
+  },
+  "background": {
+    "prompt": "A man wearing a black T-shirt and cap, standing against a plain background.",
+    "negative_prompt": "any other objects, people, or distractions.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#808080",
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全店大码",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.3
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "R",
+        "bbox": [
+          0.7,
+          0.2,
+          0.3,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

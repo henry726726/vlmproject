@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "boys' jacket",
+    "material": "soft and breathable",
+    "design": "modern and casual",
+    "features": "waterproof and windproof"
+  },
+  "background": {
+    "prompt": "A young man wearing a black and white jacket, standing in front of a chalkboard with a casual pose.",
+    "negative_prompt": "blurry background, distorted colors, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.1
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一家只做青少年的店",
+        "bbox": [
+          0.03,
+          0.55,
+          0.81,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "阿尼三 ANISAN",
+        "bbox": [
+          0.03,
+          0.03,
+          0.25,
+          0.1
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

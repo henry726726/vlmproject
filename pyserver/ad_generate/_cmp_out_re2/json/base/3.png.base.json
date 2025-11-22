@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "thermal underwear",
+    "material": "lightweight and breathable",
+    "design": "fitting and comfortable",
+    "features": "warmth retention, quick-drying"
+  },
+  "background": {
+    "prompt": "A woman wearing a pair of thermal underwear, with a soft lighting effect and a neutral background.",
+    "negative_prompt": "The woman is not wearing any clothing.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5F5",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "37°恒温肌底衣",
+        "bbox": [
+          0.3,
+          0.7,
+          0.7,
+          0.9
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "MIIOW官方旗舰店",
+        "bbox": [
+          0.03,
+          0.1,
+          0.2,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "卫衣",
+    "material": "未知",
+    "design": "简约",
+    "features": "适合30-45岁人群"
+  },
+  "background": {
+    "prompt": "一位穿着深紫色卫衣的女性，背景为室内环境，有植物装饰。",
+    "negative_prompt": "模糊不清，不自然。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "30-45岁请进",
+        "bbox": [
+          0.5,
+          0.7,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "迪菲丽格",
+        "bbox": [
+          0.05,
+          0.05,
+          0.08,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

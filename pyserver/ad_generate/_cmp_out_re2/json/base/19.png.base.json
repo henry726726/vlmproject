@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Fashion Jacket",
+    "material": "Waterproof & Breathable",
+    "design": "Casual & Stylish",
+    "features": "Lightweight, Versatile"
+  },
+  "background": {
+    "prompt": "A woman wearing an orange jacket indoors, smiling and looking back.",
+    "negative_prompt": "Blurry, low resolution, distorted, out-of-focus, poor lighting, dark background, cluttered, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "时尚外套",
+        "bbox": [
+          0.2,
+          0.6,
+          0.8,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

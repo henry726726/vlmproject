@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "运动服装",
+    "material": "高弹面料",
+    "design": "紧身设计",
+    "features": "无惧各种运动"
+  },
+  "background": {
+    "prompt": "一个室内跑步场景，背景为红色的墙壁。",
+    "negative_prompt": "模糊不清的背景，不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#800000",
+      "#FFA500",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "高弹面料",
+        "bbox": [
+          0.4,
+          0.6,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "无惧各种运动",
+        "bbox": [
+          0.4,
+          0.85,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "NN&22",
+        "bbox": [
+          0.05,
+          0.1,
+          0.1,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

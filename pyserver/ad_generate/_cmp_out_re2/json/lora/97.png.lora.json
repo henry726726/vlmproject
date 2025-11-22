@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "necklace",
+    "material": "gold",
+    "design": "simple round pendant",
+    "features": "dainty, elegant"
+  },
+  "background": {
+    "prompt": "A close-up shot of a woman wearing a red turtleneck sweater and a gold necklace. The background is blurred, focusing attention on the subject.",
+    "negative_prompt": "a blurry background, an out-of-focus subject, irrelevant objects",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFD700",
+      "#000000",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "配外套太好看啦!",
+        "bbox": [
+          0.2,
+          0.6,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.7,
+          0.1,
+          0.2
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

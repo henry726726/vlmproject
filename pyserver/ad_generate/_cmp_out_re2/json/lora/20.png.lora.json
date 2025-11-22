@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "down jacket",
+    "material": "90% white duck down",
+    "design": "high neck, short length",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "A woman wearing a light pink down jacket standing against a plain wall.",
+    "negative_prompt": "any other objects, people, or distractions.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FECFCC",
+      "#ECECEC",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "90%",
+        "bbox": [
+          0.1,
+          0.4,
+          0.2,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LA NIKAR",
+        "bbox": [
+          0.1,
+          0.1,
+          0.2,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

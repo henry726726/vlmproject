@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "牛仔裤",
+    "material": "棉质",
+    "design": "喇叭裤",
+    "features": "舒适，显瘦"
+  },
+  "background": {
+    "prompt": "一位穿着牛仔喇叭裤的人站在室内，背景为浅色墙壁和地板。",
+    "negative_prompt": "模糊的背景，不清晰的人像，非牛仔裤。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FECFCE",
+      "#EAEAEA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起\n一条属于胖 mm 的裤子",
+        "bbox": [
+          0.2,
+          0.2,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

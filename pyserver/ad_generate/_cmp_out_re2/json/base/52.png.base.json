@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "chopstick rest",
+    "material": "black ironwood",
+    "design": "thickened ironwood",
+    "features": "thickened 5-6 cm, durable and does not crack over time"
+  },
+  "background": {
+    "prompt": "A person holding a thick chopstick rest with a red background.",
+    "negative_prompt": "No people, no background, no text",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#808080",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "正宗黑铁木 加厚铁木",
+        "bbox": [
+          0.1,
+          0.4,
+          0.9,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

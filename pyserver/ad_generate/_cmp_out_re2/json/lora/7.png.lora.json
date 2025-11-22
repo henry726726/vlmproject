@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "children's pajamas",
+    "material": "soft cotton",
+    "design": "long-sleeved, full-length",
+    "features": "comfortable, breathable"
+  },
+  "background": {
+    "prompt": "a cozy bedroom setting with a white bed and pillows, soft lighting, neutral colors.",
+    "negative_prompt": "unrecognizable objects, cluttered background, dark lighting, unusual camera angles",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#F5F5DC",
+      "#E0E0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "整晚舒睡",
+        "bbox": [
+          0.5,
+          0.15,
+          0.9,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "爱贝迪拉",
+        "bbox": [
+          0.08,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

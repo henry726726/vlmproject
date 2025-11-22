@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "baby clothing",
+    "material": "cotton",
+    "design": "floral pattern, soft texture",
+    "features": "double-layered, warm, comfortable"
+  },
+  "background": {
+    "prompt": "a baby sitting on a soft, fluffy surface with a pink background, conveying warmth and comfort.",
+    "negative_prompt": "unrecognizable objects, distorted colors, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFC1C1",
+      "#F0F0F0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "双层细纱尖尖帽帽顶充棉花花",
+        "bbox": [
+          0.1,
+          0.7,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "momobox",
+        "bbox": [
+          0.05,
+          0.1,
+          0.08,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

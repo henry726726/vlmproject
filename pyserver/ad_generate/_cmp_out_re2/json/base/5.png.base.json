@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "men's casual pants",
+    "material": "soft cotton blend",
+    "design": "straight leg, loose fit",
+    "features": "comfortable, breathable"
+  },
+  "background": {
+    "prompt": "A man wearing gray casual pants with white sneakers on a plain background.",
+    "negative_prompt": "blurry, distorted, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.1
+      ],
+      "ratio": [
+        0.6,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "休闲宽松运动裤",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.8,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

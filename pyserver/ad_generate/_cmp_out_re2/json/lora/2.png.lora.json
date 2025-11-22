@@ -1,0 +1,73 @@
+{
+  "product": {
+    "type": "运动裤",
+    "material": "亲肤棉",
+    "design": "加长版",
+    "features": "适合160-180cm身高"
+  },
+  "background": {
+    "prompt": "简洁的灰色背景，模特穿着运动裤和白色上衣。",
+    "negative_prompt": "杂乱的背景，不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5F5",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "加长版",
+        "bbox": [
+          0.5,
+          0.3,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "160-180",
+        "bbox": [
+          0.5,
+          0.4,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.5,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "卫衣",
+    "material": "棉质",
+    "design": "宽松长袖",
+    "features": "休闲风格"
+  },
+  "background": {
+    "prompt": "室内服装店环境，模特站在镜子前。",
+    "negative_prompt": "模糊图像|不清晰的背景|过曝/欠曝",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起\n一家属于胖mm的店铺",
+        "bbox": [
+          0.4,
+          0.3,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "ANACCA",
+        "bbox": [
+          0.5,
+          0.2,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

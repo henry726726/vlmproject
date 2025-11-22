@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Yoga Mat",
+    "material": "Non-Slip",
+    "design": "Body Position Guidance",
+    "features": "Anti-Slip, Shock Absorption"
+  },
+  "background": {
+    "prompt": "A beige background with three yoga mats in different colors (blue, purple, pink). A woman is practicing yoga on each mat.",
+    "negative_prompt": "Any distractions or objects that do not fit the yoga theme.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EAEAD2",
+      "#D9C8B6"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "体式引导防滑减震",
+        "bbox": [
+          0.1,
+          0.7,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "奥义",
+        "bbox": [
+          0.05,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

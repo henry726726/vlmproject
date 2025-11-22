@@ -1,0 +1,77 @@
+{
+  "product": {
+    "type": "Knee Support Strap",
+    "material": "Neoprene",
+    "design": "Sticky Band Design",
+    "features": [
+      "Adjustable Fit",
+      "Double-sided Pressure"
+    ]
+  },
+  "background": {
+    "prompt": "A close-up of a person wearing a knee support strap, focusing on the adjustable sticky band design.",
+    "negative_prompt": "Blurry background, out-of-focus objects, incorrect product details",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#000000",
+      "#FF0000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.5,
+        0.5
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "1. 粘扣带设计 随意调节 贴合膝部曲线",
+        "bbox": [
+          0.03,
+          0.1,
+          0.45,
+          0.18
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "2. 可双向加压 确保整体稳固",
+        "bbox": [
+          0.03,
+          0.2,
+          0.45,
+          0.28
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LP SUPPORT",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

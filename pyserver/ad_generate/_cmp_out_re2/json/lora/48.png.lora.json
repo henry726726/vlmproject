@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "帽子",
+    "material": "棉质",
+    "design": "简约时尚",
+    "features": "三合一版型，适合大头和大脸"
+  },
+  "background": {
+    "prompt": "一位年轻女性戴着黑色帽子，手持手机自拍。背景简洁，突出产品。",
+    "negative_prompt": "模糊的背景，不清晰的主体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.4,
+          0.6,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.8,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

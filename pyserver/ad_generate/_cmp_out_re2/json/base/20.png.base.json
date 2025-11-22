@@ -1,0 +1,85 @@
+{
+  "product": {
+    "type": "women's clothing",
+    "material": "duck down",
+    "design": "high neck, short length",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "a woman wearing a pink puffer jacket standing against a plain background",
+    "negative_prompt": "blurry, low resolution, distorted",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.2
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "90%",
+        "bbox": [
+          0.05,
+          0.35,
+          0.3,
+          0.55
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "大朵白鸭绒",
+        "bbox": [
+          0.05,
+          0.55,
+          0.4,
+          0.7
+        ],
+        "confidence": 0.9
+      },
+      {
+        "type": "headline",
+        "content": "御寒保暖",
+        "bbox": [
+          0.05,
+          0.7,
+          0.3,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LA NIKAR",
+        "bbox": [
+          0.05,
+          0.1,
+          0.35,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

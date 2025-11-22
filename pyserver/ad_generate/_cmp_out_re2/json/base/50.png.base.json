@@ -1,0 +1,25 @@
+{
+  "raw": "```json\n{\n  \"product\": {\n    \"type\": \"face mask shirt\",\n    \"material\": \"lightweight\",\n    \"design\": \"fitting\",\n    \"features\": \"+lightweight+ light-dense+ nourishing+\"\n  },\n  \"background\": {\n    \"prompt\": \"A woman wearing a face mask shirt, showcasing its fit and design.\",\n    \"negative_prompt\": \"a plain background, a blurry image, an out-of-focus image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image, a noisy image, a grainy image, a blurry image, a low-resolution image, a distorted image, a low-quality image, a dark image,",
+  "product": {},
+  "background": {
+    "prompt": "",
+    "negative_prompt": "",
+    "camera": {},
+    "lighting": {},
+    "palette": []
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.3,
+        0.3
+      ]
+    },
+    "nongraphic_layout": [],
+    "graphic_layout": []
+  }
+}

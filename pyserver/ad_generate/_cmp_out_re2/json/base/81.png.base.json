@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "knitwear set",
+    "material": "wool blend",
+    "design": "casual and elegant",
+    "features": "warm and comfortable"
+  },
+  "background": {
+    "prompt": "a woman wearing a dark blue knit dress and sweater set, standing indoors with a neutral background.",
+    "negative_prompt": "blurry, low resolution, distorted, abstract, out of focus",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#000000",
+      "#2C3E50"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一家属于胖子的店铺",
+        "bbox": [
+          0.15,
+          0.35,
+          0.85,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

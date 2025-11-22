@@ -1,0 +1,133 @@
+/* src/main/frontend_login/src/App.css */
+
+/* ✨ 페이지 전체의 바탕을 이제 메인 테마 색으로 통일! ✨ */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #4b367c; /* ✨ LoginSignup 컨테이너와 더 비슷한 진한 보라색으로 통일 */
+  font-family: "Noto Sans KR", sans-serif; /* ✨ 전역 폰트 지정 */
+  color: #e0e0ff; /* ✨ 기본 텍스트 색상도 밝게 통일 */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* background-color: #4b367c; /* ✨ .App 자체도 통일된 배경색으로 지정 (html,body,root에 있다면 여기는 선택적) */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* 기존 background-color를 새로운 그라디언트 배경으로 변경 */
+  background: linear-gradient(
+    135deg,
+    #3a2a60 0%,
+    #4b367c 100%
+  ); /* ✨ 시작 색상도 좀 더 다크하게 조정, 전체 테마에 맞춤 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #e0e0ff; /* 글자색을 밝은 톤 유지 */
+}
+
+.App-link {
+  color: #a8e6cf; /* 밝은 그린 계열 링크색 유지 */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+/* 네비게이션 버튼들은 이제 메인 테마에 맞춰 변경! */
+.nav-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* ✨ 투명한 밝은 배경으로 변경, 어두운 배경과 잘 어울리게 */
+  color: #d8cffc; /* ✨ 텍스트 색상을 밝은 보라빛으로 변경 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ✨ 그림자도 어둡게 조정 */
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2); /* ✨ 호버 시 좀 더 밝아지게 */
+}
+
+.nav-btn.active {
+  background: linear-gradient(
+    45deg,
+    #6aa78e,
+    #8cbfbd
+  ); /* ✨ 민트-그린 그라데이션 액티브는 유지 */
+  color: #ffffff; /* 텍스트 색상 유지 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* 그림자 조정 */
+}
+
+.nav-btn.active:hover {
+  background: linear-gradient(
+    45deg,
+    #8cbfbd,
+    #6aa78e
+  ); /* 호버 시 그라데이션 방향 변경 */
+}
+
+.logout-btn {
+  background: linear-gradient(
+    45deg,
+    #ffb6b6,
+    #ff9b9b
+  ); /* 로그아웃 버튼의 레드 계열 유지 (특수 기능) */
+  color: #ffffff;
+  border-radius: 25px; /* 모서리 둥글게 통일 */
+  padding: 12px 24px; /* 패딩 통일 */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 그림자도 어둡게 조정 */
+}
+
+.logout-btn:hover {
+  background: linear-gradient(45deg, #ff9b9b, #ffb6b6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}

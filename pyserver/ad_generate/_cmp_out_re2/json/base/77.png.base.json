@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "shirt",
+    "material": "silk",
+    "design": "embroidered floral pattern",
+    "features": "bow tie, elegant design"
+  },
+  "background": {
+    "prompt": "A woman wearing a red floral blouse with a black bow tie, soft lighting, eye-level angle.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFC1C1",
+      "#8B0000",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "蝴蝶结雪纺衬衫",
+        "bbox": [
+          0.1,
+          0.7,
+          0.9,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "COLLOCATION",
+        "bbox": [
+          0.1,
+          0.1,
+          0.9,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

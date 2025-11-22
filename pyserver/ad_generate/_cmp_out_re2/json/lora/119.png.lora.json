@@ -1,0 +1,64 @@
+{
+  "product": {
+    "type": "Sneakers",
+    "material": "Canvas",
+    "design": "Classic Low-top",
+    "features": "Water-resistant, Breathable"
+  },
+  "background": {
+    "prompt": "A person sitting on a shelf wearing jeans and sneakers. The background is plain white.",
+    "negative_prompt": "Blurry, distorted, other objects present",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#00FF00",
+      "#00FFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "可承重300斤左右",
+        "bbox": [
+          0.1,
+          0.9,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.3,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

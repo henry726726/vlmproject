@@ -1,0 +1,73 @@
+{
+  "product": {
+    "type": "sunscreen cream",
+    "material": "plastic tube",
+    "design": "pink and white striped packaging",
+    "features": "high SPF, lightweight, easy to apply"
+  },
+  "background": {
+    "prompt": "a woman holding a sunscreen tube, indoor setting with soft lighting and neutral background.",
+    "negative_prompt": "blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FADADA",
+      "#EAE0C8"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "防晒界的扛把子选手！",
+        "bbox": [
+          0.15,
+          0.15,
+          0.85,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "娜丽丝防晒霜",
+        "bbox": [
+          0.15,
+          0.7,
+          0.85,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Parasola",
+        "bbox": [
+          0.7,
+          0.6,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

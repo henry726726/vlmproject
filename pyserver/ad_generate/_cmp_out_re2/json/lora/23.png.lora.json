@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "外套",
+    "material": "羊绒羊毛",
+    "design": "手工盘扣",
+    "features": "轻盈双面"
+  },
+  "background": {
+    "prompt": "简洁的白色背景，突出产品和模特。",
+    "negative_prompt": "杂乱的背景，模糊的焦点。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.2,
+          0.15,
+          0.8,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "EP YAYING",
+        "bbox": [
+          0.2,
+          0.15,
+          0.8,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

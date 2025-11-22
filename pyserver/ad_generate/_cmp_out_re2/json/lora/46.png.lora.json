@@ -1,0 +1,74 @@
+{
+  "product": {
+    "type": "电动代步车",
+    "material": "塑料",
+    "design": "简约现代，适合老人使用",
+    "features": "轻便、安全、易于操作"
+  },
+  "background": {
+    "prompt": "一位老人和小孩在公园里骑着红色的电动代步车。背景是绿色的草地和树木。",
+    "negative_prompt": "模糊的图像，不清晰的文本，杂乱的背景。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#7A8E9A",
+      "#F7D000",
+      "#FFC107"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.5
+      ],
+      "ratio": [
+        0.8,
+        0.8
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "终于降价了啦",
+        "bbox": [
+          0.1,
+          0.15,
+          0.7,
+          0.2
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "headline",
+        "content": "老人代步车",
+        "bbox": [
+          0.3,
+          0.3,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.8,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "TEMPUR pillow",
+    "material": "全新泰普尔材质",
+    "design": "舒适设计，适合各种睡眠姿势",
+    "features": "限抢买一送一"
+  },
+  "background": {
+    "prompt": "一个穿着睡衣的女性坐在床上，枕着一个白色枕头。背景是床头板和床单。",
+    "negative_prompt": "模糊的图像，不清晰的文本，不相关的物体。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FECFCF",
+      "#ECECEC",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "全新泰普尔材质",
+        "bbox": [
+          0.2,
+          0.15,
+          0.8,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "天猫年货节",
+        "bbox": [
+          0.1,
+          0.1,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

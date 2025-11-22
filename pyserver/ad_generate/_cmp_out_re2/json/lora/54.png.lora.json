@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "home clothing",
+    "material": "long pile fleece",
+    "design": "loose fit",
+    "features": "warmth, comfort"
+  },
+  "background": {
+    "prompt": "A young woman wearing a cozy, warm sweater set against a neutral background. The lighting is soft and even.",
+    "negative_prompt": "blurry, distorted, low quality",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EAEAD2"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.1,
+          0.95,
+          0.4,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "MIIOW",
+        "bbox": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

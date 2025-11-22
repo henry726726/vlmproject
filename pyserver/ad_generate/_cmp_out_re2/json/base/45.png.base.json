@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "jeans",
+    "material": "denim",
+    "design": "straight-leg",
+    "features": "comfortable fit, high waist"
+  },
+  "background": {
+    "prompt": "A person wearing blue jeans standing indoors, with a focus on the lower half of their body.",
+    "negative_prompt": "blurry, out-of-focus, low resolution",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#C0C0C0",
+      "#808080"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "显瘦三十斤",
+        "bbox": [
+          0.1,
+          0.4,
+          0.9,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.7,
+          0.1,
+          0.8,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

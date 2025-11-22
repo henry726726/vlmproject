@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Hair Curler",
+    "material": "Plastic",
+    "design": "Cute Cat Design",
+    "features": "32mm Deep U-Shaped, 2X Deep U,蓬松立体"
+  },
+  "background": {
+    "prompt": "A cute cat-shaped hair curler on a soft background with a young woman holding it.",
+    "negative_prompt": "No people, no background elements.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#EDEDED",
+      "#D3D3C7"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.5,
+        0.5
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "32MM 法式深U蛋卷",
+        "bbox": [
+          0.08,
+          0.25,
+          0.55,
+          0.35
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "华媚 HUAMEI",
+        "bbox": [
+          0.15,
+          0.05,
+          0.35,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

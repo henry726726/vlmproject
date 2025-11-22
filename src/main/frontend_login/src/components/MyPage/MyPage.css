@@ -1,0 +1,213 @@
+.mypage-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    width: 700px;
+    background: linear-gradient(135deg, #98D8C8 0%, #7FB069 100%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(152, 216, 200, 0.3);
+}
+
+.mypage-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.mypage-title {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.mypage-underline {
+    width: 80px;
+    height: 6px;
+    background: linear-gradient(90deg, #A8E6CF, #88D8A3);
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.profile-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(152, 216, 200, 0.2);
+    border: 4px solid #A8E6CF;
+}
+
+.profile-avatar img {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0.7) sepia(0.3) hue-rotate(120deg);
+}
+
+.profile-info {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(152, 216, 200, 0.2);
+}
+
+.info-display .info-item,
+.info-display .bio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.info-display .info-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.7) sepia(0.3) hue-rotate(120deg);
+}
+
+.info-display .label {
+    font-weight: 600;
+    color: #2C5530;
+    min-width: 100px;
+}
+
+.info-display .value {
+    color: #7FB069;
+    font-weight: 500;
+}
+
+.bio-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+}
+
+.bio-item .value {
+    line-height: 1.5;
+    padding-left: 35px;
+}
+
+.info-edit .edit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.info-edit .edit-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.7) sepia(0.3) hue-rotate(120deg);
+}
+
+.info-edit input,
+.info-edit textarea {
+    flex: 1;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #A8E6CF;
+    border-radius: 8px;
+    padding: 0 15px;
+    color: #2C5530;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.info-edit input:focus,
+.info-edit textarea:focus {
+    border-color: #88D8A3;
+    box-shadow: 0 0 8px rgba(152, 216, 200, 0.3);
+}
+
+.info-edit textarea {
+    height: 80px;
+    padding: 10px 15px;
+    resize: vertical;
+}
+
+.info-edit input::placeholder,
+.info-edit textarea::placeholder {
+    color: #95a5a6;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(152, 216, 200, 0.3);
+}
+
+.edit-btn {
+    background: linear-gradient(45deg, #A8E6CF, #88D8A3);
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(152, 216, 200, 0.4);
+    background: linear-gradient(45deg, #88D8A3, #A8E6CF);
+}
+
+.save-btn {
+    background: linear-gradient(45deg, #88D8A3, #7FB069);
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(152, 216, 200, 0.4);
+    background: linear-gradient(45deg, #7FB069, #88D8A3);
+}
+
+.cancel-btn {
+    background: linear-gradient(45deg, #B8D4BA, #A8C4AA);
+}
+
+.cancel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(152, 216, 200, 0.4);
+    background: linear-gradient(45deg, #A8C4AA, #B8D4BA);
+}
+
+.logout-btn {
+    background: linear-gradient(45deg, #FFB6B6, #FF9B9B);
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 182, 182, 0.4);
+    background: linear-gradient(45deg, #FF9B9B, #FFB6B6);
+} 

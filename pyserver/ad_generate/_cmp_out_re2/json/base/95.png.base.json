@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "winter coat",
+    "material": "down",
+    "design": "long",
+    "features": "thick, warm"
+  },
+  "background": {
+    "prompt": "A woman wearing a white down jacket standing against a gradient background.",
+    "negative_prompt": "a person wearing casual clothes, a plain background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#FFD700",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.15
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "COLLOCATION",
+        "bbox": [
+          0.15,
+          0.7,
+          0.85,
+          0.85
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LOGO",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "raw": "```json\n{\n  \"product\": {\n    \"type\": \"bra\",\n    \"material\": \"soft\",\n    \"design\": \"underwire\",\n    \"features\": \"comfortable, invisible\"\n  },\n  \"background\": {\n    \"prompt\": \"A woman wearing a beige bra, with her hands adjusting the straps. The background is a soft, neutral color.\",\n    \"negative_prompt\": \"a man, a cat, a car, a mountain, a desert, a forest, a cityscape, a starry sky, a galaxy, a nebula, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky, a galaxy, a nebula, a starry sky,",
+  "product": {},
+  "background": {
+    "prompt": "",
+    "negative_prompt": "",
+    "camera": {},
+    "lighting": {},
+    "palette": []
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        0.3,
+        0.3
+      ]
+    },
+    "nongraphic_layout": [],
+    "graphic_layout": []
+  }
+}

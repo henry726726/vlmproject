@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "jacket",
+    "material": "leather",
+    "design": "casual",
+    "features": "zipper closure, patch on sleeve"
+  },
+  "background": {
+    "prompt": "A man wearing a black leather jacket against a plain white background. The lighting is soft and even.",
+    "negative_prompt": "any object other than the man and his jacket.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.48,
+        0.48
+      ],
+      "ratio": [
+        0.65,
+        0.65
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "对不起！一家属于胖子的店铺",
+        "bbox": [
+          0.25,
+          0.65,
+          0.85,
+          0.25
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LOGO",
+        "bbox": [
+          0.7,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

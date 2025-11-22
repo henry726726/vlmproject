@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "Sleepwear Set",
+    "material": "60S Silk",
+    "design": "Comfortable and Soft",
+    "features": "Naked Sleep Feeling"
+  },
+  "background": {
+    "prompt": "A pair of light green pajamas hanging on a wooden hanger against a dark green background.",
+    "negative_prompt": "No people, No objects other than the pajamas and hanger.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#2E3440",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "舒服到！不想脱",
+        "bbox": [
+          0.18,
+          0.2,
+          0.78,
+          0.3
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "SHENGLI",
+        "bbox": [
+          0.01,
+          0.1,
+          0.25,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

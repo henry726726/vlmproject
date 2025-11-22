@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "pillow core",
+    "material": "silk",
+    "design": "seven-hole",
+    "features": "comfortable"
+  },
+  "background": {
+    "prompt": "A minimalist setting with a woman in a light dress, a small table with a plant, and a soft lighting.",
+    "negative_prompt": "cluttered background, dark lighting, close-up shot, macro shot, oblique angle",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5DC",
+      "#ECECEC",
+      "#DADADA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.5
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "",
+        "bbox": [
+          0.4,
+          0.45,
+          0.6,
+          0.15
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.7,
+          0.1,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

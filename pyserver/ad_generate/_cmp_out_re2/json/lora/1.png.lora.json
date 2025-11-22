@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "Toothpaste",
+    "material": "Plastic",
+    "design": "Squeeze bottle",
+    "features": "Baby-friendly, probiotic, citrus flavor"
+  },
+  "background": {
+    "prompt": "A soft pink background with a playful illustration of a child's hand holding a toothpaste bottle, a cartoon frog character on the bottle, and a slice of orange fruit. The scene is bright and cheerful.",
+    "negative_prompt": "The background is not pink, the illustration is not playful, the character is not on the bottle, there is no orange fruit.",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFDAB9",
+      "#F0E68C",
+      "#E6E6FA"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "按压式设计让刷牙变的更简单",
+        "bbox": [
+          0.35,
+          0.15,
+          0.7,
+          0.15
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "logo",
+        "content": "青蛙王子",
+        "bbox": [
+          0.7,
+          0.85,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": []
+  }
+}

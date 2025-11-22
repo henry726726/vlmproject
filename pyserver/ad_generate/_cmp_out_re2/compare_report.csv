@@ -1,0 +1,259 @@
+image,model,json_ok,have_headline,have_logo,num_head_boxes,num_logo_boxes,margin_ok_text,margin_ok_logo,ar_text,ar_logo,area_text,area_logo,iou_subject_text,iou_subject_logo,iou_text_logo,energy_text,energy_logo,negspace_compliance,prompt_len,composite_score,headline_suggestion,background_prompt
+0.png,base,1,1,1,1,1,0,1,1.9,1.0,0.475,0.0225,0.1678,0.02,0.0,0.0667,0.1074,1.0,90,3.5977,,a person wearing black pants and a white sweater standing in front of a closet with shoes.
+1.png,base,1,1,1,1,1,0,0,3.0,1.0,0.1875,0.25,0.1774,0.1731,0.0,0.0374,0.0505,1.0,118,3.0767,,"A baby's hand holding a squeeze bottle of toothpaste, with a cartoon character on the bottle, and a toothbrush nearby."
+10.png,base,1,1,1,1,1,0,0,3.4,0.75,0.2125,0.12,0.0,0.0,0.177,0.0459,0.0477,1.0,131,3.5475,,"A person wearing purple waterproof snow boots on a sidewalk, with a colorful background and text highlighting the product features."
+100.png,base,1,1,1,1,1,0,0,2.5,2.0,0.225,0.045,0.0,0.0189,0.0,0.045,0.0147,1.0,143,3.7473,,"a woman wearing a black and white sleeveless dress standing in a modern living room with a wooden floor, soft lighting, and minimalistic decor."
+101.png,base,1,1,1,1,1,0,1,3.2,0.7,0.2,0.175,0.3254,0.2442,0.0,0.0385,0.0495,0.0,71,3.3371,,A woman sleeping on a blue neck pillow against a light blue background.
+102.png,base,1,1,1,1,1,0,0,1.2,1.5,0.3,0.06,0.0909,0.0244,0.0,0.0711,0.028,1.0,87,3.1459,,"A young girl wearing a pink and white striped long-sleeved shirt, smiling and laughing."
+103.png,base,1,1,1,1,1,0,0,2.4286,2.0,0.2975,0.045,0.4693,0.0189,0.0,0.0491,0.0314,0.0,122,3.4011,,A person wearing a pair of black straight-leg pants standing in a modern living room with a beige sofa and a wooden floor.
+104.png,base,1,1,1,2,2,0,1,1.0,2.3333,0.2025,0.0525,0.0523,0.0342,0.0,0.0407,0.0123,1.0,80,3.5561,,"A man wearing light blue thermal underwear, standing against a plain background."
+105.png,base,1,1,1,1,1,0,1,3.4,1.5,0.2125,0.015,0.355,0.0,0.0,0.1041,0.002,0.0,94,3.6586,,"A child sleeping on a pink blanket with a white pillow, soft lighting, eye-level camera angle."
+106.png,base,1,1,1,1,1,0,0,1.3333,1.0,0.12,0.09,0.0323,0.0,0.4,0.0802,0.1065,1.0,98,3.2702,,A person wearing beige tights sitting on a white chair with a stack of folded tights next to them.
+107.png,base,1,1,1,1,1,1,0,1.7143,1.0,0.21,0.2025,0.5099,0.1658,0.0,0.0729,0.0507,0.0,65,3.212,,A woman wearing a gray backpack against a white fence background.
+108.png,base,1,1,1,1,1,1,1,2.0,1.3333,0.245,0.03,0.3828,0.0229,0.0185,0.054,0.065,0.0,54,3.9748,,a man wearing black pajama pants on a green background
+109.png,base,1,1,1,1,1,0,0,2.0,3.3333,0.32,0.075,0.0,0.0545,0.0,0.0914,0.0435,1.0,94,2.7625,,"A woman wearing a cozy, high-neck knit sweater with a patterned skirt and a delicate necklace."
+11.png,base,1,1,1,1,1,1,0,3.2,3.5,0.2,0.14,0.2857,0.1143,0.36,0.0434,0.0657,0.0,123,3.5517,,"a minimalist white background with two women wearing tank tops and jeans, one in pink and the other in black, both smiling."
+110.png,base,1,1,1,1,1,0,1,1.625,3.0,0.26,0.12,0.3478,0.1429,0.0857,0.053,0.0363,0.0,58,3.0197,,a baby sitting in a car seat with a mountainous background
+111.png,base,1,1,1,1,1,0,0,1.6667,1.8333,0.3375,0.165,0.274,0.2069,0.2803,0.136,0.1274,0.0,25,2.5394,,一个穿着时尚的女性站在服装店前，背景是货架和衣物。
+112.png,base,1,1,1,1,1,0,0,3.0,1.0,0.1875,0.0225,0.2959,0.0,0.0,0.043,0.0349,0.0,64,3.3301,,A woman sleeping on a memory foam pillow with a blue background.
+113.png,base,1,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,-1.0,0.0,0,0.0,,
+114.png,base,1,1,1,2,1,1,0,3.2,1.0,0.2,0.25,0.2857,0.1364,0.0,0.0884,0.0235,0.0,81,3.5941,,"a man holding a seat cushion in front of a car, with a building in the background"
+115.png,base,1,1,1,1,1,0,0,3.0,1.0,0.27,0.0225,0.3582,0.0038,0.0,0.0815,0.0814,0.0,18,3.1522,,简洁的白色背景，突出产品特点和品牌。
+116.png,base,1,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,-1.0,0.0,0,0.0,,
+117.png,base,1,1,1,1,1,1,0,2.25,1.0,0.09,0.09,0.0413,0.0074,0.0,0.1433,0.011,1.0,107,4.0742,,"A foldable stool with a person sitting on it, showcasing its compact design and high load-bearing capacity."
+118.png,base,1,1,1,1,1,0,0,3.4,4.3333,0.2125,0.0975,0.2759,0.053,0.2653,0.0872,0.0662,0.0,89,2.6818,,"A woman holding a pet carrier with a small white dog, set against a green ivy background."
+119.png,base,1,1,1,1,1,0,0,4.75,1.5,0.19,0.06,0.0,0.0244,0.0,0.1023,0.0141,1.0,88,3.4936,,"A person wearing sneakers sitting on a shelf, showcasing the shoe's design and features."
+12.png,base,1,1,1,1,1,1,0,2.6667,0.75,0.24,0.12,0.4286,0.0,0.0,0.0395,0.0367,0.0,63,3.5334,,a person wearing wide-legged jeans in a modern interior setting
+120.png,base,1,1,1,1,1,0,0,1.75,2.0,0.28,0.045,0.0,0.0189,0.0,0.0466,0.0016,1.0,125,3.6239,,A woman wearing a light purple sleepwear set with lace details on the collar and cuffs. The background is a soft beige color.
+121.png,base,1,1,1,1,1,1,1,0.8,1.0,0.2,0.04,0.3125,0.0625,0.0,0.0525,0.0282,0.0,112,3.9162,,"A person wearing light gray golf pants and white shoes holding a golf club, standing against a plain background."
+122.png,base,1,1,1,1,1,0,0,0.6667,1.0,0.24,0.09,0.225,0.0,0.0,0.0643,0.0387,0.0,113,2.7273,,"a man wearing black casual pants against a dark textured wall, with white sneakers and a watch on his left wrist."
+123.png,base,1,1,1,1,1,1,0,3.2,1.25,0.2,0.2,0.3659,0.037,0.0,0.0421,0.0265,0.0,77,3.6148,,"a woman wearing black velvet flared pants standing indoors, holding a handbag"
+124.png,base,1,1,1,1,1,0,1,1.0,1.6667,0.2025,0.0375,0.1312,0.0177,0.0,0.0262,0.0075,1.0,111,3.5188,,"A woman wearing a pair of black high-heeled boots with a buckle closure, standing against a neutral background."
+125.png,base,1,1,1,1,1,1,0,2.6667,0.8571,0.24,0.105,0.3333,0.0391,0.0615,0.1058,0.1134,0.0,18,3.4131,,简洁的室内环境，白色墙壁和木质地板。
+126.png,base,1,1,1,1,1,0,1,1.6,0.4,0.4,0.081,0.078,0.0889,0.1045,0.0552,0.0512,1.0,100,3.0234,,A woman in a black Nike shirt standing behind a red gift box with traditional Chinese illustrations.
+127.png,base,1,1,1,1,1,0,0,1.3636,0.75,0.4125,0.12,0.0352,0.0,0.2909,0.0508,0.0418,1.0,27,2.8256,,一个穿着棕色外套的学生站在书架前，手里拿着一本教辅书。
+128.png,base,1,1,1,1,1,1,0,3.4,0.5455,0.2125,0.165,0.355,0.0,0.0,0.0345,0.0419,0.0,86,3.3424,,"A woman holding a tube of sunscreen cream, smiling and looking directly at the camera."
+13.png,base,1,1,1,1,1,0,0,2.0,1.75,0.18,0.28,0.1622,0.0,0.0,0.0608,0.0326,1.0,89,2.9968,,A young boy wearing a formal outfit with black leather shoes on a clean white background.
+14.png,base,1,1,1,1,1,0,1,1.25,0.75,0.2,0.03,0.0874,0.0541,0.0,0.0856,0.0116,1.0,103,3.5364,,"a baby sitting on a pink surface with white fluffy decorations, wearing a pink hat with floral details."
+15.png,base,1,1,1,1,1,0,0,1.2222,2.2,0.2475,0.1375,0.0167,0.1117,0.0,0.0204,0.0505,1.0,87,2.9338,,"A woman holding an iron supplement box, soft lighting, eye-level angle, medium distance"
+16.png,base,1,1,1,1,1,0,0,2.0,1.25,0.125,0.2,0.0838,0.0136,0.0,0.0771,0.0601,1.0,74,3.0296,,"a couple pushing a baby stroller by a lake, soft lighting, eye-level angle"
+17.png,base,1,1,1,1,1,0,0,1.4615,1.0,0.6175,0.09,0.2527,0.0,0.1457,0.0946,0.061,0.0,88,2.7886,,"A child holding a multivitamin box, with a focus on the product's branding and features."
+18.png,base,1,1,1,1,1,0,0,1.0,1.2,0.16,0.075,0.0722,0.0,0.0,0.1736,0.0242,1.0,74,2.8271,,A person wearing outdoor pants standing on grass with a scenic background.
+19.png,base,1,1,1,1,1,0,0,2.0,2.0,0.32,0.045,0.0,0.0189,0.0,0.0489,0.0113,1.0,67,3.3623,,"A woman wearing an orange jacket indoors, smiling and looking back."
+2.png,base,1,1,1,2,1,0,0,1.0,1.125,0.2025,0.18,0.1905,0.0588,0.2143,0.0659,0.0256,1.0,18,2.6364,,简洁的背景，突出裤子的设计和舒适感。
+20.png,base,1,1,1,3,1,1,1,0.5455,2.3333,0.165,0.0525,0.1351,0.1224,0.0,0.0894,0.0093,1.0,72,3.9496,,a woman wearing a pink puffer jacket standing against a plain background
+21.png,base,1,1,1,1,1,0,1,1.8,1.3333,0.1125,0.03,0.1183,0.0263,0.0,0.0583,0.0222,1.0,94,4.0346,,"a baby sleeping in a swaddle blanket with stars and moons on it, soft lighting, eye-level shot"
+22.png,base,1,1,1,1,1,0,0,1.6667,3.3333,0.3375,0.075,0.4762,0.061,0.0,0.05,0.016,0.0,85,2.4007,,"a person wearing a pair of thermal underwear, focusing on the lower half of the body."
+23.png,base,1,1,1,1,1,1,1,1.5556,2.0,0.315,0.08,0.2151,0.2222,0.0464,0.0523,0.0059,0.0,74,3.7758,,a woman wearing a red jacket and black skirt standing against a white wall
+24.png,base,1,1,1,1,1,0,0,1.875,4.0,0.3,0.16,0.0732,0.0,0.4839,0.0508,0.0589,1.0,78,2.6422,,"A woman wearing sunglasses and a white tank top, holding a flower arrangement."
+25.png,base,1,1,1,2,1,1,1,3.2,1.0,0.2,0.0225,0.3659,0.0132,0.0471,0.0856,0.0717,0.0,97,4.2321,,"A woman sitting on a bed with a TEMPUR pillow, surrounded by soft lighting and a cozy atmosphere."
+26.png,base,1,1,1,1,1,0,0,1.125,0.8333,0.18,0.027,0.072,0.0,0.0,0.069,0.0251,1.0,100,3.1607,,"a woman wearing a light pink undergarment, soft and comfortable, with a focus on the design details."
+27.png,base,1,1,1,1,1,0,0,1.7,0.9091,0.425,0.275,0.1805,0.1092,0.5556,0.1133,0.0998,1.0,102,2.7233,,"A woman wearing a pair of olive green leggings, highlighting their soft texture and high waist design."
+28.png,base,1,1,1,1,1,0,0,2.7667,0.14,0.249,0.035,0.0,0.0,0.0798,0.052,0.0441,1.0,138,3.4751,,"A man wearing a black T-shirt with patches on the sleeves, a black cap, and a black face mask. The background is a plain light blue color."
+29.png,base,1,1,1,1,1,1,0,3.2,0.75,0.2,0.12,0.3659,0.0159,0.0,0.0644,0.0164,0.0,56,3.514,,A person wearing flared jeans standing on a tiled floor.
+3.png,base,1,1,1,1,1,0,1,2.3333,1.0,0.21,0.04,0.0411,0.0309,0.0,0.0444,0.0411,1.0,98,3.7798,,"A woman wearing a pair of thermal underwear, with a soft lighting effect and a neutral background."
+30.png,base,1,1,1,1,1,0,1,4.0,0.75,0.16,0.03,0.0,0.0541,0.0,0.0632,0.052,1.0,106,3.8946,,"a warm, neutral-toned background with a minimalist design, featuring two models wearing thermal underwear."
+31.png,base,1,1,1,1,1,1,0,4.25,1.0,0.17,0.09,0.2927,0.0,0.0,0.055,0.0158,0.0,78,3.679,,"A baby sleeping peacefully on a soft blue pillow, surrounded by white bedding."
+32.png,base,1,1,1,1,1,1,1,1.5714,2.3333,0.1925,0.0525,0.5154,0.0,0.0,0.07,0.029,0.0,81,3.9233,,A cute cat-shaped hair curler on a soft background with a young woman holding it.
+33.png,base,1,1,1,1,1,0,0,0.7143,1.6667,0.0875,0.0375,0.0,0.014,0.0,0.0905,0.05,1.0,138,3.8177,,"A man wearing green cargo shorts with multiple pockets, a brown belt, and a watch on his left wrist. The background is a plain gray color."
+34.png,base,1,1,1,1,1,0,1,2.5,0.75,0.1,0.03,0.0698,0.0833,0.0,0.0677,0.0154,1.0,166,4.4525,,"a child wearing thickened sharkskin pattern leggings, standing on a kitchen counter, with a close-up view of the leggings and a text box with promotional information."
+35.png,base,1,1,1,1,1,0,0,2.125,0.7143,0.34,0.0875,0.0,0.0391,0.0,0.0185,0.0344,1.0,152,3.4366,,"a woman wearing a winter coat, a pair of black pants, and a necklace, with a fire effect on the left side, and a plus sign icon in the top right corner."
+36.png,base,1,1,1,1,1,0,0,1.3333,1.0,0.48,0.25,0.1351,0.0339,0.5208,0.0265,0.0191,1.0,74,2.8068,,A woman wearing a formal outfit taking a mirror selfie in a well-lit room.
+37.png,base,1,1,1,2,1,0,1,0.7778,0.8,0.1575,0.05,0.0098,0.0513,0.0,0.0987,0.0863,1.0,67,3.4906,,A grassy field with children wearing cute sweaters and accessories.
+38.png,base,1,1,1,3,1,0,0,1.3636,2.0,0.4125,0.045,0.1931,0.0189,0.0,0.0496,0.0156,1.0,107,3.1198,,"A woman wearing a beige thermal underwear, standing against a light background with a soft lighting effect."
+39.png,base,1,1,1,2,1,0,0,2.0,0.8571,0.32,0.105,0.0,0.0333,0.0241,0.0785,0.0569,1.0,80,3.0734,,"A man playing tennis with a wireless earbud in his ear, wearing a casual outfit."
+4.png,base,1,1,1,1,1,1,0,2.4,1.0,0.15,0.09,0.3691,0.0,0.0,0.0911,0.0281,0.0,80,3.5013,,A woman sleeping peacefully on a white pillow with a blue wristband on her hand.
+40.png,base,1,1,1,1,1,0,0,3.0,0.6,0.27,0.15,0.0,0.0099,0.2727,0.0574,0.0378,1.0,73,2.9185,,A man wearing a black leather jacket standing against a plain background.
+41.png,base,1,1,1,1,1,0,0,3.6,1.0,0.225,0.09,0.2581,0.0056,0.0,0.086,0.0631,0.0,18,2.9723,,一位穿着棕色外套的女性，背景为深色。
+42.png,base,1,1,1,1,1,1,0,1.5,1.25,0.135,0.05,0.2692,0.0,0.0,0.1254,0.0344,0.0,58,3.5494,,A baby wearing a yellow hat is holding a silicone teether.
+43.png,base,1,1,1,1,1,0,0,2.8333,1.375,0.255,0.22,0.0,0.1837,0.0,0.095,0.0231,1.0,100,3.1387,,A person wearing black cargo pants with a white shirt and white sneakers on a plain gray background.
+44.png,base,1,1,1,1,1,0,1,3.0,0.5,0.27,0.02,0.2133,0.0154,0.0,0.0767,0.0637,0.0,102,3.4542,,"A woman wearing a beige long-sleeved thermal underwear, holding up her shirt to show its soft texture."
+45.png,base,1,1,1,1,1,0,0,1.6364,1.5,0.495,0.06,0.2667,0.0,0.0,0.0433,0.0198,0.0,91,3.1261,,"A person wearing blue jeans standing indoors, with a focus on the lower half of their body."
+46.png,base,1,1,1,2,1,1,0,2.6667,1.25,0.24,0.2,0.4286,0.037,0.0,0.0791,0.0674,0.0,22,3.385,,一位老人和孩子在公园里骑着红色的电动代步车。
+47.png,base,1,1,1,1,1,0,1,1.75,1.0,0.28,0.04,0.1852,0.0127,0.0,0.0438,0.0137,1.0,13,3.4967,,运动场景，背景为红色跑道。
+48.png,base,1,1,1,1,1,0,0,1.875,0.6,0.3,0.15,0.082,0.0303,0.25,0.0749,0.0523,1.0,73,2.6546,,"A woman wearing a black hat and holding a phone, with a white background."
+49.png,base,1,1,1,1,1,0,0,5.3333,1.25,0.12,0.2,0.0,0.1546,0.0,0.0596,0.0543,1.0,116,3.5961,,"A person wearing a stylish black leather jacket with a crocodile pattern, standing against a plain white background."
+5.png,base,1,1,1,1,1,0,0,3.0,1.5,0.27,0.06,0.087,0.0,0.0,0.0765,0.0091,1.0,74,3.4614,,A man wearing gray casual pants with white sneakers on a plain background.
+50.png,base,1,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,-1.0,0.0,0,0.0,,
+51.png,base,1,1,1,1,1,0,0,2.0,2.0,0.18,0.045,0.0,0.0189,0.0,0.0843,0.0501,1.0,79,3.3333,,"A woman wearing cat-eye glasses, with a soft lighting and a neutral background."
+52.png,base,1,1,1,1,1,0,0,1.6364,2.0,0.495,0.045,0.5442,0.0458,0.0,0.0678,0.0577,0.0,62,2.8867,,A person holding a thick chopstick rest with a red background.
+53.png,base,1,1,1,1,1,0,1,3.0,1.5,0.1875,0.135,0.259,0.375,0.2647,0.0843,0.0488,0.0,94,3.2379,,"A person wearing warm, cozy brown pants and matching socks, standing on a light-colored floor."
+54.png,base,1,1,1,1,1,0,1,2.3333,1.3333,0.0525,0.03,0.0,0.0526,0.0,0.0764,0.0036,1.0,92,4.186,,"a cozy indoor setting with a neutral color palette, soft lighting, and a relaxed atmosphere."
+55.png,base,1,1,1,1,1,0,0,5.0,2.0,0.1125,0.045,0.0,0.0189,0.0,0.1152,0.0362,1.0,83,3.8842,,"a woman wearing a beige knit sweater, soft lighting, close-up shot, eye-level angle"
+56.png,base,1,1,1,1,1,0,1,3.3333,1.4,0.075,0.0875,0.0,0.2431,0.0,0.076,0.1113,1.0,98,3.9306,,"A woman wearing a beige V-neck undergarment with lace trim, standing against a neutral background."
+57.png,base,1,1,1,1,1,0,0,2.7143,0.9091,0.3325,0.275,0.0453,0.1092,0.4046,0.1309,0.0972,1.0,29,2.9072,,绿意盎然的户外环境，背景为草地和树木，营造自然舒适的氛围。
+58.png,base,1,1,1,1,1,0,0,2.3333,2.0,0.21,0.045,0.0962,0.0125,0.0,0.0333,0.0241,1.0,106,3.3605,,a minimalist fashion advertisement with three models wearing different outfits against a plain background.
+59.png,base,1,1,1,1,1,0,0,3.0,0.75,0.27,0.12,0.05,0.0159,0.3,0.0683,0.0401,1.0,84,3.1681,,A young woman holding a pair of black and white sneakers against a plain background.
+6.png,base,1,1,1,1,1,1,0,2.4,1.0,0.15,0.0225,0.3077,0.0,0.0,0.0339,0.1262,0.0,106,3.809,,A close-up of a person wearing black shark pants with a white and blue striped sweater and white sneakers.
+60.png,base,1,1,1,1,1,0,0,2.6667,1.3158,0.24,0.19,0.048,0.2088,0.0361,0.0976,0.022,1.0,180,3.3563,,"a man wearing a white hoodie with black stripes on the sleeves, standing in front of a white background, with a red banner at the bottom displaying 'Sell well' and '服从你的渴望 高品质 高颜值'"
+61.png,base,1,1,1,1,1,0,0,17.0,1.0,0.0425,0.0625,0.0,0.0,0.0,0.0101,0.0485,1.0,68,3.7042,,a woman wearing a pink robe and black lace bra in a bathroom setting
+62.png,base,1,1,1,1,1,0,1,1.6,0.6667,0.1,0.06,0.0,0.0769,0.0,0.0348,0.0478,1.0,118,3.7678,,"A cozy indoor setting with a soft light, featuring a person wearing a pink velvet sleepwear set, holding a teddy bear."
+63.png,base,1,1,1,2,1,0,0,4.0,1.0,0.16,0.25,0.1389,0.087,0.0,0.0872,0.0893,1.0,88,3.1091,,"a group of smiling babies wearing glasses, soft lighting, close-up shot, eye-level angle"
+64.png,base,1,1,1,1,1,0,0,1.4545,0.75,0.44,0.12,0.1636,0.0,0.1915,0.0504,0.0066,1.0,86,2.878,,A woman in a white dress standing in a minimalist room with a small table and a plant.
+65.png,base,1,1,1,1,1,0,0,1.875,2.0,0.3,0.045,0.0,0.0189,0.0,0.0646,0.0,1.0,83,3.3343,,"A man wearing a black down jacket with a hood, standing against a plain background."
+66.png,base,1,1,1,1,1,0,0,2.25,1.0,0.36,0.09,0.0,0.0,0.25,0.0716,0.0666,1.0,171,3.3887,,"a woman wearing an ancient Chinese costume with intricate embroidery and a floral headdress, set against a dark background with traditional Chinese characters on the wall."
+67.png,base,1,1,1,1,1,0,0,2.125,2.0,0.34,0.045,0.1475,0.0125,0.0,0.0848,0.0375,1.0,81,3.2563,,"A woman wearing a beige cable-knit sweater, standing in front of a clothing rack."
+68.png,base,1,1,1,1,1,0,0,2.6667,1.3333,0.24,0.27,0.0,0.2,0.0625,0.0933,0.0355,1.0,122,3.3889,,"a young man wearing a red sweater with black lettering, sunglasses, and a chain necklace against a plain white background."
+69.png,base,1,1,1,1,1,0,0,5.0,2.0,0.1125,0.045,0.0,0.0125,0.0,0.0565,0.0468,1.0,110,3.9205,,"a person wearing a beige coat holding a brown leather handbag, soft lighting, eye-level angle, medium distance"
+7.png,base,1,1,1,1,1,0,1,1.8,1.3333,0.1125,0.03,0.0662,0.009,0.0,0.0734,0.0578,1.0,96,4.0636,,"a cozy bedroom setting with a white bed and pillows, soft lighting, and a neutral color palette."
+70.png,base,1,1,1,1,2,1,0,2.6667,0.5455,0.24,0.165,0.2564,0.2206,0.0,0.0509,0.0576,0.0,76,3.2326,,A woman holding two orange tubes of flower drink against a black background.
+71.png,base,1,1,1,1,1,0,0,3.8,1.2727,0.2375,0.385,0.3352,0.1779,0.0,0.0266,0.0366,0.0,87,2.9731,,"A woman with long, straight hair styled with metallic beads. The background is neutral."
+72.png,base,1,1,1,1,1,0,0,2.8333,1.125,0.255,0.18,0.3289,0.1391,0.0,0.0568,0.05,0.0,94,2.9484,,"A close-up of a smartwatch on a person's wrist, with a soft lighting and a neutral background."
+73.png,base,1,1,1,1,1,0,0,3.2,2.0,0.2,0.045,0.125,0.0,0.225,0.0552,0.0733,1.0,110,3.3897,,"a woman wearing a white dress with a pearl chain shoulder strap, soft lighting, eye-level angle, close-up view"
+74.png,base,1,1,1,1,1,1,1,1.4286,1.3333,0.175,0.03,0.2395,0.0347,0.0513,0.039,0.0598,0.0,67,4.0775,,A woman is jumping rope on a pink mat in a pink room with curtains.
+75.png,base,1,1,1,1,1,1,1,1.6667,2.0,0.15,0.045,0.3386,0.0931,0.0833,0.0932,0.1118,0.0,161,4.2693,,"A pregnant woman sitting in a car, wearing a gray protective vest over her white top. The background shows a blurred view of a road and trees outside the window."
+76.png,base,1,1,1,1,1,0,0,3.75,1.2,0.15,0.075,0.203,0.0,0.25,0.0491,0.0583,0.0,80,3.0868,,A group of children wearing colorful winter clothing standing on a snowy ground.
+77.png,base,1,1,1,1,1,0,0,3.0,6.0,0.27,0.135,0.0,0.2222,0.0,0.0945,0.0648,1.0,89,2.8392,,"A woman wearing a red floral blouse with a black bow tie, soft lighting, eye-level angle."
+78.png,base,1,1,1,1,1,0,0,2.6667,1.0,0.24,0.09,0.0,0.0,0.134,0.1339,0.0857,1.0,107,3.1402,,"a woman wearing a beige crop top and light blue jeans, standing in front of a bookshelf with various items."
+79.png,base,1,1,1,1,1,0,1,2.0,1.0,0.32,0.0225,0.0968,0.0625,0.0,0.0831,0.004,1.0,141,3.9537,,"A woman wearing a purple long-sleeved shirt with a classic collar, standing against a light-colored wall with green plants in the background."
+8.png,base,1,1,1,1,1,1,0,0.7273,1.1111,0.22,0.225,0.3182,0.1759,0.0,0.0709,0.0314,0.0,82,3.1817,,"A child wearing black pants with a blue logo, standing against a plain background."
+80.png,base,1,1,1,2,1,1,0,2.5,0.75,0.081,0.12,0.0726,0.0,0.0,0.0768,0.0345,1.0,99,4.1329,,"A close-up of a person wearing a knee support strap, focusing on the adjustable sticky band design."
+81.png,base,1,1,1,1,1,0,0,1.8889,2.0,0.3825,0.045,0.3944,0.0189,0.0,0.0356,0.0389,0.0,99,3.0701,,"a woman wearing a dark blue knit dress and sweater set, standing indoors with a neutral background."
+82.png,base,1,1,1,1,1,0,1,1.75,1.75,0.28,0.07,0.122,0.1094,0.0,0.094,0.0298,1.0,79,3.3092,,"A cozy living room setting with a soft, plush sofa and a neutral color palette."
+83.png,base,1,1,1,1,1,0,1,2.3333,1.0,0.21,0.0225,0.1806,0.0153,0.0,0.0204,0.0645,1.0,48,3.5997,,A woman practicing yoga on a patterned yoga mat.
+84.png,base,1,1,1,1,1,0,0,2.0,1.0,0.32,0.25,0.0,0.0339,0.5405,0.0499,0.0457,1.0,82,2.9892,,A woman holding a vacuum compression bag in front of a closet filled with clothes.
+85.png,base,1,1,1,1,1,0,0,1.8,1.6667,0.45,0.15,0.4156,0.1791,0.0435,0.0806,0.0224,0.0,75,2.678,,A man wearing a blue classic menswear shirt with a small logo on the chest.
+86.png,base,1,1,1,1,1,0,1,2.3333,0.75,0.21,0.03,0.0,0.0263,0.0,0.0742,0.0238,1.0,16,3.6965,,城市天际线背景，男性运动员形象。
+87.png,base,1,1,1,1,1,0,0,1.3333,1.0,0.48,0.25,0.6,0.2192,0.2586,0.0872,0.0755,0.0,74,2.3935,,"A baby lying on its back on a soft blanket, wearing comfortable sleepwear."
+88.png,base,1,1,1,1,1,0,0,1.75,2.5,0.28,0.1,0.1179,0.0888,0.0,0.053,0.0046,1.0,98,2.952,,"A close-up shot of a woman wearing a pearl necklace, highlighting its elegance and sophistication."
+89.png,base,1,1,1,1,1,1,0,2.0,2.0,0.32,0.045,0.5455,0.0125,0.0,0.024,0.0427,0.0,79,3.5923,,a pair of beige pants worn by two people standing side by side on a gray floor.
+9.png,base,1,1,1,1,1,0,0,1.8889,0.75,0.3825,0.12,0.2532,0.0,0.1356,0.0567,0.0126,0.0,64,2.8939,,a woman wearing a black winter coat against a neutral background
+90.png,base,1,1,1,1,1,0,0,2.6667,1.5,0.24,0.06,0.0,0.0244,0.0,0.0474,0.0132,1.0,116,3.4712,,"A person in green scrubs holding a blue tennis racket, standing in front of a wooden shelf with a plant on the left."
+91.png,base,1,1,1,1,1,0,1,1.8,2.5,0.3645,0.025,0.0432,0.0349,0.0,0.0285,0.0689,1.0,99,3.6914,,"A young man wearing a black and white jacket, standing in front of a chalkboard with a casual pose."
+92.png,base,1,1,1,1,1,0,0,1.5455,2.0,0.4675,0.045,0.1619,0.0,0.0,0.0415,0.0184,1.0,78,3.1857,,A person wearing jeans and a black jacket standing against a plain background.
+93.png,base,1,1,1,1,1,0,0,0.8889,1.75,0.18,0.07,0.1392,0.0488,0.0,0.0864,0.0299,1.0,71,2.7885,,A woman holding a light blue coffee cup against a soft pink background.
+94.png,base,1,1,1,1,1,0,0,2.6667,1.0,0.24,0.25,0.0,0.0339,0.4412,0.071,0.0604,1.0,69,3.1046,,A man wearing a green jacket standing against a blue sky with clouds.
+95.png,base,1,1,1,1,1,0,0,2.8333,2.0,0.255,0.045,0.0,0.0189,0.0,0.0713,0.0226,1.0,75,3.4855,,A woman wearing a white down jacket standing against a gradient background.
+96.png,base,1,1,1,1,1,1,0,2.6,1.6667,0.234,0.0375,0.4043,0.0433,0.015,0.0825,0.0809,0.0,89,3.73,,A pair of light green pajamas hanging on a wooden hanger against a dark green background.
+97.png,base,1,1,1,1,1,0,0,1.6,2.0,0.4,0.045,0.1692,0.0189,0.0,0.0493,0.0371,1.0,81,3.1718,,"A woman wearing a red turtleneck sweater with a gold necklace, standing outdoors."
+98.png,base,1,1,1,1,1,0,0,1.7273,2.0,0.5225,0.045,0.1136,0.0189,0.0,0.0403,0.037,1.0,107,3.2373,,"A woman wearing a form-fitting beige shapewear dress, standing in a well-lit room with a soft light source."
+99.png,base,1,1,1,1,1,0,1,2.3333,1.125,0.21,0.18,0.0625,0.2424,0.0,0.0654,0.0327,1.0,83,3.3982,,A man wearing a black Nike hoodie and sunglasses standing outdoors with a backpack.
+0.png,lora,1,1,1,1,1,0,1,4.3333,1.0,0.0975,0.01,0.0975,0.01,0.0,0.095,0.0215,1.0,89,3.9855,,a person wearing black pants and white slippers standing in front of a closet with shoes.
+1.png,lora,1,1,0,2,0,0,0,4.3333,0.0,0.0975,0.0,0.0975,0.0,0.0,0.0437,-1.0,1.0,200,2.5155,,"A soft pink background with a playful illustration of a child's hand holding a toothpaste bottle, a cartoon frog character on the bottle, and a slice of orange fruit. The scene is bright and cheerful."
+10.png,lora,1,1,1,1,1,0,1,7.6667,1.0,0.1104,0.01,0.0,0.0,0.0433,0.0384,0.1061,1.0,82,4.0671,,"A person wearing purple winter boots on a sidewalk. Soft lighting, eye-level shot."
+100.png,lora,1,1,1,1,1,0,1,4.6667,1.25,0.105,0.008,0.105,0.008,0.0,0.0427,0.006,1.0,22,3.9157,,室内场景，木质地板，浅色墙壁，柔和自然光线。
+101.png,lora,1,1,1,2,1,0,1,7.0,1.0,0.07,0.01,0.07,0.01,0.0,0.0297,0.0479,1.0,110,4.0386,,"a woman sleeping on a blue neck pillow against a light blue background, soft lighting, eye-level camera angle."
+102.png,lora,1,1,1,1,1,1,1,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0381,0.0357,1.0,126,4.9115,,"A young girl wearing a pink and white striped long-sleeved shirt, smiling and laughing. The background is a soft pastel color."
+103.png,lora,1,1,1,1,1,0,1,4.3333,1.25,0.0975,0.008,0.0975,0.008,0.0,0.027,0.0111,1.0,93,4.0293,,a person wearing black pants standing in a living room with a beige sofa and a brown handbag.
+104.png,lora,1,1,1,1,1,0,1,3.0,2.0,0.03,0.005,0.03,0.005,0.0,0.0555,0.0046,1.0,101,3.6623,,"a man wearing light blue thermal underwear against a plain background, soft lighting, eye-level shot."
+105.png,lora,1,1,1,1,1,0,1,6.0,1.6,0.06,0.004,0.06,0.004,0.0,0.0885,0.004,1.0,102,4.0221,,"a child sleeping on a bed with a pink blanket and white pillow, soft lighting, eye-level camera angle."
+106.png,lora,1,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,-1.0,0.0,0,0.0,,
+107.png,lora,1,1,1,1,1,1,1,4.0,0.5,0.09,0.005,0.09,0.005,0.0,0.066,0.0258,1.0,129,4.6097,,A woman wearing a large grey backpack against a white fence background. The backpack has multiple compartments and a brand label.
+108.png,lora,1,1,1,1,1,1,1,4.0,2.0,0.09,0.005,0.09,0.005,0.0,0.0591,0.0163,1.0,107,4.6158,,"a green background with a man wearing black pajama pants, soft lighting from front, eye-level camera angle."
+109.png,lora,1,1,1,1,1,0,1,4.3333,2.0,0.0975,0.005,0.0975,0.005,0.0,0.1121,0.0362,1.0,22,3.8747,,一位穿着时尚的女性模特，背景为柔和的棕色调。
+11.png,lora,1,1,1,1,1,1,0,6.8333,6.25,0.0984,0.04,0.0984,0.04,0.3411,0.0465,0.049,1.0,104,4.0752,,"a plain white background with two women wearing tank tops and jeans, one in pink and the other in black."
+110.png,lora,1,1,1,1,1,0,1,4.0,4.0,0.09,0.01,0.09,0.01,0.0,0.0439,0.0051,1.0,20,3.6246,,车内环境，婴儿坐在汽车座椅上，背景模糊。
+111.png,lora,1,1,1,1,1,0,1,4.0,1.0,0.09,0.01,0.09,0.01,0.0,0.1305,0.1701,1.0,16,3.8397,,室内服装店环境，模特站在镜子前。
+112.png,lora,1,1,1,1,1,0,0,4.0,1.0,0.09,0.01,0.09,0.01,0.0,0.0323,0.0257,1.0,107,3.6275,,A woman sleeping on a white memory foam pillow against a blue background. The pillow has a label with text.
+113.png,lora,1,1,1,1,1,0,1,8.0,2.0,0.08,0.005,0.08,0.005,0.0,0.0509,0.0021,1.0,116,4.0305,,A model wearing a white knit sweater with a floral lace collar and pearl accessories. The background is plain white.
+114.png,lora,1,1,1,1,1,0,1,5.5,2.0,0.055,0.005,0.055,0.005,0.0,0.0904,0.0847,1.0,108,4.0078,,"a man standing on a sidewalk holding a cushion, a car and a building in the background, clear sky, sunny day"
+115.png,lora,1,1,1,4,1,0,1,7.0,1.0,0.07,0.0025,0.07,0.0025,0.0,0.05,0.0001,1.0,16,3.9397,,简洁的白色背景，突出产品和品牌。
+116.png,lora,1,1,1,1,1,1,1,2.0,1.5,0.045,0.015,0.045,0.015,0.0,0.0324,0.0398,1.0,93,4.7369,,"A woman wearing a beige bra, holding it up to show its design. Soft lighting, eye-level shot."
+117.png,lora,1,1,1,1,1,1,1,6.0,1.0,0.06,0.01,0.06,0.01,0.0,0.0359,0.03,1.0,18,4.5455,,简洁的大理石纹理背景，突出产品细节。
+118.png,lora,1,1,1,1,1,0,1,4.6667,2.0,0.105,0.02,0.105,0.02,0.0,0.0667,0.0891,1.0,110,4.2287,,"a woman holding a pet carrier bag with a small white dog, green ivy background, soft lighting, eye-level shot."
+119.png,lora,1,1,1,1,1,0,0,9.0,3.0,0.09,0.03,0.09,0.03,0.0,0.1162,0.0147,1.0,86,3.8193,,A person sitting on a shelf wearing jeans and sneakers. The background is plain white.
+12.png,lora,1,1,1,1,1,1,1,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0409,0.1113,1.0,64,4.5842,,A person wearing wide-legged jeans in a modern interior setting.
+120.png,lora,1,1,1,1,1,1,1,4.0,2.0,0.09,0.005,0.09,0.005,0.0,0.0169,0.002,1.0,103,4.644,,A woman wearing a light purple sleepwear set against a plain background. The lighting is soft and even.
+121.png,lora,1,1,1,1,1,1,1,2.0,2.0,0.08,0.005,0.08,0.005,0.0,0.025,0.1481,1.0,130,4.7502,,"A person wearing Page & Tuttle Golf trousers standing with one hand in pocket, holding a golf club. The background is plain white."
+122.png,lora,1,1,1,1,1,1,1,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0614,0.1064,1.0,98,4.5834,,"a man wearing black pants against a dark textured wall, gray floor tiles, soft lighting from above"
+123.png,lora,1,1,1,1,1,0,0,3.6667,1.0,0.0825,0.01,0.0825,0.01,0.0,0.0411,0.0171,1.0,102,3.6292,,"a person wearing black pants standing indoors, holding a bag, with a checkered chair and marble floor."
+124.png,lora,1,1,1,1,1,0,1,5.0,2.0,0.05,0.005,0.05,0.005,0.0,0.041,0.0011,1.0,109,4.0577,,A woman wearing brown knee-high boots against a neutral background. The scene is well-lit with soft lighting.
+125.png,lora,1,1,1,1,1,1,1,5.3333,1.0,0.12,0.01,0.12,0.01,0.04,0.1161,0.1156,1.0,23,4.4302,,简洁的室内环境，木质地板和白色墙壁，植物点缀。
+126.png,lora,1,1,1,2,1,0,1,4.6667,2.0,0.105,0.005,0.105,0.005,0.0476,0.1011,0.0419,1.0,179,4.2654,,A woman in a black Nike sweatshirt standing behind a red gift box with a traditional Chinese design. The background features a wooden wall with circular cutouts and warm lighting.
+127.png,lora,1,1,0,2,0,0,0,4.3333,0.0,0.0975,0.0,0.0975,0.0,0.0,0.0801,-1.0,1.0,71,2.1937,,a young woman holding a book in front of a bookshelf filled with books.
+128.png,lora,1,1,1,2,1,0,1,5.6667,1.0,0.1275,0.01,0.1275,0.01,0.0,0.0384,0.0673,1.0,91,3.5893,,"a woman holding a sunscreen tube, indoor setting with soft lighting and neutral background."
+13.png,lora,1,1,1,2,1,0,0,3.3333,5.0,0.075,0.05,0.075,0.05,0.0,0.0658,0.0746,1.0,107,3.5381,,A young boy wearing formal attire standing against a plain background. The shoes are displayed prominently.
+14.png,lora,1,1,1,1,1,1,1,5.3333,0.8,0.12,0.008,0.12,0.008,0.0,0.0718,0.029,1.0,94,4.5831,,"a baby sitting on a soft, fluffy surface with a pink background, conveying warmth and comfort."
+15.png,lora,1,1,1,2,1,0,0,1.6667,5.0,0.15,0.05,0.1724,0.0314,0.0,0.0613,0.033,1.0,76,2.868,,"a woman holding a supplement box, soft lighting, pastel background, balloons"
+16.png,lora,1,1,1,2,1,0,1,5.0,1.0,0.05,0.01,0.05,0.01,0.0,0.072,0.1283,1.0,34,3.9111,,一对父母推着婴儿车在户外散步，背景是湖泊和树木。天气晴朗，光线柔和。
+17.png,lora,1,1,0,2,0,0,0,3.2,0.0,0.2,0.0,0.2,0.0,0.0,0.0915,-1.0,1.0,67,1.7151,,"child holding a product box, indoor setting with neutral background"
+18.png,lora,1,1,1,1,1,1,1,3.0,1.0,0.0675,0.01,0.0675,0.01,0.0,0.1435,0.0275,1.0,99,4.5762,,"a grassy field with a blurred background of trees and a wooden bench, soft lighting, eye-level shot"
+19.png,lora,1,1,1,1,1,0,1,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.081,0.0245,1.0,74,3.988,,"A woman wearing an orange jacket indoors, smiling and holding the hood up."
+2.png,lora,1,1,1,2,1,0,0,3.3333,3.3333,0.075,0.075,0.075,0.075,0.0,0.0937,0.0371,1.0,21,3.1664,,简洁的灰色背景，模特穿着运动裤和白色上衣。
+20.png,lora,1,1,1,1,1,1,1,1.3333,4.0,0.03,0.01,0.03,0.01,0.0,0.0541,0.0064,1.0,71,3.6825,,A woman wearing a light pink down jacket standing against a plain wall.
+21.png,lora,1,1,1,1,1,0,1,3.3333,1.875,0.075,0.012,0.075,0.012,0.0,0.0594,0.0333,1.0,22,3.9192,,温馨的室内环境，柔和的灯光，婴儿床或地板上。
+22.png,lora,1,1,1,2,1,1,1,4.0,1.0,0.09,0.01,0.09,0.01,0.0,0.0649,0.0031,1.0,98,4.6124,,A person wearing a pair of thermal underwear with a pocket on the side. The background is neutral.
+23.png,lora,1,1,1,1,1,0,0,8.0,8.0,0.08,0.08,0.08,0.08,1.0,0.0214,0.0214,1.0,16,3.0069,,简洁的白色背景，突出产品和模特。
+24.png,lora,1,1,1,1,1,1,1,6.0,6.0,0.06,0.06,0.06,0.06,0.0,0.0236,0.0471,1.0,103,4.5744,,"A woman wearing sunglasses and a white tank top, holding flowers, with green foliage in the background."
+25.png,lora,1,1,1,1,1,0,1,5.3333,2.0,0.12,0.005,0.12,0.005,0.0,0.1024,0.0733,1.0,33,3.8574,,一个穿着睡衣的女性坐在床上，枕着一个白色枕头。背景是床头板和床单。
+26.png,lora,1,1,0,2,0,1,0,5.3333,0.0,0.12,0.0,0.12,0.0,0.0,0.0149,-1.0,1.0,65,2.8171,,a woman wearing a light pink tank top against a plain background.
+27.png,lora,1,1,1,2,1,0,0,3.2,5.0,0.2,0.05,0.2,0.05,0.25,0.1272,0.1186,1.0,130,3.255,,"A woman wearing a pair of olive green leggings, highlighting the high waist and full-length design. The background is plain white."
+28.png,lora,1,1,1,1,1,0,0,3.0,2.0,0.27,0.045,0.27,0.045,0.0,0.0494,0.0134,0.0,75,3.3262,,"A man wearing a black T-shirt and cap, standing against a plain background."
+29.png,lora,1,1,1,1,1,0,1,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0324,0.2126,1.0,27,3.869,,一位穿着牛仔喇叭裤的人站在室内，背景为浅色墙壁和地板。
+3.png,lora,1,1,1,1,1,0,1,3.6667,1.0,0.0825,0.01,0.0825,0.01,0.0,0.0303,0.0969,1.0,109,4.0197,,A woman wearing a brown and green thermal underwear against a plain background. Soft lighting from the front.
+30.png,lora,1,1,1,2,1,0,1,4.0,1.0,0.09,0.01,0.09,0.01,0.0,0.0743,0.0684,1.0,61,3.9937,,"A warm, neutral-toned background with a soft lighting effect."
+31.png,lora,1,1,1,1,1,1,1,7.3333,1.6667,0.1056,0.006,0.1056,0.006,0.0,0.0249,0.1114,1.0,57,4.5059,,A baby sleeping on a blue U-shaped pillow on a white bed.
+32.png,lora,1,1,1,1,1,1,1,4.6667,2.0,0.105,0.005,0.105,0.005,0.0,0.0689,0.1894,1.0,135,4.8648,,"A soft beige background with a cute cat hair styling tool on a white table. A young woman is holding the tool, showcasing its features."
+33.png,lora,1,1,1,1,1,1,1,7.0,4.6667,0.07,0.105,0.07,0.105,0.25,0.0542,0.0503,1.0,14,4.1259,,灰色背景，模特穿着绿色短裤。
+34.png,lora,1,1,1,1,1,0,1,3.3333,2.0,0.075,0.005,0.0296,0.0,0.0,0.0727,0.1196,1.0,115,4.0317,,"a child wearing thickened shark pants in a kitchen setting, with a focus on the pants' design and comfort features."
+35.png,lora,1,1,1,1,1,0,0,9.0,1.0,0.09,0.09,0.09,0.09,0.0,0.0336,0.0341,1.0,88,3.585,,"a woman wearing a winter coat against a plain background, soft lighting, eye-level shot."
+36.png,lora,1,1,1,1,1,0,1,2.6,1.3333,0.1625,0.03,0.1845,0.0469,0.1846,0.0387,0.0628,1.0,107,3.678,,A woman taking a mirror selfie in a stylish outfit. The background is a modern interior with warm lighting.
+37.png,lora,1,1,1,1,1,0,1,5.0,1.5,0.05,0.015,0.05,0.015,0.0,0.1362,0.1698,1.0,92,4.2118,,"a grassy outdoor setting with two children wearing sweaters and pants, one holding a basket."
+38.png,lora,1,1,1,3,1,0,1,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.049,0.0165,1.0,80,4.0088,,"A woman wearing a beige thermal undergarment against a soft, blurred background."
+39.png,lora,1,1,1,2,1,0,0,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.114,0.0175,1.0,117,3.5696,,"A man playing tennis on an outdoor court with a bright, sunny day. The background is blurred to focus on the subject."
+4.png,lora,1,1,1,2,1,1,0,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0658,0.0325,1.0,61,4.1955,,A woman sleeping on a white pillow in a cozy bedroom setting.
+40.png,lora,1,1,1,1,1,0,1,3.0,2.0,0.1875,0.005,0.1642,0.0,0.0,0.0768,0.0019,1.0,101,3.5586,,A man wearing a black leather jacket against a plain white background. The lighting is soft and even.
+41.png,lora,1,1,1,1,1,0,0,6.0,1.0,0.135,0.01,0.135,0.01,0.0,0.1192,0.1097,1.0,18,3.027,,一位穿着棕色外套的女性，背景为深色。
+42.png,lora,1,1,1,1,1,1,1,2.6,0.8,0.1625,0.008,0.1625,0.008,0.0,0.1064,0.0663,1.0,84,4.0585,,"a baby wearing a yellow hat, holding a silicone teether, against a plain background."
+43.png,lora,1,1,1,1,1,0,1,2.75,1.0,0.11,0.01,0.11,0.01,0.0,0.0627,0.0345,1.0,17,3.8518,,简洁灰色背景，突出裤子和品牌标志。
+44.png,lora,1,1,1,2,1,0,1,4.3333,1.0,0.0975,0.0064,0.0975,0.0064,0.0,0.0693,0.1599,1.0,106,3.975,,"a warm, neutral background with two models wearing thermal underwear, highlighting the product's features."
+45.png,lora,1,1,1,1,1,0,0,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0278,0.0333,1.0,88,3.6077,,"a person wearing jeans standing indoors, floor visible, some furniture in the background"
+46.png,lora,1,1,1,2,1,1,1,3.5,1.0,0.14,0.01,0.2187,0.0156,0.0,0.0771,0.0761,0.0,34,3.9976,,一位老人和小孩在公园里骑着红色的电动代步车。背景是绿色的草地和树木。
+47.png,lora,1,1,1,2,1,0,1,4.0,0.6667,0.09,0.015,0.09,0.015,0.0,0.0388,0.0126,1.0,18,3.8737,,一个室内跑步场景，背景为红色的墙壁。
+48.png,lora,1,1,1,1,1,0,1,6.0,1.0,0.06,0.01,0.06,0.01,0.0,0.045,0.1711,1.0,30,3.9118,,一位年轻女性戴着黑色帽子，手持手机自拍。背景简洁，突出产品。
+49.png,lora,1,1,1,1,1,0,1,17.0,1.0,0.0425,0.01,0.0425,0.01,0.0,0.0184,0.0686,1.0,18,3.9605,,简洁的白色背景，突出产品和促销信息。
+5.png,lora,1,1,1,1,1,0,1,6.0,1.0,0.135,0.01,0.135,0.01,0.0,0.1071,0.0177,1.0,15,3.4527,,简洁灰色背景，突出裤子和品牌。
+50.png,lora,1,1,1,2,1,0,1,4.0,2.0,0.09,0.02,0.09,0.02,0.0,0.0559,0.0054,1.0,65,4.2624,,Two women wearing a face mask shirt against a neutral background.
+51.png,lora,1,1,1,1,1,1,0,5.3333,0.5,0.12,0.02,0.1143,0.0,0.0,0.0372,0.0646,1.0,97,4.1547,,"A close-up shot of a person wearing stylish eyewear, with a soft lighting and neutral background."
+52.png,lora,1,1,1,1,1,0,0,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.113,0.0591,1.0,57,3.4514,,A person holding a thick chopboard with a red background.
+53.png,lora,1,1,1,1,1,0,1,5.8333,1.25,0.084,0.008,0.084,0.008,0.0,0.1231,0.0973,1.0,118,3.9639,,A person wearing brown corduroy pants and beige socks standing on a light-colored floor. The focus is on the sneakers.
+54.png,lora,1,1,1,1,1,0,1,8.0,1.0,0.02,0.01,0.02,0.01,0.0,0.0535,0.0042,1.0,107,3.6681,,"A young woman wearing a cozy, warm sweater set against a neutral background. The lighting is soft and even."
+55.png,lora,1,1,1,1,1,0,1,10.0,2.0,0.025,0.005,0.025,0.005,0.0,0.098,0.0405,1.0,84,3.6331,,"A woman wearing a beige knit sweater, close-up shot, soft lighting, eye-level angle."
+56.png,lora,1,1,1,1,1,0,1,4.6667,2.0,0.105,0.005,0.105,0.005,0.0,0.0357,0.0208,1.0,111,4.0184,,"A woman wearing a beige undergarment with a delicate lace trim. The background is a neutral, soft-colored room."
+57.png,lora,1,1,1,1,1,0,0,6.0,1.0,0.135,0.01,0.135,0.01,0.0,0.1683,0.0683,1.0,29,3.0059,,一位优雅的女性坐在户外，背景是绿色的草坪和树木，阳光明媚。
+58.png,lora,1,1,1,1,1,0,1,5.5,1.0,0.055,0.01,0.055,0.01,0.1818,0.0177,0.0121,1.0,81,4.0271,,"a neutral background with soft lighting, eye-level camera angle, medium distance."
+59.png,lora,1,1,1,1,1,0,0,4.0,0.5,0.09,0.02,0.09,0.02,0.0476,0.0396,0.0696,1.0,21,3.4498,,一位年轻女性手持一双运动鞋，背景简洁明亮。
+6.png,lora,1,1,1,1,1,1,0,6.0,1.0,0.06,0.01,0.06,0.01,0.0,0.0341,0.0657,1.0,22,4.1394,,展示加绒鲨鱼裤的细节，突出其保暖和舒适特点。
+60.png,lora,1,1,1,1,1,0,0,5.0,5.0,0.05,0.05,0.05,0.05,0.0,0.1341,0.0296,1.0,25,3.4236,,一位穿着白色卫衣的模特，背景为室内环境，光线柔和。
+61.png,lora,1,1,1,1,1,0,0,7.0,10.0,0.07,0.025,0.07,0.025,0.0,0.0307,0.0097,1.0,113,3.5881,,"a woman wearing a pink robe and black lace bra in a bathroom setting, with a mirror and window in the background."
+62.png,lora,1,1,1,1,1,1,1,3.3333,1.0,0.075,0.01,0.1,0.0138,0.0,0.0335,0.0373,1.0,201,4.9155,,"A young woman taking a mirror selfie in a cozy room, wearing a pink velvet sleepwear set. The background is a modern kitchen with dark cabinets and a light countertop. The lighting is soft and ambient."
+63.png,lora,1,1,1,1,1,0,0,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0931,0.0659,1.0,116,3.562,,"A collage of children wearing glasses, with a red heart symbol and Chinese text promoting quality and baby products."
+64.png,lora,1,1,1,1,1,0,0,4.0,3.0,0.09,0.03,0.1321,0.0,0.0,0.0567,0.0009,1.0,100,3.8433,,"A minimalist setting with a woman in a light dress, a small table with a plant, and a soft lighting."
+65.png,lora,1,1,1,1,1,0,0,4.6667,5.0,0.105,0.05,0.105,0.05,0.0,0.0836,0.0709,1.0,70,3.5072,,A man wearing a black down jacket standing against a plain background.
+66.png,lora,1,1,1,1,1,0,0,5.0,1.0,0.05,0.01,0.05,0.01,0.2,0.0955,0.0866,1.0,22,3.4654,,一位穿着传统服饰的女性，背景为中国古典建筑。
+67.png,lora,1,1,1,1,1,0,1,4.3333,1.0,0.0975,0.01,0.0975,0.01,0.0,0.1187,0.0641,1.0,99,3.9627,,"A woman wearing a beige cable-knit sweater, standing in a clothing store with a blurred background."
+68.png,lora,1,1,1,1,1,0,1,3.25,0.5,0.13,0.02,0.13,0.02,0.0714,0.1097,0.0415,1.0,82,3.4806,,a young man wearing a red sweater and sunglasses against a plain white background.
+69.png,lora,1,1,1,1,1,0,1,4.5833,2.0,0.066,0.005,0.0,0.0,0.0,0.0549,0.0401,1.0,154,4.379,,"a person wearing a beige coat standing indoors, holding a brown leather handbag. The background includes a tiled floor, a wooden wall, and some furniture."
+7.png,lora,1,1,1,1,1,0,1,3.3333,1.0,0.075,0.01,0.075,0.01,0.0,0.0876,0.1263,1.0,83,3.9847,,"a cozy bedroom setting with a white bed and pillows, soft lighting, neutral colors."
+70.png,lora,1,1,1,1,1,0,1,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0571,0.0253,1.0,95,4.0022,,"a dark background with a woman holding two tubes of beauty drink, focus on the product and text"
+71.png,lora,1,1,1,2,1,0,1,6.0,2.0,0.135,0.005,0.135,0.005,0.0,0.0261,0.1645,1.0,19,3.4744,,一位女性背对镜头，展示一个闪亮的发夹。
+72.png,lora,1,1,1,1,1,0,0,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0418,0.0269,1.0,103,3.611,,"a close-up shot of a person's wrist wearing a smartwatch on a wooden surface, soft lighting from above."
+73.png,lora,1,1,1,1,1,0,0,7.0,1.0,0.07,0.01,0.07,0.01,0.0,0.0241,0.0109,1.0,91,3.6494,,A woman wearing a white dress with a pearl chain shoulder strap. The background is neutral.
+74.png,lora,1,1,1,2,1,1,1,4.6667,2.0,0.105,0.005,0.105,0.005,0.0,0.0594,0.0265,1.0,18,4.5031,,粉色背景，简洁明亮，突出产品和模特。
+75.png,lora,1,1,1,1,1,1,1,4.6667,2.0,0.105,0.005,0.105,0.005,0.0,0.088,0.0132,1.0,173,4.8886,,"A pregnant woman sitting in a car, wearing a gray protective vest. The interior of the car is visible with orange leather seats and a window showing a blurred outdoor scene."
+76.png,lora,1,1,1,1,1,0,0,6.0,1.0,0.06,0.01,0.06,0.01,0.0,0.0973,0.0198,1.0,104,3.6107,,"a snowy background with children wearing colorful winter clothes, soft lighting, eye-level camera angle."
+77.png,lora,1,1,1,1,1,0,0,7.0,5.0,0.07,0.05,0.07,0.05,0.0,0.1444,0.0555,1.0,88,3.4983,,"A woman wearing a red floral blouse with a black bow tie, soft lighting, eye-level shot."
+78.png,lora,1,1,1,1,1,0,1,6.0,1.0,0.135,0.01,0.135,0.01,0.0,0.1314,0.0315,1.0,107,3.5354,,a person wearing a beige crop top and light blue jeans standing in front of a bookshelf with various items.
+79.png,lora,1,1,1,1,1,0,1,3.3333,1.6,0.075,0.004,0.075,0.004,0.0,0.0917,0.2025,1.0,27,3.87,,一位穿着深紫色卫衣的女性，背景为室内环境，有植物装饰。
+8.png,lora,1,1,1,1,1,0,1,2.2,1.0,0.1375,0.01,0.1375,0.01,0.0727,0.0239,0.0372,1.0,82,3.4491,,"A child wearing black pants with a blue logo, standing against a plain background."
+80.png,lora,1,1,1,2,1,1,1,6.5,0.8,0.065,0.008,0.065,0.008,0.0,0.1065,0.0931,1.0,104,4.588,,"A close-up of a person wearing a knee support bandage, focusing on the adjustable design and secure fit."
+81.png,lora,1,1,1,1,1,0,0,4.6667,1.0,0.105,0.01,0.105,0.01,0.0,0.0284,0.0583,1.0,125,3.9128,,A woman wearing a dark blue knit sweater and matching skirt in a cozy indoor setting with wooden furniture and soft lighting.
+82.png,lora,1,1,1,1,1,0,1,6.0,2.0,0.06,0.02,0.06,0.02,0.0,0.0687,0.008,1.0,102,4.2752,,"a cozy living room setting with a white sofa, soft lighting, and a relaxed woman wearing pink pajamas."
+83.png,lora,1,1,1,1,1,1,1,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.034,0.0406,1.0,121,4.9025,,"A beige background with three yoga mats in different colors (blue, purple, pink). A woman is practicing yoga on each mat."
+84.png,lora,1,1,1,2,1,0,1,5.0,1.0,0.1125,0.01,0.0,0.0303,0.0,0.0791,0.0288,1.0,16,3.9516,,室内环境，衣架和储物箱作为背景。
+85.png,lora,1,1,1,1,1,0,0,8.0,2.5,0.08,0.1,0.08,0.1,0.0,0.023,0.0216,1.0,91,3.5959,,"a man wearing a blue classic menswear shirt, soft lighting, eye-level shot, medium distance"
+86.png,lora,1,1,1,2,1,1,1,5.3333,0.6667,0.12,0.015,0.12,0.015,0.0,0.0905,0.0418,1.0,13,4.4158,,城市天际线背景，清新自然。
+87.png,lora,1,1,1,1,1,0,0,6.0,5.0,0.06,0.05,0.06,0.05,0.0,0.0915,0.0927,1.0,118,3.5296,,A baby lying on its back on a textured white blanket. The baby is wearing a light grey onesie with cartoon characters.
+88.png,lora,1,1,1,1,1,0,0,6.0,1.0,0.06,0.01,0.06,0.01,0.0,0.0411,0.0035,1.0,87,3.6476,,"A close-up shot of a woman wearing a pearl necklace, focusing on the jewelry's details."
+89.png,lora,1,1,1,1,1,0,0,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0376,0.0373,1.0,17,3.501,,简洁的室内环境，灰色地板和背景墙。
+9.png,lora,1,1,1,2,1,0,0,5.5,5.0,0.055,0.05,0.055,0.05,0.0,0.0672,0.0655,1.0,63,3.5531,,A woman wearing a black winter coat against a plain background.
+90.png,lora,1,1,0,2,0,0,0,6.0,0.0,0.06,0.0,0.06,0.0,0.0,0.0762,-1.0,1.0,114,2.2223,,"A person in green scrubs holding a blue object, standing in front of a white wall with a wooden shelf and a plant."
+91.png,lora,1,1,1,1,1,0,1,9.0,2.0,0.09,0.02,0.09,0.02,0.0,0.0603,0.0145,1.0,28,4.1579,,一个穿着黑色和白色拼接外套的青少年，背景是教室或办公室。
+92.png,lora,1,1,1,1,1,0,0,4.5833,5.0,0.066,0.05,0.066,0.05,0.4321,0.0443,0.031,1.0,78,3.4796,,A person wearing jeans and a black jacket standing against a plain background.
+93.png,lora,1,1,1,1,1,1,1,5.3333,2.5,0.12,0.016,0.12,0.016,0.0,0.0671,0.0255,1.0,121,5.1326,,A close-up of a person holding a pastel-colored coffee cup against a soft pink background. The lighting is soft and even.
+94.png,lora,1,1,1,1,1,0,1,2.6,1.0,0.1625,0.01,0.1371,0.0237,0.0,0.0767,0.0628,1.0,104,3.4869,,A man wearing a green jacket against a blue sky with clouds. The jacket has a hood and multiple pockets.
+95.png,lora,1,1,1,1,1,0,0,7.0,1.0,0.07,0.01,0.07,0.01,0.0,0.0607,0.1212,1.0,151,3.9053,,"A woman wearing a white down jacket with a light-colored inner lining, holding a black handbag. The background is a gradient from light gray to orange."
+96.png,lora,1,1,1,1,1,0,1,4.6667,1.6,0.105,0.004,0.105,0.004,0.0,0.0884,0.0053,1.0,112,3.9904,,"a green background with a soft lighting, a close-up shot of a hand holding a sleepwear set, minimalistic design."
+97.png,lora,1,1,1,1,1,0,1,5.3333,0.5,0.12,0.02,0.12,0.02,0.037,0.0677,0.0056,1.0,142,4.2269,,"A close-up shot of a woman wearing a red turtleneck sweater and a gold necklace. The background is blurred, focusing attention on the subject."
+98.png,lora,1,1,1,1,1,0,0,5.3333,1.0,0.12,0.01,0.12,0.01,0.0,0.0596,0.0484,1.0,95,3.5856,,"A woman wearing a form-fitting beige top, standing indoors with a soft light source behind her."
+99.png,lora,1,1,1,1,1,0,1,2.6,1.0,0.1625,0.01,0.1625,0.01,0.0615,0.0681,0.0991,1.0,101,3.4616,,"A casual outdoor setting with a plain background, soft lighting, and a focus on the subject's attire."

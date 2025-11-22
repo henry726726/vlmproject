@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Turtleneck Sweater",
+    "material": "Soft Wool Blend",
+    "design": "High Neck",
+    "features": "Warmth, Comfortable Fit"
+  },
+  "background": {
+    "prompt": "A woman wearing a red turtleneck sweater with a gold necklace, standing outdoors.",
+    "negative_prompt": "Blurry, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FF0000",
+      "#C0C0C0",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "配外套太好看啦!",
+        "bbox": [
+          0.2,
+          0.5,
+          0.8,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Women's Clothing",
+    "material": "Soft Cotton",
+    "design": "Classic Collar",
+    "features": "Comfortable Fit, Versatile Style"
+  },
+  "background": {
+    "prompt": "A woman wearing a purple long-sleeved shirt with a classic collar, standing against a light-colored wall with green plants in the background.",
+    "negative_prompt": "Blurry image, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#808080",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "30-45岁请进",
+        "bbox": [
+          0.1,
+          0.6,
+          0.8,
+          0.75
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "迪菲丽格",
+        "bbox": [
+          0.1,
+          0.1,
+          0.15,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Pearl Necklace",
+    "material": "High-Quality Cultured Pearls",
+    "design": "Classic Round Pearls",
+    "features": "Elegant Design, Soft Touch, Timeless Beauty"
+  },
+  "background": {
+    "prompt": "A close-up shot of a woman wearing a pearl necklace, highlighting its elegance and sophistication.",
+    "negative_prompt": "Blurry background, low resolution, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "closeup"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#FFFFFF",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "致爱·时光",
+        "bbox": [
+          0.3,
+          0.6,
+          0.7,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Brand Logo",
+        "bbox": [
+          0.5,
+          0.1,
+          0.6,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

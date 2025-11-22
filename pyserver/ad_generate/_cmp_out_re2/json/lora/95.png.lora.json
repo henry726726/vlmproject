@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "winter coat",
+    "material": "down",
+    "design": "long, hooded",
+    "features": "thick, warm"
+  },
+  "background": {
+    "prompt": "A woman wearing a white down jacket with a light-colored inner lining, holding a black handbag. The background is a gradient from light gray to orange.",
+    "negative_prompt": "any other objects or people in the scene",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#FFD700"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "COLLOCATION",
+        "bbox": [
+          0.3,
+          0.7,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

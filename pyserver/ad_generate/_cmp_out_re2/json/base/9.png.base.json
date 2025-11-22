@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "winter coat",
+    "material": "wool blend",
+    "design": "classic double-breasted",
+    "features": "insulated lining, button closure"
+  },
+  "background": {
+    "prompt": "a woman wearing a black winter coat against a neutral background",
+    "negative_prompt": "any other objects or people",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F5F5F5",
+      "#000000",
+      "#FFFFFF"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.1
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "LANCY FROM25",
+        "bbox": [
+          0.15,
+          0.35,
+          0.85,
+          0.45
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "LANCY FROM25",
+        "bbox": [
+          0.7,
+          0.6,
+          0.75,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

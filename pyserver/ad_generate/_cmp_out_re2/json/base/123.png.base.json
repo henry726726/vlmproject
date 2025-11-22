@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "black pants",
+    "material": "velvet",
+    "design": "flared",
+    "features": "slimming effect, comfortable fit"
+  },
+  "background": {
+    "prompt": "a woman wearing black velvet flared pants standing indoors, holding a handbag",
+    "negative_prompt": "blurry, low resolution, distorted",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#000000",
+      "#FFFFFF",
+      "#CCCCCC"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "巨显瘦 不挑身材",
+        "bbox": [
+          0.1,
+          0.15,
+          0.8,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.5,
+          0.6,
+          0.6,
+          0.7
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

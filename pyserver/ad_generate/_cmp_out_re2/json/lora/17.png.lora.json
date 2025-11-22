@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "boxed product",
+    "material": "cardboard",
+    "design": "plain box with colorful branding",
+    "features": "multivitamin supplement for kids"
+  },
+  "background": {
+    "prompt": "child holding a product box, indoor setting with neutral background",
+    "negative_prompt": "child in outdoor setting, product out of focus, cluttered background",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#000000",
+      "#FFD700"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "每天1块终于补对了",
+        "bbox": [
+          0.2,
+          0.4,
+          0.8,
+          0.25
+        ],
+        "confidence": 1
+      },
+      {
+        "type": "logo",
+        "content": "BIORELA Kids",
+        "bbox": [
+          0.7,
+          0.7,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": []
+  }
+}

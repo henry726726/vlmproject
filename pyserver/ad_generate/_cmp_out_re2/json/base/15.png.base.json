@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Iron Supplement",
+    "material": "Red Box",
+    "design": "Simple and Clean",
+    "features": "5 Times Iron Supplement, Brighten Skin"
+  },
+  "background": {
+    "prompt": "A woman holding an iron supplement box, soft lighting, eye-level angle, medium distance",
+    "negative_prompt": "Blurry background, dark lighting, low-angle shot, macro shot, oblique angle",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#C0C0C0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.35,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "每天1袋 补铁美颜",
+        "bbox": [
+          0.45,
+          0.55,
+          0.85,
+          0.65
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "意之宝 | 欧洲原装进口",
+        "bbox": [
+          0.45,
+          0.15,
+          0.85,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

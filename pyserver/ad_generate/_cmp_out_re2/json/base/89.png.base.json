@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "casual pants",
+    "material": "soft fabric",
+    "design": "straight leg",
+    "features": "comfortable fit"
+  },
+  "background": {
+    "prompt": "a pair of beige pants worn by two people standing side by side on a gray floor.",
+    "negative_prompt": "blurry background | out-of-focus subjects | distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.45
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "一条属于胖 mm 的裤子",
+        "bbox": [
+          0.1,
+          0.3,
+          0.8,
+          0.4
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌Logo",
+        "bbox": [
+          0.7,
+          0.1,
+          0.75,
+          0.15
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Hair Accessories",
+    "material": "Metallic Beads",
+    "design": "Shiny and Luxurious",
+    "features": "Elegant and Sparkling"
+  },
+  "background": {
+    "prompt": "A woman with long, straight hair styled with metallic beads. The background is neutral.",
+    "negative_prompt": "Blurry, low resolution, distorted, out-of-focus",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#F0F0F0",
+      "#E0E0E0",
+      "#C0C0C0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.45,
+        0.3
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "不要再抓头散发了",
+        "bbox": [
+          0.05,
+          0.1,
+          0.95,
+          0.25
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Shiny Beads",
+        "bbox": [
+          0.3,
+          0.35,
+          0.7,
+          0.55
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

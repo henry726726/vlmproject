@@ -1,0 +1,65 @@
+{
+  "product": {
+    "type": "children's clothing",
+    "material": "lightweight and warm",
+    "design": "4 colors",
+    "features": "cute and warm"
+  },
+  "background": {
+    "prompt": "a snowy background with children wearing colorful winter clothes, soft lighting, eye-level camera angle.",
+    "negative_prompt": "blurry, dark, low resolution, out-of-focus, incorrect color palette",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#C0C0C0",
+      "#FFD700",
+      "#FFA500",
+      "#FF6347"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "萌趣4色 轻薄保暖",
+        "bbox": [
+          0.4,
+          0.1,
+          0.6,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "品牌标志",
+        "bbox": [
+          0.5,
+          0.9,
+          0.1,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

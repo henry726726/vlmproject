@@ -1,0 +1,63 @@
+{
+  "product": {
+    "type": "Baby Pillow",
+    "material": "Soft Cotton",
+    "design": "U-Shaped Design",
+    "features": "Supports Baby's Head and Neck"
+  },
+  "background": {
+    "prompt": "A baby sleeping peacefully on a soft blue pillow, surrounded by white bedding.",
+    "negative_prompt": "Blurry background, dark lighting, distorted colors",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#8E8E8E",
+      "#ADD8E6"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.4,
+        0.4
+      ],
+      "ratio": [
+        0.6,
+        0.6
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "守护我的天使",
+        "bbox": [
+          0.05,
+          0.1,
+          0.85,
+          0.2
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "Baby Pillow Brand Logo",
+        "bbox": [
+          0.7,
+          0.7,
+          0.8,
+          0.8
+        ],
+        "confidence": 0.9
+      }
+    ]
+  }
+}

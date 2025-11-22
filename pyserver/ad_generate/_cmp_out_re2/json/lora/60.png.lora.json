@@ -1,0 +1,62 @@
+{
+  "product": {
+    "type": "卫衣",
+    "material": "棉质",
+    "design": "简约设计，两侧条纹装饰",
+    "features": "高品质，高颜值"
+  },
+  "background": {
+    "prompt": "一位穿着白色卫衣的模特，背景为室内环境，光线柔和。",
+    "negative_prompt": "模糊不清，杂乱无章。",
+    "camera": {
+      "angle": "eye-level",
+      "distance": "medium"
+    },
+    "lighting": {
+      "type": "soft",
+      "direction": "front"
+    },
+    "palette": [
+      "#FFFFFF",
+      "#F0F0F0"
+    ]
+  },
+  "layout": {
+    "subject_layout": {
+      "center": [
+        0.5,
+        0.5
+      ],
+      "ratio": [
+        1,
+        1
+      ]
+    },
+    "nongraphic_layout": [
+      {
+        "type": "headline",
+        "content": "服从你的渴望",
+        "bbox": [
+          0.5,
+          0.8,
+          0.9,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ],
+    "graphic_layout": [
+      {
+        "type": "logo",
+        "content": "BAGENCKBGE",
+        "bbox": [
+          0.5,
+          0.3,
+          0.7,
+          0.1
+        ],
+        "confidence": 1
+      }
+    ]
+  }
+}

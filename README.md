@@ -1,78 +1,81 @@
-# project
+📢 다중 모달 AI 기반 SNS 광고 자동 생성 및 배포 시스템
+(Fully Automated SNS Advertisement Generation and Deployment System Using Multimodal AI)
 
-본 프로젝트를 실행하기위해서는 application.properties에 gpt api를 작성하고 백엔드, 파이썬 서버를 먼저 실행하고, 이후 프론트를 실행시켜 결과물을 확인해야합니다.
+## 📖 프로젝트 소개 (Project Description)
 
-실행전 필요한 것들
+### "소상공인을 위한 End-to-End AI 광고 운영 솔루션"
 
-- gpt api (결제 카드 등록을 해야합니다.)
-- gemini(nano banana) api (결제 카드를 등록해야합니다.)
-- 페이스북 광고 관리자를 통해 페이스북 엑세스 토큰 - 홈페이지에서 사용합니다.
-- python 17 을 사용해야합니다.
+현대 비즈니스에서 SNS 광고는 필수적이지만, 전문 지식이 없는 소상공인에게는 기획, 디자인, 배포, 성과 관리가 큰 부담으로 작용합니다.
+본 프로젝트는 상품명과 상품 이미지만 입력하면, AI가 자동으로 광고 콘텐츠를 생성하고 SNS에 배포하며, 성과를 분석하여 저조한 광고를 자동으로 교체하는 완전 자동화 시스템입니다.
 
----
+기존 연구들이 단순한 광고 생성에 그쳤다면, 본 시스템은 생성(Generation) → 배포(Deployment) → 평가(Evaluation) → 교체(Replacement)로 이어지는 광고 운영의 전 과정을 자동화하여 사용자의 개입을 최소화하고 광고 효율을 극대화합니다.
 
-## 파이썬 서버 실행 방법 (처음 설정 시) - vlm이 있으므로 gpu 필수
+### 💡 주요 기능 (Key Features)
 
-cd project_restored
-cd pyserver
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1 <-> deactivate(탈출)
-pip install -r requirements.txt
-
-# 2) vertex AI 클라이언트 설치 (vertexai 모듈 포함)
-
-python -m pip install --upgrade google-cloud-aiplatform
-
-# 3) (최초 1회) gcloud ADC 인증 + 프로젝트 설정
-
-gcloud auth application-default login
-
-gcloud config set project 내\_프로젝트\_ID #(google api 생성시 만든 프로젝트 id)
--> gcloud config set project nano-471710 #(예시)
-
-## venv 활성화된 상태에서 설치 파일들
-
-python -m pip install --upgrade pip
-pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio
-
-pip install "git+https://github.com/huggingface/transformers"
-pip install "git+https://github.com/huggingface/diffusers"
-pip install accelerate qwen-vl-utils pillow
-pip install hf_transfer
-$env:HF_HUB_ENABLE_HF_TRANSFER = "1"
-
-python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='Qwen/Qwen2.5-VL-3B-Instruct')"
-
-# 4) 실행
-
-$env:GOOGLE_API_KEY = 'gemini api' #(gemini api 입력) AIzaSyDHLy5RDLf0tzbEeezIWke7gqCJqSrM4jo
-
-$env:GOOGLE_CLOUD_PROJECT = "<내_프로젝트_ID>"     #(google api 생성시 만든 프로젝트 id)
-$env:GOOGLE_CLOUD_PROJECT="nano-471710" #(예시)
-
-$env:GOOGLE_CLOUD_LOCATION="global"
-$env:GOOGLE_GENAI_USE_VERTEXAI = "False"
-
-cd ad_generate
-uvicorn compose_service:app --host 0.0.0.0 --port 8010 --reload
+최소한의 입력: 복잡한 프롬프트 없이 '상품명'과 '이미지'만으로 고품질 광고 생성.
+멀티모달 AI 생성 파이프라인: 광고 문구(Text), 레이아웃(Layout), 배경(Background)을 각기 다른 최적의 AI 모델이 생성 후 합성.
+성과 기반 자동 순환 (Closed-Loop Automation): Apache Airflow를 통해 광고 성과(CTR)를 주기적으로 분석하고, 기준 미달 시 자동으로 새로운 광고로 교체.
+피로도 관리: 동일 광고가 3주 이상 노출되면 자동으로 교체하여 광고 피로도(Ad Wearout) 방지.
 
 ---
 
-## 백엔드 실행
+## 🛠 기술적 설명 (Technical Details)
 
-2. 스프링 백엔드(8080)
-   cd project
-   ./gradlew bootRun
+본 시스템은 크게 광고 콘텐츠 생성 모듈과 자동화 모듈로 구성되어 있으며, 웹 기반의 통합 시스템으로 구현되었습니다.
 
-application.properties에
+### 1. 광고 콘텐츠 생성 모듈 (Ad Content Generation Module)
 
-compose.base-url=http://localhost:8010 있는지 확인.
+Min Zhou의 프레임워크를 재정의하여 4단계 파이프라인으로 구축했습니다.
+
+Step 1: 광고 문구 생성 (Ad Text Generation)
+Model: `ChatGPT-4o API`
+사용자 입력(제품명, 타겟, 목적, 키워드)을 바탕으로 혜택형, 구매 유도형, 신뢰형 등 목적에 맞는 3가지 유형의 광고 카피를 생성합니다.
+Step 2: 레이아웃 생성 (Layout Generation with LoRA)
+Model: `Qwen2.5-VL-3B-Instruct` (LoRA Fine-tuned)
+텍스트와 이미지를 동시에 이해하는 멀티모달 모델을 사용합니다.
+Core Tech (LoRA): 기존 모델은 JSON 형식의 레이아웃 좌표를 정확히 출력하는 데 한계가 있어, PITA 데이터셋을 활용해 LoRA(Low-Rank Adaptation) 파이프튜닝을 진행했습니다. 이를 통해 요소 겹침(Overlap)을 61% 감소시키고 시각적 안정성을 확보했습니다.
+Step 3: 배경 생성 (Background Generation)
+Model:`Nano-Banana` (Google Gemini 2.5 Flash Image)
+레이아웃 단계에서 생성된 JSON 정보를 기반으로 제품을 부각시키는 최적의 배경 이미지를 생성합니다.
+Step 4: 텍스트 렌더링 (Text Rendering & Composition)
+Library: `Python PIL (Pillow)`
+생성된 배경, 제품 누끼 이미지, 텍스트, 로고를 좌표에 맞춰 합성합니다. 특히 한국어 인코딩 문제를 해결하고 디자인 컨텍스트에 맞는 폰트/색상을 적용하여 최종 결과물을 완성합니다.
+
+### 2. 자동화 모듈 (Automation Module)
+
+광고 집행의 전 과정을 Apache Airflow 기반의 DAG(Directed Acyclic Graph)로 관리합니다.
+
+데이터 흐름: `Fetch -> Evaluate -> Generate -> Update`
+
+성과 기반 교체 로직 (Performance-based Replacement):
+Meta Graph API를 통해 수집된 CTR(클릭률)이 WordStream 기준 카테고리별 평균보다 낮을 경우 교체 대상으로 분류합니다
+상품 설명을 KoNLPy(Okt)로 형태소 분석하여 카테고리를 자동 분류하고, 적절한 벤치마크와 비교합니다
+시간 기반 교체 로직 (Time-based Replacement):
+성과와 무관하게 노출 후 3주가 경과한 광고를 탐지하여 교체함으로써 사용자 피로 누적을 방지합니다.
+
+### 3. 기술 스택 (Tech Stack)
+
+| 구분 | 기술 (Technology) | 설명 |
+| Frontend | React | [cite_start]사용자 입력 및 결과 확인 UI
+| Backend | Java, Spring Boot | [cite_start]API 서버 및 비즈니스 로직 처리
+| AI Models | Qwen2.5-VL (LoRA), ChatGPT-4o, Gemini 2.5 | [cite_start]레이아웃, 텍스트, 배경 이미지 생성
+| Automation | Apache Airflow, Python | [cite_start]광고 운영 프로세스 자동화 및 스케줄링
+| Database | MySQL, AWS RDS | [cite_start]광고 데이터 및 성과 지표 저장
+| External API | Meta Graph API | [cite_start]Facebook 광고 배포 및 인사이트 수집
 
 ---
 
-## 프론트 실행
+### 📊 성능 평가 (Evaluation)
 
-3. 프론트(3000)
-   cd project\src\main\frontend_login
-   npm install
-   npm start
+[cite_start]LoRA 파이프튜닝을 적용한 `Ours(LoRA)` 모델은 기존 `Qwen2.5-VL` 대비 다음과 같은 성능 향상을 보였습니다
+Ove (Overlap): 0.0649 → 0.0253 (낮을수록 좋음, 요소 간 겹침 현상 대폭 감소)
+Rea (Readability): 0.6124 → 0.9767 (가독성 크게 향상)
+Und (Underlay Effectiveness): 0.9442 → 0.9836 (텍스트 배경 처리 개선)
+
+---
+
+### 🚀 향후 계획 (Future Work)
+
+플랫폼 확장: Instagram, Naver, Google 등 다양한 광고 플랫폼 연동.
+콘텐츠 고도화: 정적 이미지뿐만 아니라 동적 비디오 광고 생성 기능 추가.
+워크플로우 개선: n8n 도입을 통한 개발 및 유지보수 효율성 증대.

@@ -10,22 +10,24 @@ import MyPage from "./components/MyPage/MyPage";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import MainPage from "./components/MainPage/MainPage";
 
+// 새로 만든 LandingPage 임포트 (파일 경로 확인 필요, src/ex_main.jsx라고 가정)
+import LandingPage from "./ex_main"; 
+
 import TextGenerator from "./TextGenerator";
 import ImageGenerator from "./ImageGenerator";
 import FacebookInput from "./FacebookInput";
 import MetaAdManager from "./MetaAdManager";
-import AdWaitingModal from "./AdWaitingModal";
+import AdWaitingModal from "./AdWaitingMoㅊㅇdal";
 import SaveAdAccounts from "./Pages/SaveAdAccounts";
 import SyncAdInfo from "./Pages/SyncAdInfo";
 import AccessTokenInput from "./Pages/AccessTokenInput";
-import "./App.css"; // ✨✨ 바로 여기!! 이 한 줄을 추가해주는 거야! ✨✨
+import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userData, setUserData] = useState(false); // userData 초기값 변경 (false -> null)
-  // [userData, setUserData] = useState(null); // userData 초기값 null로 이미 잘 되어있네, 내 실수!
+  const [userData, setUserData] = useState(null); 
 
-  // 앱 시작 시 JWT 확인 → 자동 로그인
+  // 앱 시작 시 JWT 확인 → 자동 로그인 로직 (기존 유지)
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");
     if (!token) return;
@@ -56,6 +58,25 @@ function App() {
 
   return (
     <Routes>
+      {/* ✅ 메인 라우트 변경 핵심:
+         로그인 상태면 -> MainPage (대시보드)
+         로그인 안했으면 -> LandingPage (ex_main, Canva 스타일 소개 페이지)
+      */}
+      <Route
+        path="/"
+        element={
+          isLoggedIn ? (
+            <MainPage
+              userData={userData}
+              onLogout={handleLogout}
+              isLoggedIn={isLoggedIn}
+            />
+          ) : (
+            <LandingPage />
+          )
+        }
+      />
+
       {/* 인증 페이지 */}
       <Route
         path="/auth/login"
@@ -74,19 +95,7 @@ function App() {
         }
       />
 
-      {/* 메인 */}
-      <Route
-        path="/"
-        element={
-          <MainPage
-            userData={userData}
-            onLogout={handleLogout}
-            isLoggedIn={isLoggedIn}
-          />
-        }
-      />
-
-      {/* 보호 라우트들 */}
+      {/* 보호된 라우트들 (기존 유지) */}
       <Route
         path="/text-generator"
         element={
@@ -96,11 +105,7 @@ function App() {
       <Route
         path="/image-generator"
         element={
-          isLoggedIn ? (
-            <ImageGenerator />
-          ) : (
-            <Navigate to="/auth/login" replace />
-          )
+          isLoggedIn ? <ImageGenerator /> : <Navigate to="/auth/login" replace />
         }
       />
       <Route
@@ -116,16 +121,6 @@ function App() {
         }
       />
       <Route
-        path="/ad-waiting"
-        element={
-          isLoggedIn ? (
-            <AdWaitingModal isOpen={true} onClose={() => {}} />
-          ) : (
-            <Navigate to="/auth/login" replace />
-          )
-        }
-      />
-      <Route
         path="/mypage"
         element={
           isLoggedIn ? (
@@ -135,34 +130,22 @@ function App() {
           )
         }
       />
+      
+      {/* ... 나머지 라우트들 (save-access-token 등) 기존과 동일하게 유지 ... */}
       <Route
         path="/save-access-token"
-        element={
-          isLoggedIn ? (
-            <AccessTokenInput />
-          ) : (
-            <Navigate to="/auth/login" replace />
-          )
-        }
+        element={isLoggedIn ? <AccessTokenInput /> : <Navigate to="/auth/login" replace />}
       />
       <Route
         path="/save-ad-accounts"
-        element={
-          isLoggedIn ? (
-            <SaveAdAccounts />
-          ) : (
-            <Navigate to="/auth/login" replace />
-          )
-        }
+        element={isLoggedIn ? <SaveAdAccounts /> : <Navigate to="/auth/login" replace />}
       />
       <Route
         path="/sync-ad-info"
-        element={
-          isLoggedIn ? <SyncAdInfo /> : <Navigate to="/auth/login" replace />
-        }
+        element={isLoggedIn ? <SyncAdInfo /> : <Navigate to="/auth/login" replace />}
       />
 
-      {/* 나머지는 메인으로 */}
+      {/* 잘못된 경로는 메인으로 리다이렉트 */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

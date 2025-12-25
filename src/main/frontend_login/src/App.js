@@ -11,13 +11,13 @@ import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import MainPage from "./components/MainPage/MainPage";
 
 // 새로 만든 LandingPage 임포트 (파일 경로 확인 필요, src/ex_main.jsx라고 가정)
-import LandingPage from "./ex_main"; 
+import LandingPage from "./ex_main";
 
 import TextGenerator from "./TextGenerator";
 import ImageGenerator from "./ImageGenerator";
 import FacebookInput from "./FacebookInput";
 import MetaAdManager from "./MetaAdManager";
-import AdWaitingModal from "./AdWaitingMoㅊㅇdal";
+import AdWaitingModal from "./AdWaitingModal";
 import SaveAdAccounts from "./Pages/SaveAdAccounts";
 import SyncAdInfo from "./Pages/SyncAdInfo";
 import AccessTokenInput from "./Pages/AccessTokenInput";
@@ -25,7 +25,7 @@ import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userData, setUserData] = useState(null); 
+  const [userData, setUserData] = useState(null);
 
   // 앱 시작 시 JWT 확인 → 자동 로그인 로직 (기존 유지)
   useEffect(() => {
@@ -105,7 +105,11 @@ function App() {
       <Route
         path="/image-generator"
         element={
-          isLoggedIn ? <ImageGenerator /> : <Navigate to="/auth/login" replace />
+          isLoggedIn ? (
+            <ImageGenerator />
+          ) : (
+            <Navigate to="/auth/login" replace />
+          )
         }
       />
       <Route
@@ -130,19 +134,33 @@ function App() {
           )
         }
       />
-      
+
       {/* ... 나머지 라우트들 (save-access-token 등) 기존과 동일하게 유지 ... */}
       <Route
         path="/save-access-token"
-        element={isLoggedIn ? <AccessTokenInput /> : <Navigate to="/auth/login" replace />}
+        element={
+          isLoggedIn ? (
+            <AccessTokenInput />
+          ) : (
+            <Navigate to="/auth/login" replace />
+          )
+        }
       />
       <Route
         path="/save-ad-accounts"
-        element={isLoggedIn ? <SaveAdAccounts /> : <Navigate to="/auth/login" replace />}
+        element={
+          isLoggedIn ? (
+            <SaveAdAccounts />
+          ) : (
+            <Navigate to="/auth/login" replace />
+          )
+        }
       />
       <Route
         path="/sync-ad-info"
-        element={isLoggedIn ? <SyncAdInfo /> : <Navigate to="/auth/login" replace />}
+        element={
+          isLoggedIn ? <SyncAdInfo /> : <Navigate to="/auth/login" replace />
+        }
       />
 
       {/* 잘못된 경로는 메인으로 리다이렉트 */}

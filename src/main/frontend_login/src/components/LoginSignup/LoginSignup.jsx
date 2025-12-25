@@ -7,34 +7,39 @@ import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
 import ForgotPassword from "./ForgotPassword";
 
+// Header: LandingPage와 동일한 스타일 (흰색 배경 + 보라색 포인트)
 function Header({ isLoggedIn, onLogout }) {
   return (
     <header
       style={{
-        backgroundColor: "#3a2a60",
+        backgroundColor: "#ffffff",
         padding: "12px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#a8a5f1",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+        borderBottom: "1px solid #f3f4f6", // border-gray-100
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
     >
       <Link
         to="/"
         style={{
+          fontFamily: "serif",
+          fontStyle: "italic",
           fontWeight: "700",
-          fontSize: "1.5rem",
-          color: "#A8E6CF",
+          fontSize: "1.5rem", // text-3xl
+          color: "#00C4CC", // Canva Logo Color
           textDecoration: "none",
           cursor: "pointer",
+          letterSpacing: "-0.025em",
         }}
       >
-        Ad Manager
+        ADaide
       </Link>
 
-      <nav style={{ display: "flex", gap: 12 }}>
+      <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
         <Link to="/mypage" style={navLinkStyle}>
           마이페이지
         </Link>
@@ -52,43 +57,50 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
+// Nav Link: 짙은 회색 텍스트 + 호버 효과
 const navLinkStyle = {
-  color: "#a8a5f1",
-  fontWeight: "600",
+  color: "#374151", // text-gray-700
+  fontWeight: "500",
+  fontSize: "15px",
   textDecoration: "none",
-  padding: "6px 12px",
-  borderRadius: 6,
-  backgroundColor: "rgba(255,255,255,0.1)",
-  transition: "background-color 0.3s ease",
+  padding: "8px 16px",
+  borderRadius: "6px",
+  transition: "all 0.2s ease",
   cursor: "pointer",
 };
 
+// Logout Button: 메인 퍼플 컬러 적용
 const logoutButtonStyle = {
   color: "#fff",
-  backgroundColor: "#ff6536",
+  backgroundColor: "#8B3DFF", // Main Purple
   border: "none",
-  borderRadius: 6,
-  padding: "6px 12px",
-  fontWeight: "600",
+  borderRadius: "6px",
+  padding: "8px 20px",
+  fontWeight: "700",
+  fontSize: "15px",
   cursor: "pointer",
+  boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+  transition: "background-color 0.2s ease",
 };
 
+// Footer: LandingPage와 동일한 심플한 스타일
 function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#6243a5",
-        color: "#cfcce2",
-        fontSize: "0.9rem",
-        padding: "15px 0",
+        backgroundColor: "#ffffff",
+        borderTop: "1px solid #f3f4f6",
+        color: "#6b7280", // text-gray-500
+        fontSize: "0.875rem", // text-sm
+        padding: "48px 0",
         textAlign: "center",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "inset 0 1px 4px rgba(255,255,255,0.15)",
         marginTop: "auto",
       }}
     >
-      <p>© 2025 광고 매니저. All rights reserved.</p>
-      <p>연락처: support@admanager.com</p>
+      <p style={{ marginBottom: "8px" }}>
+        © 2025 AI Ad Manager. All rights reserved.
+      </p>
+      <p>대표: 장민서 | 대표 메일: msj3767@gmail.com</p>
     </footer>
   );
 }
@@ -168,130 +180,149 @@ const LoginSignup = ({ onLogin }) => {
     return <ForgotPassword onBackToLogin={() => setShowForgot(false)} />;
   }
 
-  // 스타일 인라인 객체 (스크린샷 스타일 기준)
+  // ================= 스타일 정의 (LandingPage 테마 적용) =================
 
-  const containerStyle = {
-    maxWidth: 570,
-    minHeight: 530,
-    margin: "70px auto",
-    padding: 30,
-    background: "linear-gradient(135deg, #250b5d 0%, #3a1d6e 100%)",
-    borderRadius: 16,
-    boxShadow: "0 10px 30px rgba(0,0,0,0.8)",
-    fontFamily: "'Noto Sans KR', sans-serif",
-    color: "#d0d7ff",
+  // 전체 배경: 랜딩 페이지 Hero 섹션과 동일한 연한 라벤더색
+  const pageBackgroundStyle = {
+    backgroundColor: "#F2F0FF",
+    minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-evenly", // 인풋과 버튼 영역이 박스 내부 세로 공간에 균등 분포됨
+  };
+
+  // 카드 컨테이너: 흰색 배경 + 그림자 + 둥근 모서리
+  const containerStyle = {
+    maxWidth: "500px",
+    width: "90%",
+    margin: "60px auto",
+    padding: "40px",
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    boxShadow:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)", // Soft Shadow
+    display: "flex",
+    flexDirection: "column",
     alignItems: "center",
   };
 
   const headerTextStyle = {
-    color: "#A8E6CF",
-    fontSize: "2em",
-    fontWeight: 600,
-    textShadow: "0 0 15px rgba(168,230,207,0.5)",
-    marginBottom: 10,
+    color: "#0E101A", // Dark Navy/Black
+    fontSize: "2rem",
+    fontWeight: "800",
+    marginBottom: "10px",
+    letterSpacing: "-0.025em",
   };
 
+  // 언더라인: 메인 퍼플 컬러
   const underlineStyle = {
-    width: 60,
-    height: 5,
-    background: "linear-gradient(90deg, #6aa78e, #8cbfbd)",
-    borderRadius: 9,
-    marginBottom: 30,
+    width: "60px",
+    height: "6px",
+    backgroundColor: "#8B3DFF", // Main Purple
+    borderRadius: "9px",
+    marginBottom: "40px",
   };
 
+  // 인풋 래퍼: 연한 회색 배경
   const inputWrapperStyle = {
     display: "flex",
     alignItems: "center",
     width: "100%",
-    height: 80,
-    background: "rgba(255,255,255,0.1)",
-    borderRadius: 10,
-    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-    border: "1px solid rgba(255,255,255,0.3)",
-    marginBottom: 15,
-    paddingLeft: 12,
+    height: "60px",
+    backgroundColor: "#F9FAFB", // gray-50
+    borderRadius: "8px",
+    border: "1px solid #E5E7EB", // gray-200
+    marginBottom: "16px",
+    paddingLeft: "16px",
+    transition: "border-color 0.2s",
   };
 
+  // 아이콘: 기본적으로 너무 어둡지 않게 투명도 조절
   const iconStyle = {
-    marginRight: 15,
-    filter: "brightness(1) invert(0.8)",
-    opacity: 0.9,
-    width: 24,
-    height: 24,
+    marginRight: "16px",
+    width: "20px",
+    height: "20px",
+    opacity: 0.5,
   };
 
   const inputStyle = {
     flex: 1,
-    height: "60%",
+    height: "100%",
     border: "none",
     outline: "none",
-    background: "transparent",
-    color: "#e0e0ff",
-    fontSize: 16,
+    backgroundColor: "transparent",
+    color: "#374151", // text-gray-700
+    fontSize: "16px",
+    fontWeight: "500",
   };
 
   const errorStyle = {
-    backgroundColor: "rgba(255,107,107,0.2)",
-    color: "#ff6b6b",
-    padding: 10,
-    borderRadius: 8,
+    backgroundColor: "#FEE2E2", // red-100
+    color: "#EF4444", // red-500
+    padding: "12px",
+    borderRadius: "8px",
     width: "100%",
-    marginBottom: 20,
-    fontSize: 14,
+    marginBottom: "20px",
+    fontSize: "14px",
     textAlign: "center",
-    fontWeight: "bold",
+    fontWeight: "600",
   };
 
   const forgotPasswordStyle = {
     width: "100%",
     textAlign: "left",
-    color: "#b7b4d6",
-    fontSize: 15,
-    marginTop: 10,
-    marginBottom: 20,
+    color: "#6B7280", // gray-500
+    fontSize: "14px",
+    marginTop: "10px",
+    marginBottom: "30px",
   };
 
   const clickHereStyle = {
-    color: "#6aa78e",
-    fontWeight: 600,
+    color: "#8B3DFF", // Main Purple
+    fontWeight: "600",
     cursor: "pointer",
-    marginLeft: 5,
+    marginLeft: "5px",
   };
 
   const submitContainerStyle = {
     display: "flex",
-    gap: 20,
+    gap: "16px",
     width: "100%",
-    marginTop: 20,
+    marginTop: "10px",
   };
 
-  const submitButtonStyle = {
+  // 버튼 기본 스타일
+  const baseButtonStyle = {
     flex: 1,
-    height: 70,
-    borderRadius: 30,
-    fontWeight: 700,
-    fontSize: 17,
+    height: "56px",
+    borderRadius: "8px",
+    fontWeight: "700",
+    fontSize: "16px",
     cursor: "pointer",
-    color: "#fff",
-    background: "linear-gradient(45deg, #6aa78e, #8cbfbd)",
-    boxShadow: "0 6px 12px rgba(0,0,0,0.3)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     transition: "all 0.3s ease",
+    border: "none",
   };
 
-  const submitButtonGrayStyle = {
-    ...submitButtonStyle,
-    background: "linear-gradient(45deg, #7b7e8d, #6c6f7e)",
-    color: "#d1d4de",
+  // 활성 버튼 (보라색)
+  const activeButtonStyle = {
+    ...baseButtonStyle,
+    backgroundColor: "#8B3DFF", // Main Purple
+    color: "#ffffff",
+    boxShadow: "0 4px 6px -1px rgba(139, 61, 255, 0.3)",
+    transform: "translateY(-1px)",
+  };
+
+  // 비활성 버튼 (회색)
+  const inactiveButtonStyle = {
+    ...baseButtonStyle,
+    backgroundColor: "#F3F4F6", // gray-100
+    color: "#6B7280", // gray-500
   };
 
   return (
-    <>
+    <div style={pageBackgroundStyle}>
       <Header
         isLoggedIn={Boolean(localStorage.getItem("jwtToken"))}
         onLogout={() => {
@@ -306,6 +337,7 @@ const LoginSignup = ({ onLogin }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "100%",
           }}
         >
           <div style={headerTextStyle}>{action}</div>
@@ -359,19 +391,17 @@ const LoginSignup = ({ onLogin }) => {
           <div style={forgotPasswordStyle}>
             Lost Password?
             <span onClick={() => setShowForgot(true)} style={clickHereStyle}>
-              {" "}
               Click here!
             </span>
           </div>
         )}
 
         <div style={submitContainerStyle}>
-          <div
-            className={action === "Login" ? "submit gray" : "submit"}
-            style={{
-              ...submitButtonStyle,
-              ...(action === "Login" ? submitButtonGrayStyle : {}),
-            }}
+          {/* Sign Up Button */}
+          <button
+            style={
+              action === "Sign Up" ? activeButtonStyle : inactiveButtonStyle
+            }
             onClick={() => {
               if (action === "Sign Up") {
                 handleSubmit();
@@ -382,13 +412,11 @@ const LoginSignup = ({ onLogin }) => {
             }}
           >
             {loading && action === "Sign Up" ? "Processing..." : "Sign Up"}
-          </div>
-          <div
-            className={action === "Sign Up" ? "submit gray" : "submit"}
-            style={{
-              ...submitButtonStyle,
-              ...(action === "Sign Up" ? submitButtonGrayStyle : {}),
-            }}
+          </button>
+
+          {/* Login Button */}
+          <button
+            style={action === "Login" ? activeButtonStyle : inactiveButtonStyle}
             onClick={() => {
               if (action === "Login") {
                 handleSubmit();
@@ -399,12 +427,12 @@ const LoginSignup = ({ onLogin }) => {
             }}
           >
             {loading && action === "Login" ? "Processing..." : "Login"}
-          </div>
+          </button>
         </div>
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

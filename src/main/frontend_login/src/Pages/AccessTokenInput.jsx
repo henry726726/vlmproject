@@ -2,59 +2,65 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom"; // Link와 useNavigate 추가
+import { useNavigate, Link } from "react-router-dom";
 
-// ===================== 스타일 객체 (Header/Footer에서 사용) =====================
-const navLinkStyle = {
-  color: "#a8a5f1",
-  fontWeight: "600",
-  textDecoration: "none",
-  padding: "6px 12px",
-  borderRadius: 6,
-  backgroundColor: "rgba(255,255,255,0.1)",
-  transition: "background-color 0.3s ease",
-  cursor: "pointer",
-};
-
-const logoutButtonStyle = {
-  color: "#fff",
-  backgroundColor: "#ff6536",
-  border: "none",
-  borderRadius: 6,
-  padding: "6px 12px",
-  fontWeight: "600",
-  cursor: "pointer",
-};
-
-// ===================== Header 컴포넌트 (AccessTokenInput.jsx 내부에 정의) =====================
+// ===================== Header (밝은 테마 적용) =====================
 function Header({ isLoggedIn, onLogout }) {
+  const navLinkStyle = {
+    color: "#374151", // text-gray-700
+    fontWeight: "500",
+    fontSize: "15px",
+    textDecoration: "none",
+    padding: "8px 16px",
+    borderRadius: "6px",
+    transition: "all 0.2s ease",
+    cursor: "pointer",
+  };
+
+  const logoutButtonStyle = {
+    color: "#fff",
+    backgroundColor: "#8B3DFF", // Main Purple
+    border: "none",
+    borderRadius: "6px",
+    padding: "8px 20px",
+    fontWeight: "700",
+    fontSize: "15px",
+    cursor: "pointer",
+    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    transition: "background-color 0.2s ease",
+  };
+
   return (
     <header
       style={{
-        backgroundColor: "#3a2a60",
+        backgroundColor: "#ffffff",
         padding: "12px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#a8a5f1",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+        borderBottom: "1px solid #f3f4f6",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
     >
       <Link
         to="/"
         style={{
+          fontFamily: "serif",
+          fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#A8E6CF",
+          color: "#00C4CC", // Brand Color
           textDecoration: "none",
           cursor: "pointer",
+          letterSpacing: "-0.025em",
         }}
       >
-        Ad Manager
+        ADaide
       </Link>
 
-      <nav style={{ display: "flex", gap: 12 }}>
+      <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
         <Link to="/mypage" style={navLinkStyle}>
           마이페이지
         </Link>
@@ -72,40 +78,50 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
-// ===================== Footer 컴포넌트 (AccessTokenInput.jsx 내부에 정의) =====================
+// ===================== Footer (밝은 테마 적용) =====================
 function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#6243a5",
-        color: "#cfcce2",
-        fontSize: "0.9rem",
-        padding: "15px 0",
+        backgroundColor: "#ffffff",
+        borderTop: "1px solid #f3f4f6",
+        color: "#6b7280",
+        fontSize: "0.875rem",
+        padding: "48px 0",
         textAlign: "center",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "inset 0 1px 4px rgba(255,255,255,0.15)",
         marginTop: "auto",
+        fontFamily: "'Noto Sans KR', sans-serif",
       }}
     >
-      <p>© 2025 광고 매니저. All rights reserved.</p>
-      <p>연락처: support@admanager.com</p>
+      <p style={{ marginBottom: "8px" }}>
+        © 2025 AI Ad Manager. All rights reserved.
+      </p>
+      <p>대표: 장민서 | 대표 메일: msj3767@gmail.com</p>
     </footer>
   );
 }
 
 // ===================== AccessTokenInput 컴포넌트 =====================
 function AccessTokenInput() {
-  const navigate = useNavigate(); // useNavigate 추가
+  const navigate = useNavigate();
   const [accessToken, setAccessToken] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // 로딩 상태 추가
 
   const handleSubmit = async () => {
+    if (!accessToken.trim()) {
+      setMessage("⚠️ 토큰을 입력해주세요.");
+      return;
+    }
+
+    setLoading(true);
+    setMessage(""); // 기존 메시지 초기화
+
     try {
       const token = localStorage.getItem("jwtToken");
 
       // eslint-disable-next-line no-unused-vars
       const response = await axios.post(
-        // response는 사용되지 않으므로 ESLint 경고를 무시합니다.
         "http://localhost:8080/api/access-token",
         { accessToken },
         {
@@ -115,89 +131,149 @@ function AccessTokenInput() {
         }
       );
 
-      setMessage("✅ 액세스토큰 저장 완료");
+      setMessage("✅ 액세스토큰이 성공적으로 저장되었습니다.");
     } catch (err) {
       console.error(err);
       setMessage("❌ 저장 실패: " + (err.response?.data || err.message));
+    } finally {
+      setLoading(false);
     }
   };
 
-  // Header에 전달할 onLogout 함수 정의
+  // Header에 전달할 onLogout 함수
   const handleHeaderLogout = () => {
     localStorage.removeItem("jwtToken");
-    navigate("/auth/login"); // navigate 사용
+    navigate("/auth/login");
   };
 
-  // 현재 로그인 상태 (Header 컴포넌트에 전달하기 위함)
   const isLoggedIn = Boolean(localStorage.getItem("jwtToken"));
 
+  // ================= 스타일 객체 (MyPage와 통일) =================
+  const pageContainerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#F9FAFB", // 전체 배경색 (밝은 회색)
+    fontFamily: "'Noto Sans KR', sans-serif",
+  };
+
+  const mainContentStyle = {
+    flexGrow: 1,
+    padding: "60px 20px", // 상하 여백 넉넉하게
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center", // 중앙 정렬
+  };
+
+  const cardStyle = {
+    width: "100%",
+    maxWidth: "520px", // 카드 너비
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    boxShadow:
+      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    padding: "40px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const titleStyle = {
+    fontSize: "1.5rem",
+    fontWeight: "800",
+    color: "#111827", // 진한 회색 (제목)
+    marginBottom: "10px",
+  };
+
+  const subTextStyle = {
+    fontSize: "0.95rem",
+    color: "#6B7280", // 연한 회색 (설명)
+    marginBottom: "30px",
+    textAlign: "center",
+  };
+
+  const inputStyle = {
+    width: "100%",
+    padding: "14px",
+    marginBottom: "20px",
+    borderRadius: "8px",
+    border: "1px solid #E5E7EB",
+    fontSize: "1rem",
+    backgroundColor: "#F9FAFB",
+    outline: "none",
+    boxSizing: "border-box", // 패딩 포함 크기 계산
+  };
+
+  const buttonStyle = {
+    width: "100%",
+    padding: "14px",
+    backgroundColor: loading ? "#E5E7EB" : "#8B3DFF", // 로딩 시 회색, 평소 보라색
+    color: loading ? "#9CA3AF" : "white",
+    border: "none",
+    borderRadius: "8px",
+    fontSize: "1rem",
+    fontWeight: "700",
+    cursor: loading ? "not-allowed" : "pointer",
+    transition: "background-color 0.2s ease",
+  };
+
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
+    <div style={pageContainerStyle}>
       {/* 헤더 */}
       <Header isLoggedIn={isLoggedIn} onLogout={handleHeaderLogout} />
 
-      {/* 메인 콘텐츠 영역 (남은 공간을 차지하여 푸터를 아래로 밀어냄) */}
-      <main style={{ flexGrow: 1 }}>
-        <div
-          style={{
-            padding: "30px",
-            maxWidth: "500px",
-            margin: "0 auto",
-            fontFamily: "'Noto Sans KR', sans-serif",
-            color: "#333",
-          }}
-        >
-          <h2
-            style={{
-              textAlign: "center",
-              marginBottom: "20px",
-              color: "#ffffffff",
-            }}
-          >
-            🔑 액세스토큰 입력
-          </h2>
+      {/* 메인 콘텐츠 영역 */}
+      <main style={mainContentStyle}>
+        <div style={cardStyle}>
+          <div style={titleStyle}>액세스토큰 설정</div>
+          <p style={subTextStyle}>
+            Meta 광고 계정을 연동하기 위해
+            <br />
+            발급받은 액세스토큰을 입력해주세요.
+          </p>
+
           <input
             type="text"
             value={accessToken}
             onChange={(e) => setAccessToken(e.target.value)}
-            placeholder="Meta 엑세스토큰을 입력하세요"
-            style={{
-              width: "95%",
-              padding: "12px",
-              marginBottom: "15px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              fontSize: "16px",
-            }}
+            placeholder="Meta Access Token 입력"
+            style={inputStyle}
           />
+
           <button
             onClick={handleSubmit}
-            style={{
-              width: "100%",
-              padding: "12px 20px",
-              backgroundColor: "#6243a5",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              fontSize: "16px",
-              cursor: "pointer",
-              transition: "background-color 0.3s ease",
+            disabled={loading}
+            style={buttonStyle}
+            onMouseOver={(e) => {
+              if (!loading) e.currentTarget.style.backgroundColor = "#7C3AED";
+            }}
+            onMouseOut={(e) => {
+              if (!loading) e.currentTarget.style.backgroundColor = "#8B3DFF";
             }}
           >
-            저장
+            {loading ? "저장 중..." : "토큰 저장하기"}
           </button>
+
           {message && (
-            <p
+            <div
               style={{
-                marginTop: "15px",
+                marginTop: "20px",
+                padding: "12px",
+                borderRadius: "8px",
+                width: "100%",
                 textAlign: "center",
-                color: message.startsWith("✅") ? "#4CAF50" : "#ff6347",
+                fontSize: "0.95rem",
+                fontWeight: "500",
+                backgroundColor: message.startsWith("✅")
+                  ? "#ECFDF5" // 성공 시 연한 초록 배경
+                  : "#FEF2F2", // 실패 시 연한 빨강 배경
+                color: message.startsWith("✅") ? "#059669" : "#DC2626",
+                boxSizing: "border-box",
               }}
             >
               {message}
-            </p>
+            </div>
           )}
         </div>
       </main>

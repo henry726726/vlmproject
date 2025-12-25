@@ -1,58 +1,64 @@
-// src/ImageGenerator.jsx
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom"; // Link는 Header/Footer에서 사용
+import { useNavigate, Link } from "react-router-dom";
 
-const navLinkStyle = {
-  color: "#a8a5f1",
-  fontWeight: "600",
-  textDecoration: "none",
-  padding: "6px 12px",
-  borderRadius: 6,
-  backgroundColor: "rgba(255,255,255,0.1)",
-  transition: "background-color 0.3s ease",
-  cursor: "pointer",
-};
-
-const logoutButtonStyle = {
-  color: "#fff",
-  backgroundColor: "#ff6536",
-  border: "none",
-  borderRadius: 6,
-  padding: "6px 12px",
-  fontWeight: "600",
-  cursor: "pointer",
-};
-
+// ===================== Header (통일된 밝은 테마) =====================
 function Header({ isLoggedIn, onLogout }) {
+  const navLinkStyle = {
+    color: "#374151", // text-gray-700
+    fontWeight: "500",
+    fontSize: "15px",
+    textDecoration: "none",
+    padding: "8px 16px",
+    borderRadius: "6px",
+    transition: "all 0.2s ease",
+    cursor: "pointer",
+  };
+
+  const logoutButtonStyle = {
+    color: "#fff",
+    backgroundColor: "#8B3DFF", // Main Purple
+    border: "none",
+    borderRadius: "6px",
+    padding: "8px 20px",
+    fontWeight: "700",
+    fontSize: "15px",
+    cursor: "pointer",
+    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    transition: "background-color 0.2s ease",
+  };
+
   return (
     <header
       style={{
-        backgroundColor: "#3a2a60",
+        backgroundColor: "#ffffff",
         padding: "12px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#a8a5f1",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+        borderBottom: "1px solid #f3f4f6",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
     >
       <Link
         to="/"
         style={{
+          fontFamily: "serif",
+          fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#A8E6CF",
+          color: "#00C4CC", // Brand Color
           textDecoration: "none",
           cursor: "pointer",
+          letterSpacing: "-0.025em",
         }}
       >
-        Ad Manager
+        ADaide
       </Link>
 
-      <nav style={{ display: "flex", gap: 12 }}>
+      <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
         <Link to="/mypage" style={navLinkStyle}>
           마이페이지
         </Link>
@@ -70,26 +76,30 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
+// ===================== Footer (통일된 밝은 테마) =====================
 function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#6243a5",
-        color: "#cfcce2",
-        fontSize: "0.9rem",
-        padding: "15px 0",
+        backgroundColor: "#ffffff",
+        borderTop: "1px solid #f3f4f6",
+        color: "#6b7280",
+        fontSize: "0.875rem",
+        padding: "48px 0",
         textAlign: "center",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "inset 0 1px 4px rgba(255,255,255,0.15)",
         marginTop: "auto",
+        fontFamily: "'Noto Sans KR', sans-serif",
       }}
     >
-      <p>© 2025 광고 매니저. All rights reserved.</p>
-      <p>연락처: support@admanager.com</p>
+      <p style={{ marginBottom: "8px" }}>
+        © 2025 AI Ad Manager. All rights reserved.
+      </p>
+      <p>대표: 장민서 | 대표 메일: msj3767@gmail.com</p>
     </footer>
   );
 }
 
+// ===================== ImageGenerator 컴포넌트 =====================
 function ImageGenerator() {
   const navigate = useNavigate();
 
@@ -103,9 +113,7 @@ function ImageGenerator() {
   const [isSavingContent, setIsSavingContent] = useState(false);
   const [error, setError] = useState("");
 
-  // 'mode'와 'setMode'는 사용되지 않으므로 제거합니다.
-
-  // Header에 전달할 onLogout 함수 정의
+  // Header에 전달할 onLogout 함수
   const handleHeaderLogout = () => {
     localStorage.removeItem("jwtToken");
     navigate("/auth/login");
@@ -131,7 +139,7 @@ function ImageGenerator() {
         setTextGenParams(null);
       }
     }
-  }, [navigate]); // navigate가 의존성 배열에 있어야 eslint 경고 해결
+  }, [navigate]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -167,6 +175,7 @@ function ImageGenerator() {
 
       let fileToSend = imageFile;
       if (!fileToSend && originalBase64) {
+        // base64 -> blob 변환 로직
         const toBlobFromDataUrl = (dataUrl) => {
           const [meta, b64] = dataUrl.split(",");
           const mime =
@@ -316,165 +325,212 @@ function ImageGenerator() {
 
   if (selectedAdText === null) {
     return (
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        문구 데이터를 불러오는 중입니다...
+      <div style={{ textAlign: "center", marginTop: "50px", color: "#666" }}>
+        데이터를 불러오는 중입니다...
       </div>
     );
   }
 
+  // ================= 스타일 객체 =================
+  const pageContainerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#F9FAFB", // gray-50
+    fontFamily: "'Noto Sans KR', sans-serif",
+  };
+
+  const mainContentStyle = {
+    flexGrow: 1,
+    padding: "60px 20px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const cardStyle = {
+    width: "100%",
+    maxWidth: "600px",
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    boxShadow:
+      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    padding: "40px",
+    display: "flex",
+    flexDirection: "column",
+    boxSizing: "border-box",
+  };
+
+  const titleStyle = {
+    fontSize: "1.75rem",
+    fontWeight: "800",
+    color: "#111827",
+    marginBottom: "20px",
+    textAlign: "center",
+  };
+
+  // 선택된 문구 박스 스타일 (깔끔한 그레이/블루 톤)
+  const infoBoxStyle = {
+    marginBottom: "24px",
+    padding: "16px",
+    backgroundColor: "#F3F4F6", // gray-100
+    borderLeft: "4px solid #8B3DFF", // accent color
+    borderRadius: "4px",
+    color: "#374151", // gray-700
+    fontSize: "0.95rem",
+    textAlign: "left",
+    lineHeight: "1.5",
+  };
+
+  const fileInputStyle = {
+    marginBottom: "20px",
+    padding: "10px",
+    border: "1px dashed #D1D5DB", // gray-300
+    borderRadius: "8px",
+    width: "100%",
+    boxSizing: "border-box",
+    backgroundColor: "#FAFAFA",
+  };
+
+  // 공통 버튼 스타일 생성 함수
+  const getButtonStyle = (bgColor, disabled) => ({
+    width: "100%",
+    padding: "14px",
+    backgroundColor: disabled ? "#E5E7EB" : bgColor,
+    color: disabled ? "#9CA3AF" : "white",
+    border: "none",
+    borderRadius: "8px",
+    fontSize: "1rem",
+    fontWeight: "700",
+    cursor: disabled ? "not-allowed" : "pointer",
+    marginBottom: "12px",
+    transition: "all 0.2s ease",
+  });
+
   return (
-    <div
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-    >
-      {" "}
-      {/* 전체 컨테이너를 flex column으로 만들고 최소 높이 100vh */}
-      {/* Header 컴포넌트 렌더링 */}
+    <div style={pageContainerStyle}>
       <Header
         isLoggedIn={Boolean(localStorage.getItem("jwtToken"))}
         onLogout={handleHeaderLogout}
       />
-      <div
-        style={{
-          flexGrow: 1, // 남은 공간을 차지하여 Footer를 하단으로 밀어냄
-          maxWidth: 600,
-          margin: "40px auto",
-          padding: 20,
-          border: "1px solid #ddd",
-          borderRadius: 10,
-          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-          backgroundColor: "#2b2452",
-          fontFamily: "Arial, sans-serif",
-          textAlign: "center",
-          boxSizing: "border-box", // 패딩이 너비에 포함되도록
-        }}
-      >
-        <h2 style={{ marginBottom: 20, color: "#ffffffff" }}>
-          {" "}
-          광고 이미지 합성기
-        </h2>
 
-        <div
-          style={{
-            marginBottom: 15,
-            padding: 10,
-            border: "1px dashed #007bff",
-            borderRadius: 5,
-            backgroundColor: "#d0bbff" /* 이전 #d0bbffff */,
-            color: "#000000",
-          }}
-        >
-          <strong>선택된 문구:</strong>{" "}
-          {selectedAdText || "문구 생성기에서 문구를 선택해주세요. ⚠️"}
-          {textGenParams && (
-            <div style={{ fontSize: "0.8em", color: "#666", marginTop: "5px" }}>
-              ({textGenParams.product || "없음"} |{" "}
-              {textGenParams.target || "없음"} |{" "}
-              {textGenParams.purpose || "없음"})
-              {textGenParams.keyword && ` | ${textGenParams.keyword}`}
-              {textGenParams.duration && ` | ${textGenParams.duration}`}
+      <main style={mainContentStyle}>
+        <div style={cardStyle}>
+          <h2 style={titleStyle}>광고 이미지 합성기</h2>
+
+          <div style={infoBoxStyle}>
+            <div style={{ fontWeight: "700", marginBottom: "4px" }}>
+              📢 선택된 문구
+            </div>
+            {selectedAdText}
+            {textGenParams && (
+              <div
+                style={{
+                  fontSize: "0.85rem",
+                  color: "#6B7280",
+                  marginTop: "8px",
+                  paddingTop: "8px",
+                  borderTop: "1px solid #E5E7EB",
+                }}
+              >
+                옵션: {textGenParams.product} | {textGenParams.target} |{" "}
+                {textGenParams.purpose}
+              </div>
+            )}
+          </div>
+
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            style={fileInputStyle}
+          />
+
+          {originalBase64 && (
+            <div style={{ marginBottom: "20px", textAlign: "center" }}>
+              <img
+                src={`data:image/png;base64,${originalBase64}`}
+                alt="Uploaded"
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "250px",
+                  borderRadius: "8px",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                }}
+              />
+            </div>
+          )}
+
+          <button
+            onClick={handleCompose}
+            disabled={isLoading || !selectedAdText}
+            style={getButtonStyle("#8B3DFF", isLoading || !selectedAdText)}
+          >
+            {isLoading ? "이미지 합성 중... ⏳" : "⚡ 이미지 합성하기"}
+          </button>
+
+          <button
+            onClick={handleGoFacebook}
+            disabled={isLoading || !resultUrl}
+            style={getButtonStyle("#1877f2", isLoading || !resultUrl)} // Facebook Blue
+          >
+            FacebookInput으로 이동 ➡️
+          </button>
+
+          {error && (
+            <div
+              style={{
+                marginTop: "10px",
+                color: "#DC2626",
+                textAlign: "center",
+                fontSize: "0.9rem",
+                fontWeight: "500",
+              }}
+            >
+              {error}
+            </div>
+          )}
+
+          {resultUrl && (
+            <div
+              style={{
+                marginTop: "30px",
+                borderTop: "1px solid #E5E7EB",
+                paddingTop: "30px",
+                textAlign: "center",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "1.2rem",
+                  color: "#111827",
+                  marginBottom: "15px",
+                }}
+              >
+                ✨ 합성 결과
+              </h3>
+              <img
+                src={resultUrl}
+                alt="Composite Ad"
+                style={{
+                  maxWidth: "100%",
+                  borderRadius: "8px",
+                  border: "1px solid #E5E7EB",
+                  marginBottom: "20px",
+                }}
+              />
+              <button
+                onClick={handleSaveContent}
+                disabled={isSavingContent}
+                style={getButtonStyle("#10B981", isSavingContent)} // Green
+              >
+                {isSavingContent ? "저장 중..." : "📂 광고 콘텐츠 저장"}
+              </button>
             </div>
           )}
         </div>
+      </main>
 
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleFileChange}
-          style={{ marginBottom: 15 }}
-        />
-
-        {originalBase64 && (
-          <div style={{ marginBottom: 15 }}>
-            <img
-              src={`data:image/png;base64,${originalBase64}`}
-              alt="Uploaded"
-              style={{ maxWidth: "100%", maxHeight: "200px", borderRadius: 8 }}
-            />
-          </div>
-        )}
-
-        <button
-          onClick={handleCompose}
-          disabled={isLoading || !selectedAdText}
-          style={{
-            width: "100%",
-            padding: 12,
-            backgroundColor: isLoading || !selectedAdText ? "#999" : "#ac2eff",
-            color: "white",
-            border: "none",
-            borderRadius: 5,
-            fontSize: "1.1em",
-            cursor: "pointer",
-            marginBottom: 10,
-            opacity: isLoading || !selectedAdText ? 0.7 : 1,
-          }}
-        >
-          {isLoading ? "이미지 합성 중... ⏳" : "이미지 합성하기 "}
-        </button>
-
-        {/* ⬇️ 여기 추가: 합성이 끝나야(=resultUrl 존재) 활성화 */}
-        <button
-          onClick={handleGoFacebook}
-          disabled={isLoading || !resultUrl}
-          style={{
-            width: "100%",
-            padding: 12,
-            backgroundColor: isLoading || !resultUrl ? "#999" : "#1877f2",
-            color: "white",
-            border: "none",
-            borderRadius: 5,
-            fontSize: "1.05em",
-            cursor: isLoading || !resultUrl ? "not-allowed" : "pointer",
-            marginBottom: 10,
-            opacity: isLoading || !resultUrl ? 0.7 : 1,
-          }}
-        >
-          FacebookInput으로 이동 ➡️
-        </button>
-
-        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
-
-        {resultUrl && (
-          <div
-            style={{
-              marginTop: 20,
-              borderTop: "1px solid #eee",
-              paddingTop: 20,
-            }}
-          >
-            <h3>합성된 이미지 👇</h3>
-            <img
-              src={resultUrl}
-              alt="Composite Ad"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                borderRadius: 8,
-                border: "1px solid #ddd",
-              }}
-            />
-            <button
-              onClick={handleSaveContent}
-              disabled={isSavingContent}
-              style={{
-                width: "100%",
-                padding: 12,
-                marginTop: 15,
-                backgroundColor: isSavingContent ? "#999" : "#28a745",
-                color: "white",
-                border: "none",
-                borderRadius: 5,
-                fontSize: "1.1em",
-                cursor: "pointer",
-                opacity: isSavingContent ? 0.7 : 1,
-              }}
-            >
-              {isSavingContent ? "콘텐츠 저장 중... " : "광고 콘텐츠 저장 ✅"}
-            </button>
-          </div>
-        )}
-      </div>
-      {/* Footer 컴포넌트 렌더링 */}
       <Footer />
     </div>
   );

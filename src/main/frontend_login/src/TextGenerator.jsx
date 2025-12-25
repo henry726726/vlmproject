@@ -1,37 +1,64 @@
-//src/TextGenerator.jsx
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
+// ===================== Header (통일된 밝은 테마) =====================
 function Header({ isLoggedIn, onLogout }) {
+  const navLinkStyle = {
+    color: "#374151", // text-gray-700
+    fontWeight: "500",
+    fontSize: "15px",
+    textDecoration: "none",
+    padding: "8px 16px",
+    borderRadius: "6px",
+    transition: "all 0.2s ease",
+    cursor: "pointer",
+  };
+
+  const logoutButtonStyle = {
+    color: "#fff",
+    backgroundColor: "#8B3DFF", // Main Purple
+    border: "none",
+    borderRadius: "6px",
+    padding: "8px 20px",
+    fontWeight: "700",
+    fontSize: "15px",
+    cursor: "pointer",
+    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    transition: "background-color 0.2s ease",
+  };
+
   return (
     <header
       style={{
-        backgroundColor: "#3a2a60",
+        backgroundColor: "#ffffff",
         padding: "12px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#a8a5f1",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+        borderBottom: "1px solid #f3f4f6",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
     >
       <Link
         to="/"
         style={{
+          fontFamily: "serif",
+          fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#A8E6CF",
+          color: "#00C4CC", // Brand Color
           textDecoration: "none",
           cursor: "pointer",
+          letterSpacing: "-0.025em",
         }}
       >
-        Ad Manager
+        ADaide
       </Link>
 
-      <nav style={{ display: "flex", gap: 12 }}>
+      <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
         <Link to="/mypage" style={navLinkStyle}>
           마이페이지
         </Link>
@@ -49,47 +76,30 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
-const navLinkStyle = {
-  color: "#a8a5f1",
-  fontWeight: "600",
-  textDecoration: "none",
-  padding: "6px 12px",
-  borderRadius: 6,
-  backgroundColor: "rgba(255,255,255,0.1)",
-  transition: "background-color 0.3s ease",
-  cursor: "pointer",
-};
-
-const logoutButtonStyle = {
-  color: "#fff",
-  backgroundColor: "#ff6536",
-  border: "none",
-  borderRadius: 6,
-  padding: "6px 12px",
-  fontWeight: "600",
-  cursor: "pointer",
-};
-
+// ===================== Footer (통일된 밝은 테마) =====================
 function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#6243a5",
-        color: "#cfcce2",
-        fontSize: "0.9rem",
-        padding: "15px 0",
+        backgroundColor: "#ffffff",
+        borderTop: "1px solid #f3f4f6",
+        color: "#6b7280",
+        fontSize: "0.875rem",
+        padding: "48px 0",
         textAlign: "center",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "inset 0 1px 4px rgba(255,255,255,0.15)",
         marginTop: "auto",
+        fontFamily: "'Noto Sans KR', sans-serif",
       }}
     >
-      <p>© 2025 광고 매니저. All rights reserved.</p>
-      <p>연락처: support@admanager.com</p>
+      <p style={{ marginBottom: "8px" }}>
+        © 2025 AI Ad Manager. All rights reserved.
+      </p>
+      <p>대표: 장민서 | 대표 메일: msj3767@gmail.com</p>
     </footer>
   );
 }
 
+// ===================== TextGenerator 컴포넌트 =====================
 function TextGenerator() {
   const navigate = useNavigate();
 
@@ -169,50 +179,105 @@ function TextGenerator() {
     navigate("/image-generator");
   };
 
+  // ================= 스타일 객체 (MyPage와 통일) =================
+  const pageContainerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#F9FAFB", // gray-50
+    fontFamily: "'Noto Sans KR', sans-serif",
+  };
+
+  const mainContentStyle = {
+    flexGrow: 1,
+    padding: "60px 20px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const cardStyle = {
+    width: "100%",
+    maxWidth: "600px", // 입력 폼이 많으므로 약간 넓게
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    boxShadow:
+      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    padding: "40px",
+    display: "flex",
+    flexDirection: "column",
+  };
+
+  const titleStyle = {
+    fontSize: "1.75rem",
+    fontWeight: "800",
+    color: "#111827",
+    marginBottom: "10px",
+    textAlign: "center",
+  };
+
+  const subTextStyle = {
+    fontSize: "0.95rem",
+    color: "#6B7280",
+    marginBottom: "30px",
+    textAlign: "center",
+  };
+
+  const labelStyle = {
+    display: "block",
+    fontSize: "0.9rem",
+    fontWeight: "600",
+    color: "#374151",
+    marginBottom: "6px",
+  };
+
   const inputStyle = {
-    width: "575px",
-    padding: 12,
-    borderRadius: 10,
-    border: "1px solid #7c4dff",
-    fontSize: "1.1em",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    boxShadow: "inset 0 1px 5px rgba(0,0,0,0.3)",
+    width: "100%",
+    padding: "12px",
+    marginBottom: "16px",
+    borderRadius: "8px",
+    border: "1px solid #E5E7EB",
+    backgroundColor: "#F9FAFB",
+    color: "#1F2937",
+    fontSize: "1rem",
     outline: "none",
-    color: "#e0e0ff",
+    transition: "border-color 0.2s",
+    boxSizing: "border-box",
   };
 
   const buttonStyle = {
     width: "100%",
-    padding: 15,
-    background: "linear-gradient(45deg, #a8e6cf, #88d8a3)",
-    color: "#1a0f3d",
+    padding: "14px",
+    backgroundColor: loading ? "#E5E7EB" : "#8B3DFF",
+    color: loading ? "#9CA3AF" : "white",
     border: "none",
-    borderRadius: 10,
-    fontSize: "1.2em",
-    fontWeight: "bold",
-    cursor: "pointer",
-    boxShadow: "0 5px 15px rgba(168,230,207,0.4)",
-    transition: "all 0.3s ease",
+    borderRadius: "8px",
+    fontSize: "1.1rem",
+    fontWeight: "700",
+    cursor: loading ? "not-allowed" : "pointer",
+    transition: "background-color 0.2s ease",
+    marginTop: "10px",
   };
 
-  const adTextButtonStyle = {
+  // 결과 버튼 스타일
+  const resultButtonStyle = {
     display: "block",
     width: "100%",
     textAlign: "left",
-    border: "1px solid #bb86fc",
-    borderRadius: 8,
-    padding: 12,
-    marginTop: 10,
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-    fontSize: "1.1em",
+    border: "1px solid #E5E7EB",
+    borderRadius: "8px",
+    padding: "16px",
+    marginTop: "12px",
+    backgroundColor: "#F3F4F6", // gray-100
+    fontSize: "1rem",
+    color: "#374151",
     cursor: "pointer",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
-    color: "#e0e0ff",
-    transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+    transition: "all 0.2s ease",
+    lineHeight: "1.5",
   };
 
   return (
-    <>
+    <div style={pageContainerStyle}>
       <Header
         isLoggedIn={Boolean(localStorage.getItem("jwtToken"))}
         onLogout={() => {
@@ -221,133 +286,153 @@ function TextGenerator() {
         }}
       />
 
-      <main
-        style={{
-          maxWidth: 600,
-          margin: "40px auto",
-          padding: 30,
-          background: "linear-gradient(135deg, #1a0f3d 0%, #3e1b6a 100%)",
-          borderRadius: 15,
-          boxShadow: "0 10px 30px rgba(0,0,0,0.7)",
-          fontFamily: "'Noto Sans KR', sans-serif",
-          color: "#e0e0ff",
-          minHeight: "65vh",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <h2
-          style={{
-            color: "#A8E6CF",
-            textAlign: "center",
-            marginBottom: 30,
-            fontSize: "2em",
-            fontWeight: 600,
-            textShadow: "0 0 15px rgba(168,230,207,0.5)",
-          }}
-        >
-          광고 문구 생성기
-        </h2>
-
-        <form
-          onSubmit={handleSubmit}
-          style={{ display: "flex", flexDirection: "column", gap: 15 }}
-        >
-          <input
-            name="product"
-            value={form.product}
-            onChange={handleChange}
-            placeholder="제품명 (예: 럭셔리 시계)"
-            style={inputStyle}
-          />
-          <input
-            name="target"
-            value={form.target}
-            onChange={handleChange}
-            placeholder="타겟 (예: 30대 남성 직장인)"
-            style={inputStyle}
-          />
-          <input
-            name="purpose"
-            value={form.purpose}
-            onChange={handleChange}
-            placeholder="목적 (예: 구매 유도, 브랜드 인지도 향상)"
-            style={inputStyle}
-          />
-          <input
-            name="keyword"
-            value={form.keyword}
-            onChange={handleChange}
-            placeholder="강조 키워드 (예: 프리미엄, 한정판)"
-            style={inputStyle}
-          />
-          <input
-            name="duration"
-            value={form.duration}
-            onChange={handleChange}
-            placeholder="광고 기간 (예: 5일, 1개월)"
-            style={inputStyle}
-          />
-
-          <button type="submit" disabled={loading} style={buttonStyle}>
-            {loading ? "생성 중..." : "광고 문구 생성하기 "}
-          </button>
-        </form>
-
-        {error && (
-          <p
-            style={{
-              color: "#ff6b6b",
-              marginTop: 20,
-              textAlign: "center",
-              fontWeight: "bold",
-              backgroundColor: "rgba(255, 107, 107, 0.2)",
-              padding: 10,
-              borderRadius: 8,
-            }}
-          >
-            {error}
+      <main style={mainContentStyle}>
+        <div style={cardStyle}>
+          <h2 style={titleStyle}>광고 문구 생성기</h2>
+          <p style={subTextStyle}>
+            AI가 제품에 딱 맞는 매력적인 광고 문구를 만들어드립니다.
           </p>
-        )}
 
-        {adTexts.length > 0 && (
-          <section style={{ marginTop: 30 }}>
-            <h2
-              style={{
-                color: "#d1c4e9",
-                marginBottom: 15,
-                fontSize: "1.3em",
-                fontWeight: 600,
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label style={labelStyle}>제품명</label>
+              <input
+                name="product"
+                value={form.product}
+                onChange={handleChange}
+                placeholder="예: 럭셔리 시계"
+                style={inputStyle}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>타겟 고객</label>
+              <input
+                name="target"
+                value={form.target}
+                onChange={handleChange}
+                placeholder="예: 30대 남성 직장인"
+                style={inputStyle}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>광고 목적</label>
+              <input
+                name="purpose"
+                value={form.purpose}
+                onChange={handleChange}
+                placeholder="예: 구매 유도, 브랜드 인지도 향상"
+                style={inputStyle}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>강조 키워드</label>
+              <input
+                name="keyword"
+                value={form.keyword}
+                onChange={handleChange}
+                placeholder="예: 프리미엄, 한정판"
+                style={inputStyle}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>광고 기간</label>
+              <input
+                name="duration"
+                value={form.duration}
+                onChange={handleChange}
+                placeholder="예: 5일, 1개월"
+                style={inputStyle}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              style={buttonStyle}
+              onMouseOver={(e) => {
+                if (!loading) e.currentTarget.style.backgroundColor = "#7C3AED";
+              }}
+              onMouseOut={(e) => {
+                if (!loading) e.currentTarget.style.backgroundColor = "#8B3DFF";
               }}
             >
-              👇 문구를 선택하세요:
-            </h2>
+              {loading ? "AI 생성 중..." : "✨ 문구 생성하기"}
+            </button>
+          </form>
+
+          {/* 에러 메시지 */}
+          {error && (
             <div
               style={{
-                maxHeight: 300,
-                overflowY: "auto",
-                padding: 10,
-                borderRadius: 10,
-                background: "rgba(0,0,0,0.1)",
+                marginTop: "20px",
+                padding: "12px",
+                borderRadius: "8px",
+                backgroundColor: "#FEE2E2",
+                color: "#DC2626",
+                textAlign: "center",
+                fontWeight: "500",
               }}
             >
-              {adTexts.map((t, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => handleSelectText(t)}
-                  style={adTextButtonStyle}
-                >
-                  {t}
-                </button>
-              ))}
+              {error}
             </div>
-          </section>
-        )}
+          )}
+
+          {/* 결과 표시 영역 */}
+          {adTexts.length > 0 && (
+            <div
+              style={{
+                marginTop: "40px",
+                borderTop: "1px solid #F3F4F6",
+                paddingTop: "20px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  color: "#111827",
+                  marginBottom: "15px",
+                  textAlign: "center",
+                }}
+              >
+                👇 마음에 드는 문구를 선택하세요
+              </h3>
+              <div
+                style={{
+                  maxHeight: "300px",
+                  overflowY: "auto",
+                  paddingRight: "5px", // 스크롤바 공간
+                }}
+              >
+                {adTexts.map((text, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => handleSelectText(text)}
+                    style={resultButtonStyle}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = "#E5E7EB";
+                      e.currentTarget.style.borderColor = "#8B3DFF";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = "#F3F4F6";
+                      e.currentTarget.style.borderColor = "#E5E7EB";
+                    }}
+                  >
+                    {text}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

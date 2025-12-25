@@ -1,60 +1,63 @@
-// src/MetaAdManager.jsx
-
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-// 네비게이션 링크 스타일
-const navLinkStyle = {
-  color: "#a8a5f1",
-  fontWeight: "600",
-  textDecoration: "none",
-  padding: "6px 12px",
-  borderRadius: 6,
-  backgroundColor: "rgba(255,255,255,0.1)",
-  transition: "background-color 0.3s ease",
-  cursor: "pointer",
-};
-
-// 로그아웃 버튼 스타일
-const logoutButtonStyle = {
-  color: "#fff",
-  backgroundColor: "#ff6536",
-  border: "none",
-  borderRadius: 6,
-  padding: "6px 12px",
-  fontWeight: "600",
-  cursor: "pointer",
-};
-
-// 헤더 컴포넌트
+// ===================== Header (통일된 밝은 테마) =====================
 function Header({ isLoggedIn, onLogout }) {
+  const navLinkStyle = {
+    color: "#374151", // text-gray-700
+    fontWeight: "500",
+    fontSize: "15px",
+    textDecoration: "none",
+    padding: "8px 16px",
+    borderRadius: "6px",
+    transition: "all 0.2s ease",
+    cursor: "pointer",
+  };
+
+  const logoutButtonStyle = {
+    color: "#fff",
+    backgroundColor: "#8B3DFF", // Main Purple
+    border: "none",
+    borderRadius: "6px",
+    padding: "8px 20px",
+    fontWeight: "700",
+    fontSize: "15px",
+    cursor: "pointer",
+    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    transition: "background-color 0.2s ease",
+  };
+
   return (
     <header
       style={{
-        backgroundColor: "#3a2a60",
+        backgroundColor: "#ffffff",
         padding: "12px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#a8a5f1",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+        borderBottom: "1px solid #f3f4f6",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
     >
       <Link
         to="/"
         style={{
+          fontFamily: "serif",
+          fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#A8E6CF",
+          color: "#00C4CC", // Brand Color
           textDecoration: "none",
           cursor: "pointer",
+          letterSpacing: "-0.025em",
         }}
       >
-        Ad Manager
+        ADaide
       </Link>
 
-      <nav style={{ display: "flex", gap: 12 }}>
+      <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
         <Link to="/mypage" style={navLinkStyle}>
           마이페이지
         </Link>
@@ -72,99 +75,174 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
-// 푸터 컴포넌트
+// ===================== Footer (통일된 밝은 테마) =====================
 function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#6243a5",
-        color: "#cfcce2",
-        fontSize: "0.9rem",
-        padding: "15px 0",
+        backgroundColor: "#ffffff",
+        borderTop: "1px solid #f3f4f6",
+        color: "#6b7280",
+        fontSize: "0.875rem",
+        padding: "48px 0",
         textAlign: "center",
-        fontFamily: "'Noto Sans KR', sans-serif",
-        boxShadow: "inset 0 1px 4px rgba(255,255,255,0.15)",
         marginTop: "auto",
+        fontFamily: "'Noto Sans KR', sans-serif",
       }}
     >
-      <p>© 2025 광고 매니저. All rights reserved.</p>
-      <p>연락처: support@admanager.com</p>
+      <p style={{ marginBottom: "8px" }}>
+        © 2025 AI Ad Manager. All rights reserved.
+      </p>
+      <p>대표: 장민서 | 대표 메일: msj3767@gmail.com</p>
     </footer>
   );
 }
 
-// 메인 컴포넌트
+// ===================== MetaAdManager 컴포넌트 =====================
 function MetaAdManager() {
   const navigate = useNavigate();
 
   const handleGoToMetaAds = () => {
-    // 실제 메타 광고 관리자 URL로 변경해야 함
+    // 실제 메타 광고 관리자 URL
     const metaAdsUrl = "https://business.facebook.com/adsmanager/";
     window.open(metaAdsUrl, "_blank"); // 새 탭으로 열기
   };
 
-  // 로그인 여부 (다른 인증 로직에 맞게 변경 가능)
   const isLoggedIn = Boolean(localStorage.getItem("jwtToken"));
 
-  // 로그아웃 함수
   const onLogout = () => {
     localStorage.removeItem("jwtToken");
     navigate("/auth/login");
   };
 
-  return (
-    <div
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+  // ================= 스타일 객체 =================
+  const pageContainerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#F9FAFB", // gray-50
+    fontFamily: "'Noto Sans KR', sans-serif",
+  };
+
+  const mainContentStyle = {
+    flexGrow: 1,
+    padding: "60px 20px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center", // 중앙 정렬
+  };
+
+  const cardStyle = {
+    width: "100%",
+    maxWidth: "550px",
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    boxShadow:
+      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    padding: "50px 40px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+  };
+
+  const titleStyle = {
+    fontSize: "1.75rem",
+    fontWeight: "800",
+    color: "#111827",
+    marginBottom: "20px",
+  };
+
+  const descriptionStyle = {
+    fontSize: "1.05rem",
+    color: "#4B5563", // gray-600
+    lineHeight: "1.6",
+    marginBottom: "40px",
+    wordBreak: "keep-all", // 단어 단위 줄바꿈
+  };
+
+  const buttonStyle = {
+    width: "100%",
+    padding: "16px",
+    backgroundColor: "#1877F2", // Facebook Blue
+    color: "white",
+    border: "none",
+    borderRadius: "10px",
+    fontSize: "1.1rem",
+    fontWeight: "700",
+    cursor: "pointer",
+    boxShadow: "0 4px 6px rgba(24, 119, 242, 0.2)",
+    transition: "all 0.2s ease",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+  };
+
+  const noteStyle = {
+    fontSize: "0.85rem",
+    color: "#9CA3AF", // gray-400
+    marginTop: "20px",
+  };
+
+  // 아이콘 스타일 (간단한 SVG 예시)
+  const metaIcon = (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
     >
+      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13.06 16.12C12.92 16.12 12.78 16.08 12.66 16.02C12.38 15.86 12.2 15.58 12.2 15.26V13.84H10.74C10.08 13.84 9.54 13.3 9.54 12.64V11.36C9.54 10.7 10.08 10.16 10.74 10.16H12.2V8.74C12.2 8.42 12.38 8.14 12.66 7.98C12.94 7.82 13.28 7.82 13.56 7.98L16.2 9.54C16.48 9.7 16.66 9.98 16.66 10.3V13.7C16.66 14.02 16.48 14.3 16.2 14.46L13.56 16.02C13.4 16.1 13.22 16.12 13.06 16.12Z" />
+    </svg>
+  );
+
+  return (
+    <div style={pageContainerStyle}>
       {/* 헤더 */}
       <Header isLoggedIn={isLoggedIn} onLogout={onLogout} />
 
       {/* 메인 콘텐츠 영역 */}
-      <main
-        style={{
-          maxWidth: 600,
-          margin: "40px auto",
-          padding: 20,
-          border: "1px solid #ddd",
-          borderRadius: 8,
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-          backgroundColor: "#2b2452",
-          flexGrow: 1, // 푸터를 아래 고정하는 역할
-          textAlign: "center",
-          fontFamily: "'Noto Sans KR', sans-serif",
-        }}
-      >
-        <h2 style={{ color: "#ffffffff", marginBottom: 25 }}>
-          📈 메타 광고 관리
-        </h2>
+      <main style={mainContentStyle}>
+        <div style={cardStyle}>
+          {/* 장식용 아이콘 (선택 사항) */}
+          <div
+            style={{
+              fontSize: "3rem",
+              marginBottom: "10px",
+            }}
+          >
+            📈
+          </div>
 
-        <p style={{ fontSize: "1.1em", color: "#ffffffff", lineHeight: 1.6 }}>
-          여기에서 메타(페이스북/인스타그램) 광고 캠페인을 관리하고 성과를
-          확인하실 수 있습니다. 아래 버튼을 클릭하여 메타 광고 관리자 페이지로
-          이동하세요.
-        </p>
+          <h2 style={titleStyle}>메타 광고 관리</h2>
 
-        <button
-          onClick={handleGoToMetaAds}
-          style={{
-            marginTop: 30,
-            padding: "15px 30px",
-            backgroundColor: "#3b5998",
-            color: "white",
-            border: "none",
-            borderRadius: 8,
-            fontSize: "1.2em",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-          }}
-        >
-          메타 광고 관리자 페이지로 이동 ➡️
-        </button>
+          <p style={descriptionStyle}>
+            생성된 광고 캠페인을 관리하고
+            <br />
+            실시간 성과를 분석하고 싶으신가요?
+            <br />
+            아래 버튼을 눌러 메타 광고 관리자로 이동하세요.
+          </p>
 
-        <p style={{ fontSize: "0.8em", color: "#ffffff", marginTop: 20 }}>
-          (새 창으로 열립니다.)
-        </p>
+          <button
+            onClick={handleGoToMetaAds}
+            style={buttonStyle}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.backgroundColor = "#166FE5")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.backgroundColor = "#1877F2")
+            }
+          >
+            {/* metaIcon */}
+            메타 광고 관리자 바로가기
+          </button>
+
+          <p style={noteStyle}>(새 창으로 열립니다)</p>
+        </div>
       </main>
 
       {/* 푸터 */}

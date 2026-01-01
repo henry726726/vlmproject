@@ -2,22 +2,26 @@ package com.example.backend.dto;
 
 public class PromptRequest {
 
-    private String product;
-    private String target;
-    private String purpose;
-    private String keyword;
-    private String duration;
+    // ✅ 필수
+    private String product;    // 제품명
+    private String benefit;    // 핵심 베네핏 1줄
+    private String painPoint;  // 타겟 상황/고통 1줄
 
-    // 생성자
+    // ✅ 선택
+    private String promotion;  // 프로모션/가격
+    private String toneGuide;  // 금지 표현/톤 가이드
+
+    // 기본 생성자
     public PromptRequest() {
     }
 
-    public PromptRequest(String product, String target, String purpose, String keyword, String duration) {
+    // 모든 필드 생성자
+    public PromptRequest(String product, String benefit, String painPoint, String promotion, String toneGuide) {
         this.product = product;
-        this.target = target;
-        this.purpose = purpose;
-        this.keyword = keyword;
-        this.duration = duration;
+        this.benefit = benefit;
+        this.painPoint = painPoint;
+        this.promotion = promotion;
+        this.toneGuide = toneGuide;
     }
 
     // Getters & Setters
@@ -29,35 +33,35 @@ public class PromptRequest {
         this.product = product;
     }
 
-    public String getTarget() {
-        return target;
+    public String getBenefit() {
+        return benefit;
     }
 
-    public void setTarget(String target) {
-        this.target = target;
+    public void setBenefit(String benefit) {
+        this.benefit = benefit;
     }
 
-    public String getPurpose() {
-        return purpose;
+    public String getPainPoint() {
+        return painPoint;
     }
 
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
+    public void setPainPoint(String painPoint) {
+        this.painPoint = painPoint;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getPromotion() {
+        return promotion;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
+    public void setPromotion(String promotion) {
+        this.promotion = promotion;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getToneGuide() {
+        return toneGuide;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setToneGuide(String toneGuide) {
+        this.toneGuide = toneGuide;
     }
 }

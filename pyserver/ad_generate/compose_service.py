@@ -1,4 +1,3 @@
-
 import os
 import sys
 import json
@@ -7,27 +6,24 @@ import tempfile
 import subprocess
 import logging
 import mimetypes
-from typing import Optional, List
+import threading
+from typing import Optional, Tuple
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from starlette.responses import JSONResponse
 
 app = FastAPI(title="Compose Orchestrator", version="1.1.0")
 
 # ----------------------------
 # 로깅
 # ----------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger("compose")
 
 # ----------------------------
 # 환경설정
 # ----------------------------
-BG_MODEL   = os.getenv("COMPOSE_BG_MODEL", "gemini-2.5-flash-image-preview")
+BG_MODEL    = os.getenv("COMPOSE_BG_MODEL", "gemini-2.5-flash-image-preview")
 QWEN_SCRIPT = os.getenv("COMPOSE_QWEN_SCRIPT", "qwen25_vl_layout_hybrid.py")
 NANO_SCRIPT = os.getenv("COMPOSE_NANOBANANA_SCRIPT", "nano_banana_generate.py")
 TEXT_SCRIPT = os.getenv("COMPOSE_TEXTRENDER_SCRIPT", "ad_text_render.py")
@@ -40,18 +36,15 @@ SKIP_VERTEX_ENV_CHECK = os.getenv("COMPOSE_SKIP_VERTEX_ENV_CHECK", "0") == "1"
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   
+    allow_origins=["*"],
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 # ----------------------------
-# 공용 유틸
+# 공용 유틸 (1) run_argv: text=True로 경고 제거 + stdout/stderr 캡처
 # ----------------------------
-# compose_service.py
-import os, sys, subprocess, io, threading
-
-def run_argv(argv, timeout_s=1800, cwd=None, env=None, stream_prefix=None):
+def run_argv(argv, timeout_s=1800, cwd=None, env=None, stream_prefix=None) -> Tuple[int, str, str]:
     merged_env = {**os.environ, **(env or {})}
     merged_env.update({"PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"})
 
@@ -61,13 +54,12 @@ def run_argv(argv, timeout_s=1800, cwd=None, env=None, stream_prefix=None):
         env=merged_env,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        bufsize=1,                  
-        text=False,                 
+        bufsize=1,           # ✅ text 모드에서 라인 버퍼 지원
+        text=True,           # ✅ RuntimeWarning 제거 핵심
+        encoding="utf-8",
+        errors="backslashreplace",
         creationflags=(subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0),
     )
-
-    stdout_t = io.TextIOWrapper(proc.stdout, encoding="utf-8", errors="backslashreplace", newline="")
-    stderr_t = io.TextIOWrapper(proc.stderr, encoding="utf-8", errors="backslashreplace", newline="")
 
     out_lines, err_lines = [], []
 
@@ -81,8 +73,8 @@ def run_argv(argv, timeout_s=1800, cwd=None, env=None, stream_prefix=None):
                     print(f"{stream_prefix} STDOUT: {line.rstrip()}")
         src.close()
 
-    t1 = threading.Thread(target=pump, args=(stdout_t, out_lines, False), daemon=True)
-    t2 = threading.Thread(target=pump, args=(stderr_t, err_lines, True), daemon=True)
+    t1 = threading.Thread(target=pump, args=(proc.stdout, out_lines, False), daemon=True)
+    t2 = threading.Thread(target=pump, args=(proc.stderr, err_lines, True), daemon=True)
     t1.start(); t2.start()
 
     try:
@@ -92,13 +84,7 @@ def run_argv(argv, timeout_s=1800, cwd=None, env=None, stream_prefix=None):
         ret = proc.wait()
 
     t1.join(); t2.join()
-
-    out_text = "".join(out_lines)
-    err_text = "".join(err_lines)
-    return ret, out_text, err_text
-
-
-
+    return ret, "".join(out_lines), "".join(err_lines)
 
 def _check_vertex_env_or_400():
     if SKIP_VERTEX_ENV_CHECK:
@@ -113,7 +99,7 @@ def health():
     return {"status": "ok"}
 
 # ----------------------------
-# 핵심 엔드포인트 
+# 핵심 엔드포인트
 # ----------------------------
 @app.post("/compose")
 async def compose(
@@ -123,8 +109,8 @@ async def compose(
 
     # 문자열 파라미터 (둘 다 허용)
     product: Optional[str] = Form(None),
-    text: str = Form(""),          # 프론트에서 쓰던 이름
-    caption: str = Form(""),       # 호환용(백엔드에서 caption을 쓰는 경우)
+    text: str = Form(""),
+    caption: str = Form(""),
 
     # 추가 옵션
     product_name: str = Form(""),
@@ -137,11 +123,10 @@ async def compose(
     if resolved_file is None:
         raise HTTPException(status_code=400, detail="image (or image_file) is required")
 
-    # caption/text/headline 중 우선순위로 문구 결정
     resolved_headline = (text or caption or headline).strip()
     resolved_product = (product or "").strip()
 
-    # 1) Step2 환경 (Vertex/GenAI) 체크
+    # 1) Step2 환경 체크
     _check_vertex_env_or_400()
 
     # 2) 임시 작업 디렉터리
@@ -151,14 +136,17 @@ async def compose(
         if not raw:
             raise HTTPException(status_code=400, detail="uploaded file is empty")
 
-        guessed_ext = mimetypes.guess_extension(resolved_file.content_type or "") \
-                      or os.path.splitext(resolved_file.filename or "")[1] \
-                      or ".bin"
-        img_path     = os.path.join(td, f"input{guessed_ext}")
-        layout_json  = os.path.join(td, "layout_with_bg.json")
-        stage3_path  = os.path.join(td, "stage3.png")
-        final_path   = os.path.join(td, "final_ad.png")
-        copy_json    = os.path.join(td, "copy.json")
+        guessed_ext = (
+            mimetypes.guess_extension(resolved_file.content_type or "")
+            or os.path.splitext(resolved_file.filename or "")[1]
+            or ".bin"
+        )
+
+        img_path    = os.path.join(td, f"input{guessed_ext}")
+        layout_json = os.path.join(td, "layout_with_bg.json")
+        stage3_path = os.path.join(td, "stage3.png")
+        final_path  = os.path.join(td, "final_ad.png")
+        copy_json   = os.path.join(td, "copy.json")
 
         with open(img_path, "wb") as f:
             f.write(raw)
@@ -171,23 +159,20 @@ async def compose(
             "--save", layout_json,
             "--product_name", (resolved_product or "")
         ]
-        if resolved_product:
-            argv += ["--product_name", resolved_product] 
 
-        # compose() 안, Step1 호출 직후
-        out1, err1, rc1 = run_argv(argv1, cwd=QWEN_DIR, timeout_s=1800)
+        # ✅ run_argv 반환 순서: (rc, out, err)
+        rc1, out1, err1 = run_argv(argv1, cwd=QWEN_DIR, timeout_s=1800, stream_prefix="[STEP1]")
 
-        # 파일 존재/사이즈 검증
+        if rc1 != 0:
+            log.error("Step1 failed rc=%s. head(stderr)=%s", rc1, (err1 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step1 (Qwen) failed. See server logs.")
+
         if not os.path.exists(layout_json) or os.path.getsize(layout_json) < 10:
-            log.error("Step1 produced no layout json. head(stdout)=%s", (out1 or "")[:1000])
-            raise HTTPException(
-                status_code=500,
-                detail="Step1 (Qwen) did not generate layout JSON. See server logs."
-            )
+            log.error("Step1 produced no layout json. head(stdout)=%s", (out1 or "")[:2000])
+            log.error("Step1 head(stderr)=%s", (err1 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step1 (Qwen) did not generate layout JSON. See server logs.")
 
-
-
-        # 4) Step2 — 배경 합성
+        # 4) Step2 — 배경 합성  (2) rc + 파일 존재 체크 추가
         argv2 = [
             sys.executable, NANO_SCRIPT,
             "--image", img_path,
@@ -195,7 +180,16 @@ async def compose(
             "--out", stage3_path,
             "--model", BG_MODEL
         ]
-        run_argv(argv2, cwd=NANO_DIR)
+        rc2, out2, err2 = run_argv(argv2, cwd=NANO_DIR, timeout_s=1800, stream_prefix="[STEP2]")
+
+        if rc2 != 0:
+            log.error("Step2 failed rc=%s. head(stderr)=%s", rc2, (err2 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step2 (Nano) failed. See server logs.")
+
+        if not os.path.exists(stage3_path) or os.path.getsize(stage3_path) < 10:
+            log.error("Step2 produced no stage3 image. head(stdout)=%s", (out2 or "")[:2000])
+            log.error("Step2 head(stderr)=%s", (err2 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step2 did not generate stage3.png. See server logs.")
 
         # 5) Step2.5 — copy.json 구성 (headline만 우선 매핑)
         copy_map = {}
@@ -204,7 +198,7 @@ async def compose(
         with open(copy_json, "w", encoding="utf-8") as f:
             json.dump(copy_map, f, ensure_ascii=False, indent=2)
 
-        # 6) Step3 — 텍스트/로고 렌더링
+        # 6) Step3 — 텍스트/로고 렌더링  (2) rc + 파일 존재 체크 추가
         argv3 = [
             sys.executable, TEXT_SCRIPT,
             "--image", stage3_path,
@@ -215,9 +209,19 @@ async def compose(
             "--skip_layout_underlays"
         ]
         if logo_path and logo_path.strip():
-            argv3.insert(len(argv3)-2, "--logo_path")
-            argv3.insert(len(argv3)-2, logo_path.strip())
-        run_argv(argv3, cwd=TEXT_DIR)
+            argv3.insert(len(argv3) - 2, "--logo_path")
+            argv3.insert(len(argv3) - 2, logo_path.strip())
+
+        rc3, out3, err3 = run_argv(argv3, cwd=TEXT_DIR, timeout_s=1800, stream_prefix="[STEP3]")
+
+        if rc3 != 0:
+            log.error("Step3 failed rc=%s. head(stderr)=%s", rc3, (err3 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step3 (TextRender) failed. See server logs.")
+
+        if not os.path.exists(final_path) or os.path.getsize(final_path) < 10:
+            log.error("Step3 produced no final image. head(stdout)=%s", (out3 or "")[:2000])
+            log.error("Step3 head(stderr)=%s", (err3 or "")[:2000])
+            raise HTTPException(status_code=500, detail="Step3 did not generate final_ad.png. See server logs.")
 
         # 7) 결과 수집: 이미지 base64 + 레이아웃/카피 JSON + 메타
         try:
@@ -265,13 +269,12 @@ async def compose(
 async def generate(
     caption: str = Form(""),
     image: UploadFile = File(...),
-    product: Optional[str] = Form(None), 
+    product: Optional[str] = Form(None),
 ):
-    # 내부적으로 /compose와 동일한 처리 경로 사용
     return await compose(
         image=image,
         image_file=None,
-        product="",
+        product=product or "",
         text=caption,
         caption=caption,
         product_name="",

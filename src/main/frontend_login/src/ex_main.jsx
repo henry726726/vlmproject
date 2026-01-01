@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   ChevronRight,
   MousePointerClick,
   Sparkles,
-  BarChart3, // 아이콘 변경 (데이터 분석용)
-  RefreshCw, // 아이콘 변경 (순환/교체용)
+  BarChart3,
+  RefreshCw,
   Menu,
-  Zap, // 아이콘 추가 (속도/편리함)
-  Layers, // 아이콘 추가 (레이아웃/계층)
+  Zap,
+  Layers,
+  // 추가된 아이콘들
+  PenTool, // 카피라이터
+  Wand2, // 화질 개선/마법봉
+  ImagePlus, // 배경 생성
+  LayoutTemplate, // 합성/레이아웃
 } from "lucide-react";
 
 export default function LandingPage() {
   const navigate = useNavigate();
+
+  // 1. 스크롤 이동을 위한 ref 생성
+  const aiFeaturesRef = useRef(null);
+
+  // 2. 해당 섹션으로 스크롤하는 함수
+  const scrollToAiFeatures = (e) => {
+    e.preventDefault(); // a 태그 기본 동작 방지
+    aiFeaturesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen w-full font-sans text-gray-900 bg-white">
@@ -34,7 +48,12 @@ export default function LandingPage() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6 text-[15px] font-medium text-gray-700">
-              <a href="#" className="hover:text-purple-600 transition-colors">
+              {/* 기능 소개 클릭 시 스크롤 이동 연결 */}
+              <a
+                href="#ai-features"
+                onClick={scrollToAiFeatures}
+                className="hover:text-purple-600 transition-colors cursor-pointer"
+              >
                 기능 소개
               </a>
               <a href="#" className="hover:text-purple-600 transition-colors">
@@ -113,7 +132,6 @@ export default function LandingPage() {
               <div className="relative mx-auto w-full max-w-[800px]">
                 <div className="relative z-10 overflow-hidden rounded-t-xl bg-gray-800 shadow-2xl border-[12px] border-gray-800 border-b-0 aspect-[16/10]">
                   <div className="h-full w-full bg-white relative group">
-                    {/* 메인 이미지: Unsplash의 비즈니스 미팅/발표 이미지로 교체 */}
                     <img
                       src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"
                       alt="Dashboard Preview"
@@ -145,7 +163,7 @@ export default function LandingPage() {
         </div>
       </main>
 
-      {/* 👇 [수정됨] 핵심 기능 소개 (요약 버전) */}
+      {/* 핵심 기능 소개 (요약 버전) */}
       <section className="bg-white py-20 border-b border-gray-100">
         <div className="mx-auto max-w-[1440px] px-4 lg:px-12">
           <div className="text-center mb-16">
@@ -220,9 +238,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 👇 [추가됨] 작동 원리 (Pipeline) 소개 */}
+      {/* 작동 원리 (Pipeline) 소개 */}
       <section className="bg-[#1A0F3D] py-20 text-white overflow-hidden relative">
-        {/* 배경 장식 요소 */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[100px]"></div>
@@ -245,7 +262,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Step 1 */}
+            {/* Steps (기존 코드 유지) */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6 relative">
               <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8B3DFF] rounded-full flex items-center justify-center font-bold text-white shadow-lg">
                 1
@@ -259,8 +276,6 @@ export default function LandingPage() {
                 3종을 자동으로 작성합니다.
               </p>
             </div>
-
-            {/* Step 2 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6 relative">
               <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8B3DFF] rounded-full flex items-center justify-center font-bold text-white shadow-lg">
                 2
@@ -274,8 +289,6 @@ export default function LandingPage() {
                 레이아웃 구도를 설계합니다.
               </p>
             </div>
-
-            {/* Step 3 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6 relative">
               <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8B3DFF] rounded-full flex items-center justify-center font-bold text-white shadow-lg">
                 3
@@ -289,8 +302,6 @@ export default function LandingPage() {
                 광고 이미지를 완성합니다.
               </p>
             </div>
-
-            {/* Step 4 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6 relative">
               <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8B3DFF] rounded-full flex items-center justify-center font-bold text-white shadow-lg">
                 4
@@ -308,7 +319,117 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer (Simple Version for Landing) */}
+      {/* 👇 [추가됨] AI 모듈 기능 상세 소개 (스크롤 타겟 위치) */}
+      <section
+        ref={aiFeaturesRef}
+        id="ai-features"
+        className="bg-gray-50 py-24 border-t border-gray-100"
+      >
+        <div className="mx-auto max-w-[1440px] px-4 lg:px-12">
+          <h2 className="text-3xl font-bold text-[#111827] mb-12">
+            다양한 생성 AI 기능을 <br />
+            경험해보세요
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: 카피라이터 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
+              {/* Image Placeholder Area */}
+              <div className="h-48 bg-[#F3F0FF] flex items-center justify-center relative overflow-hidden">
+                {/* 실제 이미지가 있다면 img 태그 사용, 여기선 아이콘으로 대체 */}
+                <PenTool
+                  size={48}
+                  className="text-[#8B3DFF] group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900">
+                    카피라이터
+                  </h3>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#10B981] text-white">
+                    Live
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  마케팅에 활용할 다양한 톤앤매너의 카피를 생성합니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: 화질 개선 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
+              <div className="h-48 bg-[#ECFDF5] flex items-center justify-center relative overflow-hidden">
+                <Wand2
+                  size={48}
+                  className="text-[#059669] group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900">화질 개선</h3>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#10B981] text-white">
+                    Live
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  낮은 품질의 이미지를 고해상도의 선명한 이미지로 변환합니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: 이미지 배경 생성 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
+              <div className="h-48 bg-[#EFF6FF] flex items-center justify-center relative overflow-hidden">
+                <ImagePlus
+                  size={48}
+                  className="text-[#2563EB] group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900">배경 생성</h3>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#10B981] text-white">
+                    Live
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  상품 이미지를 제외한 배경을 자연스럽게 채워줍니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4: 문구와 이미지 합성 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
+              <div className="h-48 bg-[#FDF2F8] flex items-center justify-center relative overflow-hidden">
+                <LayoutTemplate
+                  size={48}
+                  className="text-[#DB2777] group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900">
+                    이미지 합성
+                  </h3>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#10B981] text-white">
+                    Live
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  생성된 문구와 이미지를 최적의 비율로 선별 및 편집합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
       <footer className="bg-white py-12 border-t border-gray-100">
         <div className="mx-auto max-w-[1440px] px-4 text-center text-gray-500 text-sm">
           <p className="mb-2">© 2025 AI Ad Manager. All rights reserved.</p>

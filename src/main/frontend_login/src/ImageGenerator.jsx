@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-// ===================== Header (통일된 밝은 테마) =====================
+// ===================== Header (기존 동일) =====================
 function Header({ isLoggedIn, onLogout }) {
   const navLinkStyle = {
-    color: "#374151", // text-gray-700
+    color: "#374151",
     fontWeight: "500",
     fontSize: "15px",
     textDecoration: "none",
@@ -17,7 +17,7 @@ function Header({ isLoggedIn, onLogout }) {
 
   const logoutButtonStyle = {
     color: "#fff",
-    backgroundColor: "#8B3DFF", // Main Purple
+    backgroundColor: "#8B3DFF",
     border: "none",
     borderRadius: "6px",
     padding: "8px 20px",
@@ -49,7 +49,7 @@ function Header({ isLoggedIn, onLogout }) {
           fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#00C4CC", // Brand Color
+          color: "#00C4CC",
           textDecoration: "none",
           cursor: "pointer",
           letterSpacing: "-0.025em",
@@ -76,7 +76,7 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
-// ===================== Footer (통일된 밝은 테마) =====================
+// ===================== Footer (기존 동일) =====================
 function Footer() {
   return (
     <footer
@@ -113,7 +113,6 @@ function ImageGenerator() {
   const [isSavingContent, setIsSavingContent] = useState(false);
   const [error, setError] = useState("");
 
-  // Header에 전달할 onLogout 함수
   const handleHeaderLogout = () => {
     localStorage.removeItem("jwtToken");
     navigate("/auth/login");
@@ -175,7 +174,6 @@ function ImageGenerator() {
 
       let fileToSend = imageFile;
       if (!fileToSend && originalBase64) {
-        // base64 -> blob 변환 로직
         const toBlobFromDataUrl = (dataUrl) => {
           const [meta, b64] = dataUrl.split(",");
           const mime =
@@ -331,12 +329,12 @@ function ImageGenerator() {
     );
   }
 
-  // ================= 스타일 객체 =================
+  // ================= 스타일 객체 (레이아웃 변경) =================
   const pageContainerStyle = {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    backgroundColor: "#F9FAFB", // gray-50
+    backgroundColor: "#F9FAFB",
     fontFamily: "'Noto Sans KR', sans-serif",
   };
 
@@ -345,12 +343,23 @@ function ImageGenerator() {
     padding: "60px 20px",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "center", // 중앙 정렬
   };
 
-  const cardStyle = {
+  // ✅ 컨텐츠를 가로로 배치하기 위한 Wrapper (왼쪽: 입력 / 오른쪽: 결과)
+  const contentWrapperStyle = {
+    display: "flex",
+    flexDirection: "row", // 가로 배치
+    gap: "30px", // 패널 사이 간격
     width: "100%",
-    maxWidth: "600px",
+    maxWidth: "1100px", // 두 개를 놓기 위해 최대 너비 증가
+    justifyContent: "center",
+    alignItems: "flex-start", // 높이가 달라도 상단 정렬
+    flexWrap: "wrap", // 화면이 좁으면 세로로 배치 (모바일 대응)
+  };
+
+  // ✅ 공통 카드 스타일
+  const cardBaseStyle = {
     backgroundColor: "#ffffff",
     borderRadius: "16px",
     boxShadow:
@@ -361,6 +370,22 @@ function ImageGenerator() {
     boxSizing: "border-box",
   };
 
+  // 왼쪽 (입력) 카드 스타일
+  const inputCardStyle = {
+    ...cardBaseStyle,
+    flex: "1 1 400px", // 최소 400px, 공간 남으면 늘어남
+    maxWidth: "600px",
+  };
+
+  // 오른쪽 (결과) 카드 스타일
+  const resultCardStyle = {
+    ...cardBaseStyle,
+    flex: "1 1 400px",
+    maxWidth: "600px",
+    // 결과가 없을 때는 숨기고 싶다면 display: 'none' 처리를 여기서 할 수도 있음
+    // 하지만 공간을 잡아두는게 나을 수 있음. 여기선 결과 있을때만 렌더링하도록 JSX에서 처리함.
+  };
+
   const titleStyle = {
     fontSize: "1.75rem",
     fontWeight: "800",
@@ -369,14 +394,13 @@ function ImageGenerator() {
     textAlign: "center",
   };
 
-  // 선택된 문구 박스 스타일 (깔끔한 그레이/블루 톤)
   const infoBoxStyle = {
     marginBottom: "24px",
     padding: "16px",
-    backgroundColor: "#F3F4F6", // gray-100
-    borderLeft: "4px solid #8B3DFF", // accent color
+    backgroundColor: "#F3F4F6",
+    borderLeft: "4px solid #8B3DFF",
     borderRadius: "4px",
-    color: "#374151", // gray-700
+    color: "#374151",
     fontSize: "0.95rem",
     textAlign: "left",
     lineHeight: "1.5",
@@ -385,14 +409,13 @@ function ImageGenerator() {
   const fileInputStyle = {
     marginBottom: "20px",
     padding: "10px",
-    border: "1px dashed #D1D5DB", // gray-300
+    border: "1px dashed #D1D5DB",
     borderRadius: "8px",
     width: "100%",
     boxSizing: "border-box",
     backgroundColor: "#FAFAFA",
   };
 
-  // 공통 버튼 스타일 생성 함수
   const getButtonStyle = (bgColor, disabled) => ({
     width: "100%",
     padding: "14px",
@@ -415,120 +438,120 @@ function ImageGenerator() {
       />
 
       <main style={mainContentStyle}>
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>광고 이미지 합성기</h2>
+        {/* 가로 배치를 위한 Wrapper 시작 */}
+        <div style={contentWrapperStyle}>
+          {/* ============ 왼쪽 패널: 입력 및 설정 ============ */}
+          <div style={inputCardStyle}>
+            <h2 style={titleStyle}>광고 이미지 합성기</h2>
 
-          <div style={infoBoxStyle}>
-            <div style={{ fontWeight: "700", marginBottom: "4px" }}>
-              📢 선택된 문구
+            <div style={infoBoxStyle}>
+              <div style={{ fontWeight: "700", marginBottom: "4px" }}>
+                📢 선택된 문구
+              </div>
+              {selectedAdText}
+              {textGenParams && (
+                <div
+                  style={{
+                    fontSize: "0.85rem",
+                    color: "#6B7280",
+                    marginTop: "8px",
+                    paddingTop: "8px",
+                    borderTop: "1px solid #E5E7EB",
+                  }}
+                >
+                  옵션: {textGenParams.product} | {textGenParams.benefit} |{" "}
+                  {textGenParams.painPoint}
+                </div>
+              )}
             </div>
-            {selectedAdText}
-            {textGenParams && (
+
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+              style={fileInputStyle}
+            />
+
+            {originalBase64 && (
+              <div style={{ marginBottom: "20px", textAlign: "center" }}>
+                <img
+                  src={`data:image/png;base64,${originalBase64}`}
+                  alt="Uploaded"
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "250px",
+                    borderRadius: "8px",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                  }}
+                />
+              </div>
+            )}
+
+            <button
+              onClick={handleCompose}
+              disabled={isLoading || !selectedAdText}
+              style={getButtonStyle("#8B3DFF", isLoading || !selectedAdText)}
+            >
+              {isLoading ? "이미지 합성 중... ⏳" : "이미지 합성하기"}
+            </button>
+
+            {/* Facebook 버튼은 결과가 나오면 왼쪽 패널에 둘지, 오른쪽에 둘지 선택 가능하지만
+                일단 기능 버튼은 입력 쪽에 모아두는 것이 자연스러움 */}
+            <button
+              onClick={handleGoFacebook}
+              disabled={isLoading || !resultUrl}
+              style={getButtonStyle("#1877f2", isLoading || !resultUrl)}
+            >
+              Facebook에서 광고 확인하기
+            </button>
+
+            {error && (
               <div
                 style={{
-                  fontSize: "0.85rem",
-                  color: "#6B7280",
-                  marginTop: "8px",
-                  paddingTop: "8px",
-                  borderTop: "1px solid #E5E7EB",
+                  marginTop: "10px",
+                  color: "#DC2626",
+                  textAlign: "center",
+                  fontSize: "0.9rem",
+                  fontWeight: "500",
                 }}
               >
-                옵션: {textGenParams.product} | {textGenParams.target} |{" "}
-                {textGenParams.purpose}
+                {error}
               </div>
             )}
           </div>
 
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleFileChange}
-            style={fileInputStyle}
-          />
-
-          {originalBase64 && (
-            <div style={{ marginBottom: "20px", textAlign: "center" }}>
-              <img
-                src={`data:image/png;base64,${originalBase64}`}
-                alt="Uploaded"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "250px",
-                  borderRadius: "8px",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                }}
-              />
-            </div>
-          )}
-
-          <button
-            onClick={handleCompose}
-            disabled={isLoading || !selectedAdText}
-            style={getButtonStyle("#8B3DFF", isLoading || !selectedAdText)}
-          >
-            {isLoading ? "이미지 합성 중... ⏳" : "⚡ 이미지 합성하기"}
-          </button>
-
-          <button
-            onClick={handleGoFacebook}
-            disabled={isLoading || !resultUrl}
-            style={getButtonStyle("#1877f2", isLoading || !resultUrl)} // Facebook Blue
-          >
-            FacebookInput으로 이동 ➡️
-          </button>
-
-          {error && (
-            <div
-              style={{
-                marginTop: "10px",
-                color: "#DC2626",
-                textAlign: "center",
-                fontSize: "0.9rem",
-                fontWeight: "500",
-              }}
-            >
-              {error}
-            </div>
-          )}
-
+          {/* ============ 오른쪽 패널: 결과 확인 (결과가 있을 때만 보임) ============ */}
           {resultUrl && (
-            <div
-              style={{
-                marginTop: "30px",
-                borderTop: "1px solid #E5E7EB",
-                paddingTop: "30px",
-                textAlign: "center",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "1.2rem",
-                  color: "#111827",
-                  marginBottom: "15px",
-                }}
-              >
-                ✨ 합성 결과
-              </h3>
-              <img
-                src={resultUrl}
-                alt="Composite Ad"
-                style={{
-                  maxWidth: "100%",
-                  borderRadius: "8px",
-                  border: "1px solid #E5E7EB",
-                  marginBottom: "20px",
-                }}
-              />
-              <button
-                onClick={handleSaveContent}
-                disabled={isSavingContent}
-                style={getButtonStyle("#10B981", isSavingContent)} // Green
-              >
-                {isSavingContent ? "저장 중..." : "📂 광고 콘텐츠 저장"}
-              </button>
+            <div style={resultCardStyle}>
+              <h2 style={{ ...titleStyle, marginBottom: "30px" }}>합성 결과</h2>
+
+              <div style={{ textAlign: "center", flexGrow: 1 }}>
+                <img
+                  src={resultUrl}
+                  alt="Composite Ad"
+                  style={{
+                    maxWidth: "100%",
+                    borderRadius: "8px",
+                    border: "1px solid #E5E7EB",
+                    marginBottom: "30px",
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                  }}
+                />
+              </div>
+
+              <div style={{ marginTop: "auto" }}>
+                <button
+                  onClick={handleSaveContent}
+                  disabled={isSavingContent}
+                  style={getButtonStyle("#10B981", isSavingContent)}
+                >
+                  {isSavingContent ? "저장 중..." : "광고 콘텐츠 저장"}
+                </button>
+              </div>
             </div>
           )}
         </div>
+        {/* Wrapper 끝 */}
       </main>
 
       <Footer />

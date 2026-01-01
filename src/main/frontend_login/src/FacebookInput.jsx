@@ -227,7 +227,7 @@ function FacebookInput() {
     adSettings.link && adSettings.dailyBudget && adSettings.startTime;
   const buttonText = adCreatedOrUpdated ? "광고 업로드하기" : "광고 생성하기";
 
-  // ================= 스타일 객체 =================
+  // ================= 스타일 객체 (수정됨) =================
   const pageContainerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -246,7 +246,7 @@ function FacebookInput() {
 
   const cardStyle = {
     width: "100%",
-    maxWidth: "700px", // 폼이 조금 길어서 넓게 잡음
+    maxWidth: "700px",
     backgroundColor: "#ffffff",
     borderRadius: "16px",
     boxShadow:
@@ -260,7 +260,7 @@ function FacebookInput() {
   const titleStyle = {
     fontSize: "1.75rem",
     fontWeight: "800",
-    color: "#111827",
+    color: "#000000", // 완전 검정
     marginBottom: "30px",
     textAlign: "center",
   };
@@ -268,8 +268,8 @@ function FacebookInput() {
   const labelStyle = {
     display: "block",
     marginBottom: "6px",
-    fontWeight: "600",
-    color: "#374151",
+    fontWeight: "700", // 조금 더 두껍게
+    color: "#000000", // 완전 검정
     fontSize: "0.95rem",
   };
 
@@ -282,7 +282,9 @@ function FacebookInput() {
     backgroundColor: "#F9FAFB",
     outline: "none",
     boxSizing: "border-box",
-    marginBottom: "16px", // 각 입력폼 사이 간격
+    marginBottom: "16px",
+    color: "#000000", // 입력 텍스트 완전 검정
+    fontWeight: "500", // 텍스트 가독성 높임
   };
 
   const buttonStyle = {
@@ -317,16 +319,16 @@ function FacebookInput() {
   };
 
   const previewLabelStyle = {
-    color: "#6B7280",
-    fontWeight: "500",
+    color: "#333333", // 라벨은 진한 회색 (구분을 위해)
+    fontWeight: "600",
   };
 
   const previewValueStyle = {
-    color: "#111827",
-    fontWeight: "600",
+    color: "#000000", // 값은 완전 검정
+    fontWeight: "700", // 굵게 강조
     textAlign: "right",
     maxWidth: "60%",
-    wordBreak: "break-all", // URL 등이 길어질 때 줄바꿈
+    wordBreak: "break-all",
   };
 
   return (
@@ -467,7 +469,8 @@ function FacebookInput() {
             <h3
               style={{
                 fontSize: "1.1rem",
-                color: "#111827",
+                color: "#000000", // 제목도 검정
+                fontWeight: "700",
                 marginBottom: "15px",
                 textAlign: "center",
               }}

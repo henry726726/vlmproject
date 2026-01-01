@@ -5,19 +5,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter // <-- 이 어노테이션이 있다면 Lombok이 Getter를 자동 생성
-@Setter // <-- 이 어노테이션이 있다면 Lombok이 Setter를 자동 생성
-@NoArgsConstructor // 기본 생성자 자동 생성
-@AllArgsConstructor // 모든 필드를 인자로 받는 생성자 자동 생성
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TextGenerationRequest {
-    private String product;
-    private String target;
-    private String purpose;
-    private String keyword;
-    private String duration;
 
-    // 💡💡💡 수동으로 Getter/Setter 메소드를 추가합니다. 💡💡💡
-    
+    // ✅ 필수
+    private String product;    // 제품명
+    private String benefit;    // 핵심 베네핏 1줄
+    private String painPoint;  // 타겟 상황/고통 1줄
+
+    // ✅ 선택
+    private String promotion;  // 프로모션/가격
+    private String toneGuide;  // 금지 표현/톤 가이드
+
+    // 💡 수동 Getter/Setter (원하면 다 지워도 됨 — Lombok이 이미 생성해줌)
 
     public String getProduct() {
         return product;
@@ -27,35 +30,35 @@ public class TextGenerationRequest {
         this.product = product;
     }
 
-    public String getTarget() {
-        return target;
+    public String getBenefit() {
+        return benefit;
     }
 
-    public void setTarget(String target) {
-        this.target = target;
+    public void setBenefit(String benefit) {
+        this.benefit = benefit;
     }
 
-    public String getPurpose() {
-        return purpose;
+    public String getPainPoint() {
+        return painPoint;
     }
 
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
+    public void setPainPoint(String painPoint) {
+        this.painPoint = painPoint;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getPromotion() {
+        return promotion;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
+    public void setPromotion(String promotion) {
+        this.promotion = promotion;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getToneGuide() {
+        return toneGuide;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setToneGuide(String toneGuide) {
+        this.toneGuide = toneGuide;
     }
 }

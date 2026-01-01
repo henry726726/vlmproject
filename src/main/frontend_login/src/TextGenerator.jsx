@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-// ===================== Header (통일된 밝은 테마) =====================
+// ===================== Header (기존과 동일) =====================
 function Header({ isLoggedIn, onLogout }) {
   const navLinkStyle = {
-    color: "#374151", // text-gray-700
+    color: "#374151",
     fontWeight: "500",
     fontSize: "15px",
     textDecoration: "none",
@@ -17,7 +17,7 @@ function Header({ isLoggedIn, onLogout }) {
 
   const logoutButtonStyle = {
     color: "#fff",
-    backgroundColor: "#8B3DFF", // Main Purple
+    backgroundColor: "#8B3DFF",
     border: "none",
     borderRadius: "6px",
     padding: "8px 20px",
@@ -49,7 +49,7 @@ function Header({ isLoggedIn, onLogout }) {
           fontStyle: "italic",
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#00C4CC", // Brand Color
+          color: "#00C4CC",
           textDecoration: "none",
           cursor: "pointer",
           letterSpacing: "-0.025em",
@@ -76,7 +76,7 @@ function Header({ isLoggedIn, onLogout }) {
   );
 }
 
-// ===================== Footer (통일된 밝은 테마) =====================
+// ===================== Footer (기존과 동일) =====================
 function Footer() {
   return (
     <footer
@@ -105,11 +105,12 @@ function TextGenerator() {
 
   const [form, setForm] = useState({
     product: "",
-    target: "",
-    purpose: "",
-    keyword: "",
-    duration: "",
+    benefit: "",
+    painPoint: "",
+    promotion: "",
+    toneGuide: "",
   });
+
   const [adTexts, setAdTexts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -124,10 +125,10 @@ function TextGenerator() {
     setAdTexts([]);
     setError("");
 
-    const formValues = Object.values(form);
-    const isValid = formValues.every((value) => value.trim() !== "");
-    if (!isValid) {
-      setError("모든 필드를 입력해주세요! 😅");
+    const requiredFields = ["product", "benefit", "painPoint"];
+    const missing = requiredFields.filter((k) => !form[k]?.trim());
+    if (missing.length > 0) {
+      setError("필수 항목을 모두 입력해주세요! 😅");
       setLoading(false);
       return;
     }
@@ -148,16 +149,24 @@ function TextGenerator() {
           Authorization: `Bearer ${token}`,
         },
       });
-      setAdTexts(res.data.adTexts || []);
+
+      if (res.data?.ok === false) {
+        setError(res.data?.warning || "광고 문구 생성에 실패했어요.");
+        setAdTexts([]);
+      } else {
+        setAdTexts(res.data?.adTexts || []);
+      }
     } catch (err) {
       console.error("❌ 광고 문구 생성 오류:", err);
       const errorMessage =
         err.response && err.response.status === 401
           ? "인증이 필요하거나 세션이 만료되었습니다. 다시 로그인해주세요."
           : err.response?.data?.message ||
+            err.response?.data?.warning ||
             err.message ||
-            "광고 문구 생성 중 오류가 발생했습니다. 백엔드 서버를 확인해주세요.";
+            "광고 문구 생성 중 오류가 발생했습니다.";
       setError(errorMessage);
+
       if (err.response?.status === 401 || err.response?.status === 403) {
         localStorage.removeItem("jwtToken");
         navigate("/auth/login");
@@ -179,12 +188,12 @@ function TextGenerator() {
     navigate("/image-generator");
   };
 
-  // ================= 스타일 객체 (MyPage와 통일) =================
+  // ================= 스타일 객체 (레이아웃 변경) =================
   const pageContainerStyle = {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    backgroundColor: "#F9FAFB", // gray-50
+    backgroundColor: "#F9FAFB",
     fontFamily: "'Noto Sans KR', sans-serif",
   };
 
@@ -196,9 +205,20 @@ function TextGenerator() {
     alignItems: "center",
   };
 
-  const cardStyle = {
+  // ✅ 좌우 배치를 위한 Wrapper
+  const contentWrapperStyle = {
+    display: "flex",
+    flexDirection: "row",
+    gap: "30px",
     width: "100%",
-    maxWidth: "600px", // 입력 폼이 많으므로 약간 넓게
+    maxWidth: "1100px",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    flexWrap: "wrap", // 화면이 좁아지면 세로로 배치
+  };
+
+  // ✅ 공통 카드 스타일
+  const cardBaseStyle = {
     backgroundColor: "#ffffff",
     borderRadius: "16px",
     boxShadow:
@@ -206,6 +226,23 @@ function TextGenerator() {
     padding: "40px",
     display: "flex",
     flexDirection: "column",
+    boxSizing: "border-box",
+  };
+
+  // 왼쪽 (입력) 패널
+  const inputCardStyle = {
+    ...cardBaseStyle,
+    flex: "1 1 400px",
+    maxWidth: "600px",
+  };
+
+  // 오른쪽 (결과) 패널
+  const resultCardStyle = {
+    ...cardBaseStyle,
+    flex: "1 1 400px",
+    maxWidth: "600px",
+    backgroundColor: "#F3F4F6", // 결과창은 약간 다른 배경색으로 구분 (선택사항)
+    border: "1px solid #E5E7EB",
   };
 
   const titleStyle = {
@@ -245,6 +282,14 @@ function TextGenerator() {
     boxSizing: "border-box",
   };
 
+  const helperTextStyle = {
+    fontSize: "0.82rem",
+    color: "#6B7280",
+    marginTop: "-10px",
+    marginBottom: "14px",
+    lineHeight: "1.4",
+  };
+
   const buttonStyle = {
     width: "100%",
     padding: "14px",
@@ -259,21 +304,21 @@ function TextGenerator() {
     marginTop: "10px",
   };
 
-  // 결과 버튼 스타일
   const resultButtonStyle = {
     display: "block",
     width: "100%",
     textAlign: "left",
-    border: "1px solid #E5E7EB",
+    border: "1px solid #d1d5db", // 좀 더 진한 테두리
     borderRadius: "8px",
     padding: "16px",
     marginTop: "12px",
-    backgroundColor: "#F3F4F6", // gray-100
+    backgroundColor: "#ffffff",
     fontSize: "1rem",
     color: "#374151",
     cursor: "pointer",
     transition: "all 0.2s ease",
     lineHeight: "1.5",
+    boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
   };
 
   return (
@@ -287,124 +332,145 @@ function TextGenerator() {
       />
 
       <main style={mainContentStyle}>
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>광고 문구 생성기</h2>
-          <p style={subTextStyle}>
-            AI가 제품에 딱 맞는 매력적인 광고 문구를 만들어드립니다.
-          </p>
+        <div style={contentWrapperStyle}>
+          {/* ============ 왼쪽 패널: 입력 폼 ============ */}
+          <div style={inputCardStyle}>
+            <h2 style={titleStyle}>광고 문구 생성기</h2>
+            <p style={subTextStyle}>
+              AI가 “베네핏 + 상황” 기반으로 더 강한 광고 문구를 만듭니다.
+            </p>
 
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label style={labelStyle}>제품명</label>
-              <input
-                name="product"
-                value={form.product}
-                onChange={handleChange}
-                placeholder="예: 럭셔리 시계"
-                style={inputStyle}
-              />
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label style={labelStyle}>제품명 (필수)</label>
+                <input
+                  name="product"
+                  value={form.product}
+                  onChange={handleChange}
+                  placeholder="예: 럭셔리 시계"
+                  style={inputStyle}
+                />
+              </div>
 
-            <div>
-              <label style={labelStyle}>타겟 고객</label>
-              <input
-                name="target"
-                value={form.target}
-                onChange={handleChange}
-                placeholder="예: 30대 남성 직장인"
-                style={inputStyle}
-              />
-            </div>
+              <div>
+                <label style={labelStyle}>핵심 베네핏 1줄 (필수)</label>
+                <input
+                  name="benefit"
+                  value={form.benefit}
+                  onChange={handleChange}
+                  placeholder="예: 30분 걸리던 일을 5분으로"
+                  style={inputStyle}
+                />
+                <div style={helperTextStyle}>
+                  숫자/전후 비교가 있으면 문구가 확 살아나요.
+                </div>
+              </div>
 
-            <div>
-              <label style={labelStyle}>광고 목적</label>
-              <input
-                name="purpose"
-                value={form.purpose}
-                onChange={handleChange}
-                placeholder="예: 구매 유도, 브랜드 인지도 향상"
-                style={inputStyle}
-              />
-            </div>
+              <div>
+                <label style={labelStyle}>타겟 상황/고통 1줄 (필수)</label>
+                <input
+                  name="painPoint"
+                  value={form.painPoint}
+                  onChange={handleChange}
+                  placeholder="예: 회의록 정리 때문에 매번 야근"
+                  style={inputStyle}
+                />
+                <div style={helperTextStyle}>
+                  “언제/왜 불편한지”가 구체적일수록 좋아요.
+                </div>
+              </div>
 
-            <div>
-              <label style={labelStyle}>강조 키워드</label>
-              <input
-                name="keyword"
-                value={form.keyword}
-                onChange={handleChange}
-                placeholder="예: 프리미엄, 한정판"
-                style={inputStyle}
-              />
-            </div>
+              <div>
+                <label style={labelStyle}>프로모션/가격 (선택)</label>
+                <input
+                  name="promotion"
+                  value={form.promotion}
+                  onChange={handleChange}
+                  placeholder="예: 오늘 자정까지 20% / 첫달 무료"
+                  style={inputStyle}
+                />
+              </div>
 
-            <div>
-              <label style={labelStyle}>광고 기간</label>
-              <input
-                name="duration"
-                value={form.duration}
-                onChange={handleChange}
-                placeholder="예: 5일, 1개월"
-                style={inputStyle}
-              />
-            </div>
+              <div>
+                <label style={labelStyle}>금지 표현/톤 가이드 (선택)</label>
+                <input
+                  name="toneGuide"
+                  value={form.toneGuide}
+                  onChange={handleChange}
+                  placeholder="예: 존댓말 금지, 과장 금지, 직설 톤"
+                  style={inputStyle}
+                />
+                <div style={helperTextStyle}>
+                  브랜드 말투를 한 줄로 적어주면 결과가 안정돼요.
+                </div>
+              </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              style={buttonStyle}
-              onMouseOver={(e) => {
-                if (!loading) e.currentTarget.style.backgroundColor = "#7C3AED";
-              }}
-              onMouseOut={(e) => {
-                if (!loading) e.currentTarget.style.backgroundColor = "#8B3DFF";
-              }}
-            >
-              {loading ? "AI 생성 중..." : "✨ 문구 생성하기"}
-            </button>
-          </form>
+              <button
+                type="submit"
+                disabled={loading}
+                style={buttonStyle}
+                onMouseOver={(e) => {
+                  if (!loading)
+                    e.currentTarget.style.backgroundColor = "#7C3AED";
+                }}
+                onMouseOut={(e) => {
+                  if (!loading)
+                    e.currentTarget.style.backgroundColor = "#8B3DFF";
+                }}
+              >
+                {loading ? "AI 생성 중..." : "문구 생성하기"}
+              </button>
+            </form>
 
-          {/* 에러 메시지 */}
-          {error && (
-            <div
-              style={{
-                marginTop: "20px",
-                padding: "12px",
-                borderRadius: "8px",
-                backgroundColor: "#FEE2E2",
-                color: "#DC2626",
-                textAlign: "center",
-                fontWeight: "500",
-              }}
-            >
-              {error}
-            </div>
-          )}
+            {/* 에러 메시지는 입력창 아래에 둠 */}
+            {error && (
+              <div
+                style={{
+                  marginTop: "20px",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  backgroundColor: "#FEE2E2",
+                  color: "#DC2626",
+                  textAlign: "center",
+                  fontWeight: "500",
+                }}
+              >
+                {error}
+              </div>
+            )}
+          </div>
 
-          {/* 결과 표시 영역 */}
+          {/* ============ 오른쪽 패널: 결과 목록 (결과 있을 때만 보임) ============ */}
           {adTexts.length > 0 && (
-            <div
-              style={{
-                marginTop: "40px",
-                borderTop: "1px solid #F3F4F6",
-                paddingTop: "20px",
-              }}
-            >
+            <div style={resultCardStyle}>
               <h3
                 style={{
-                  fontSize: "1.1rem",
+                  fontSize: "1.25rem",
+                  fontWeight: "700",
                   color: "#111827",
-                  marginBottom: "15px",
+                  marginBottom: "20px",
                   textAlign: "center",
                 }}
               >
-                👇 마음에 드는 문구를 선택하세요
+                🎉 생성된 카피라이팅
               </h3>
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#6B7280",
+                  marginBottom: "20px",
+                }}
+              >
+                마음에 드는 문구를 클릭하면
+                <br />
+                이미지 생성 단계로 이동합니다.
+              </p>
+
               <div
                 style={{
-                  maxHeight: "300px",
+                  maxHeight: "500px", // 너무 길어지면 스크롤 생기도록
                   overflowY: "auto",
-                  paddingRight: "5px", // 스크롤바 공간
+                  paddingRight: "5px",
                 }}
               >
                 {adTexts.map((text, idx) => (
@@ -414,12 +480,12 @@ function TextGenerator() {
                     onClick={() => handleSelectText(text)}
                     style={resultButtonStyle}
                     onMouseOver={(e) => {
-                      e.currentTarget.style.backgroundColor = "#E5E7EB";
+                      e.currentTarget.style.backgroundColor = "#F9FAFB";
                       e.currentTarget.style.borderColor = "#8B3DFF";
                     }}
                     onMouseOut={(e) => {
-                      e.currentTarget.style.backgroundColor = "#F3F4F6";
-                      e.currentTarget.style.borderColor = "#E5E7EB";
+                      e.currentTarget.style.backgroundColor = "#ffffff";
+                      e.currentTarget.style.borderColor = "#d1d5db";
                     }}
                   >
                     {text}

@@ -4,15 +4,19 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 
-// 페이지/컴포넌트들
-import LoginSignup from "./components/LoginSignup/LoginSignup";
+// ✅ 분리된 로그인/회원가입 컴포넌트 Import
+import Login from "./components/LoginSignup/Login";
+import Signup from "./components/LoginSignup/Signup";
+
+// 기존 컴포넌트들
 import MyPage from "./components/MyPage/MyPage";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import MainPage from "./components/MainPage/MainPage";
 
-// 새로 만든 LandingPage 임포트 (파일 경로 확인 필요, src/ex_main.jsx라고 가정)
+// 새로 만든 LandingPage
 import LandingPage from "./ex_main";
 
+// 기능 페이지들
 import TextGenerator from "./TextGenerator";
 import ImageGenerator from "./ImageGenerator";
 import FacebookInput from "./FacebookInput";
@@ -27,12 +31,13 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState(null);
 
-  // 앱 시작 시 JWT 확인 → 자동 로그인 로직 (기존 유지)
+  // 앱 시작 시 JWT 확인 → 자동 로그인 로직
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");
     if (!token) return;
     try {
       const decoded = jwtDecode(token);
+      // 토큰 만료 시간 확인 (exp는 초 단위이므로 1000을 곱해 밀리초로 변환)
       if (decoded.exp * 1000 > Date.now()) {
         setUserData({ email: decoded.sub, roles: decoded.auth });
         setIsLoggedIn(true);
@@ -58,9 +63,9 @@ function App() {
 
   return (
     <Routes>
-      {/* ✅ 메인 라우트 변경 핵심:
-         로그인 상태면 -> MainPage (대시보드)
-         로그인 안했으면 -> LandingPage (ex_main, Canva 스타일 소개 페이지)
+      {/* 메인 라우트:
+        로그인 상태면 -> MainPage (대시보드)
+        로그인 안했으면 -> LandingPage (소개 페이지)
       */}
       <Route
         path="/"
@@ -77,31 +82,35 @@ function App() {
         }
       />
 
-      {/* 인증 페이지 */}
+      {/* ✅ 로그인 페이지 (분리됨) */}
       <Route
         path="/auth/login"
         element={
           <ErrorBoundary>
-            <LoginSignup onLogin={handleLogin} />
-          </ErrorBoundary>
-        }
-      />
-      <Route
-        path="/auth/signup"
-        element={
-          <ErrorBoundary>
-            <LoginSignup onLogin={handleLogin} />
+            <Login onLogin={handleLogin} />
           </ErrorBoundary>
         }
       />
 
-      {/* 보호된 라우트들 (기존 유지) */}
+      {/* ✅ 회원가입 페이지 (분리됨) */}
+      <Route
+        path="/auth/signup"
+        element={
+          <ErrorBoundary>
+            <Signup />
+          </ErrorBoundary>
+        }
+      />
+
+      {/* ================= 보호된 라우트들 (로그인 필요) ================= */}
+
       <Route
         path="/text-generator"
         element={
           isLoggedIn ? <TextGenerator /> : <Navigate to="/auth/login" replace />
         }
       />
+
       <Route
         path="/image-generator"
         element={
@@ -112,18 +121,21 @@ function App() {
           )
         }
       />
+
       <Route
         path="/facebook-input"
         element={
           isLoggedIn ? <FacebookInput /> : <Navigate to="/auth/login" replace />
         }
       />
+
       <Route
         path="/meta-ad-manager"
         element={
           isLoggedIn ? <MetaAdManager /> : <Navigate to="/auth/login" replace />
         }
       />
+
       <Route
         path="/mypage"
         element={
@@ -135,7 +147,7 @@ function App() {
         }
       />
 
-      {/* ... 나머지 라우트들 (save-access-token 등) 기존과 동일하게 유지 ... */}
+      {/* 토큰 및 광고 계정 설정 페이지 */}
       <Route
         path="/save-access-token"
         element={
@@ -146,6 +158,7 @@ function App() {
           )
         }
       />
+
       <Route
         path="/save-ad-accounts"
         element={
@@ -156,6 +169,7 @@ function App() {
           )
         }
       />
+
       <Route
         path="/sync-ad-info"
         element={

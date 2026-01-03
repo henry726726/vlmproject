@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
+// ===================== RunPod 설정 (본인 값으로 변경 필수!) =====================
+
 // ===================== Header (기존 동일) =====================
 function Header({ isLoggedIn, onLogout }) {
   const navLinkStyle = {
@@ -99,6 +101,16 @@ function Footer() {
   );
 }
 
+// ===================== Helper: File to Base64 =====================
+const convertToBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result); // "data:image/png;base64,..."
+    reader.onerror = (error) => reject(error);
+  });
+};
+
 // ===================== ImageGenerator 컴포넌트 =====================
 function ImageGenerator() {
   const navigate = useNavigate();
@@ -108,9 +120,12 @@ function ImageGenerator() {
 
   const [imageFile, setImageFile] = useState(null);
   const [originalBase64, setOriginalBase64] = useState(null);
-  const [resultUrl, setResultUrl] = useState(null);
+  const [resultUrl, setResultUrl] = useState(null); // 최종 결과 이미지
+  const [resultLayout, setResultLayout] = useState(null); // (선택) 레이아웃 정보 저장용
+
   const [isLoading, setIsLoading] = useState(false);
   const [isSavingContent, setIsSavingContent] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(""); // 진행 상태 메시지
   const [error, setError] = useState("");
 
   const handleHeaderLogout = () => {
@@ -147,103 +162,102 @@ function ImageGenerator() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const base64String = reader.result.split(",")[1];
-        setOriginalBase64(base64String);
+        // 미리보기용 저장 (헤더 제외한 순수 Base64 저장도 가능하지만 여기선 Full String 사용)
+        const base64Full = reader.result;
+        const base64Raw = base64Full.split(",")[1];
+        setOriginalBase64(base64Raw);
       };
       reader.readAsDataURL(file);
     }
   };
 
+  // ★★★ RunPod과 통신하는 핵심 함수 수정됨 ★★★
   const handleCompose = async () => {
     try {
       setError("");
       setIsLoading(true);
+      setStatusMessage("이미지 업로드 및 작업 요청 중...");
 
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
-      const token = localStorage.getItem("jwtToken");
-
-      const caption =
-        (selectedAdText && selectedAdText.trim()) ||
-        (localStorage.getItem("selectedAdText") || "").trim() ||
-        (localStorage.getItem("selectedText") || "").trim();
-
-      if (!caption) {
-        setError("문구(caption)가 비어 있어요. 먼저 문구를 선택해주세요.");
-        return;
-      }
-
-      let fileToSend = imageFile;
-      if (!fileToSend && originalBase64) {
-        const toBlobFromDataUrl = (dataUrl) => {
-          const [meta, b64] = dataUrl.split(",");
-          const mime =
-            (meta?.match(/data:(.*?);base64/) || [])[1] || "image/png";
-          const bin = atob(b64);
-          const u8 = new Uint8Array(bin.length);
-          for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
-          return new Blob([u8], { type: mime });
-        };
-        const blob = toBlobFromDataUrl(
-          `data:image/png;base64,${originalBase64}`
-        );
-        fileToSend = new File([blob], "upload.png", { type: blob.type });
-      }
-
-      if (!fileToSend) {
+      if (!imageFile) {
         setError("이미지를 먼저 선택해주세요.");
+        setIsLoading(false);
         return;
       }
 
-      const product = localStorage.getItem("product") || "";
+      if (!selectedAdText) {
+        setError("문구가 없습니다.");
+        setIsLoading(false);
+        return;
+      }
 
-      const fd = new FormData();
-      fd.append("caption", caption);
-      fd.append("image", fileToSend);
-      if (product) fd.append("product", product);
-      const userEmail = localStorage.getItem("userEmail") || "";
-      if (userEmail) fd.append("userEmail", userEmail);
+      // 1. 이미지를 Base64로 변환
+      const imageBase64Full = await convertToBase64(imageFile);
 
-      const headers = {};
-      if (token) headers["Authorization"] = `Bearer ${token}`;
+      // 2. 요청 Payload 구성 (handler.py가 기대하는 키값: image, product_name, headline)
+      const payload = {
+        input: {
+          image: imageBase64Full, // data:image... 헤더 포함해서 보내도 handler가 처리함
+          product_name: textGenParams?.product || "Product",
+          headline: selectedAdText,
+        },
+      };
 
-      const res = await axios.post(`${apiUrl}/api/generate-image`, fd, {
-        withCredentials: true,
-        headers,
+      // 3. RunPod에 작업 요청 (Run)
+      const runRes = await axios.post(`${RUNPOD_URL}/run`, payload, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${RUNPOD_API_KEY}`,
+        },
       });
 
-      const b64 = res.data?.image_base64 || res.data?.imageBase64 || null;
+      const jobId = runRes.data.id;
+      console.log(`RunPod 작업 시작: ${jobId}`);
+      setStatusMessage(
+        "AI가 이미지를 분석하고 합성 중입니다... (약 30초 소요)"
+      );
 
-      if (b64) {
-        setResultUrl(`data:image/png;base64,${b64}`);
-        return;
+      // 4. 결과 대기 (Polling)
+      let status = "IN_PROGRESS";
+      let finalOutput = null;
+
+      while (status !== "COMPLETED" && status !== "FAILED") {
+        await new Promise((r) => setTimeout(r, 2000)); // 2초 대기
+
+        const statusRes = await axios.get(`${RUNPOD_URL}/status/${jobId}`, {
+          headers: { Authorization: `Bearer ${RUNPOD_API_KEY}` },
+        });
+
+        status = statusRes.data.status;
+        console.log(`작업 상태: ${status}`);
+
+        if (status === "COMPLETED") {
+          finalOutput = statusRes.data.output;
+        } else if (status === "FAILED") {
+          setError("AI 서버 작업이 실패했습니다.");
+          console.error("RunPod Error:", statusRes.data);
+          break;
+        }
       }
 
-      const id = res.data?.adContentId;
-      if (id) {
-        const getHeaders = {};
-        if (token) getHeaders["Authorization"] = `Bearer ${token}`;
-        const rec = await axios.get(`${apiUrl}/api/ad-content/${id}`, {
-          headers: getHeaders,
-          withCredentials: true,
-        });
-        const b64img = rec.data?.generatedImageBase64;
-        if (b64img) {
-          setResultUrl(`data:image/png;base64,${b64img}`);
+      // 5. 결과 처리
+      if (finalOutput) {
+        if (finalOutput.error) {
+          setError(`서버 내부 오류: ${finalOutput.error}`);
+        } else if (finalOutput.image) {
+          // handler.py는 순수 base64 문자열을 리턴하므로 앞에 헤더 붙임
+          setResultUrl(`data:image/png;base64,${finalOutput.image}`);
+          setResultLayout(finalOutput.layout); // 필요시 저장
+          setStatusMessage("완료!");
         } else {
-          setError("이미지가 저장되었지만 조회 응답에 이미지가 없습니다.");
+          setError("결과 이미지가 없습니다.");
         }
-      } else {
-        setError("이미지 생성은 성공했지만 식별자(adContentId)가 없습니다.");
       }
     } catch (err) {
       console.error("이미지 합성 오류:", err);
-      setError(
-        err.response?.data?.message ||
-          err.message ||
-          "이미지 합성 중 오류가 발생했습니다."
-      );
+      setError("통신 중 오류가 발생했습니다. (API Key 등을 확인해주세요)");
     } finally {
       setIsLoading(false);
+      if (!error) setStatusMessage("");
     }
   };
 
@@ -260,6 +274,8 @@ function ImageGenerator() {
     });
   };
 
+  // ★★★ 기존 백엔드에 저장하는 함수 (수정 불필요하지만 흐름 확인) ★★★
+  // RunPod에서 받은 결과(resultUrl)를 기존 백엔드(/api/ad-content/save)로 보냄
   const handleSaveContent = async () => {
     if (!resultUrl) {
       alert("저장할 합성된 이미지가 없습니다. 이미지를 먼저 생성해주세요! 🙅‍♀️");
@@ -276,6 +292,7 @@ function ImageGenerator() {
     }
 
     try {
+      // resultUrl은 "data:image/png;base64,..." 형태이므로 콤마 뒤만 잘라냄
       const cleanedBase64Image = resultUrl.split(",")[1];
 
       const savePayload = {
@@ -285,8 +302,8 @@ function ImageGenerator() {
         keyword: textGenParams?.keyword || "",
         duration: textGenParams?.duration || "",
         adText: selectedAdText,
-        generatedImageBase64: cleanedBase64Image,
-        originalImageBase64: originalBase64,
+        generatedImageBase64: cleanedBase64Image, // RunPod 결과
+        originalImageBase64: originalBase64, // 원본
       };
 
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
@@ -305,17 +322,8 @@ function ImageGenerator() {
       alert("광고 콘텐츠가 성공적으로 저장되었습니다! ✅");
     } catch (error) {
       console.error("광고 콘텐츠 저장 중 오류 발생:", error);
-      const errorMessage =
-        error.response && error.response.status === 401
-          ? "인증이 필요하거나 세션이 만료되었습니다. 다시 로그인해주세요."
-          : error.response?.data?.message ||
-            error.message ||
-            "광고 콘텐츠 저장 중 예상치 못한 오류가 발생했습니다. 😥";
+      const errorMessage = error.response?.data?.message || "저장 중 오류 발생";
       alert(errorMessage);
-      if (error.response?.status === 401 || error.response?.status === 403) {
-        localStorage.removeItem("jwtToken");
-        navigate("/auth/login");
-      }
     } finally {
       setIsSavingContent(false);
     }
@@ -329,7 +337,7 @@ function ImageGenerator() {
     );
   }
 
-  // ================= 스타일 객체 (레이아웃 변경) =================
+  // ================= 스타일 객체 (기존 동일) =================
   const pageContainerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -343,22 +351,20 @@ function ImageGenerator() {
     padding: "60px 20px",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center", // 중앙 정렬
+    alignItems: "center",
   };
 
-  // ✅ 컨텐츠를 가로로 배치하기 위한 Wrapper (왼쪽: 입력 / 오른쪽: 결과)
   const contentWrapperStyle = {
     display: "flex",
-    flexDirection: "row", // 가로 배치
-    gap: "30px", // 패널 사이 간격
+    flexDirection: "row",
+    gap: "30px",
     width: "100%",
-    maxWidth: "1100px", // 두 개를 놓기 위해 최대 너비 증가
+    maxWidth: "1100px",
     justifyContent: "center",
-    alignItems: "flex-start", // 높이가 달라도 상단 정렬
-    flexWrap: "wrap", // 화면이 좁으면 세로로 배치 (모바일 대응)
+    alignItems: "flex-start",
+    flexWrap: "wrap",
   };
 
-  // ✅ 공통 카드 스타일
   const cardBaseStyle = {
     backgroundColor: "#ffffff",
     borderRadius: "16px",
@@ -370,20 +376,16 @@ function ImageGenerator() {
     boxSizing: "border-box",
   };
 
-  // 왼쪽 (입력) 카드 스타일
   const inputCardStyle = {
     ...cardBaseStyle,
-    flex: "1 1 400px", // 최소 400px, 공간 남으면 늘어남
+    flex: "1 1 400px",
     maxWidth: "600px",
   };
 
-  // 오른쪽 (결과) 카드 스타일
   const resultCardStyle = {
     ...cardBaseStyle,
     flex: "1 1 400px",
     maxWidth: "600px",
-    // 결과가 없을 때는 숨기고 싶다면 display: 'none' 처리를 여기서 할 수도 있음
-    // 하지만 공간을 잡아두는게 나을 수 있음. 여기선 결과 있을때만 렌더링하도록 JSX에서 처리함.
   };
 
   const titleStyle = {
@@ -438,9 +440,8 @@ function ImageGenerator() {
       />
 
       <main style={mainContentStyle}>
-        {/* 가로 배치를 위한 Wrapper 시작 */}
         <div style={contentWrapperStyle}>
-          {/* ============ 왼쪽 패널: 입력 및 설정 ============ */}
+          {/* ============ 왼쪽 패널 ============ */}
           <div style={inputCardStyle}>
             <h2 style={titleStyle}>광고 이미지 합성기</h2>
 
@@ -492,17 +493,15 @@ function ImageGenerator() {
               disabled={isLoading || !selectedAdText}
               style={getButtonStyle("#8B3DFF", isLoading || !selectedAdText)}
             >
-              {isLoading ? "이미지 합성 중... ⏳" : "이미지 합성하기"}
+              {isLoading ? statusMessage || "작업 중..." : "이미지 합성하기"}
             </button>
 
-            {/* Facebook 버튼은 결과가 나오면 왼쪽 패널에 둘지, 오른쪽에 둘지 선택 가능하지만
-                일단 기능 버튼은 입력 쪽에 모아두는 것이 자연스러움 */}
             <button
               onClick={handleGoFacebook}
               disabled={isLoading || !resultUrl}
               style={getButtonStyle("#1877f2", isLoading || !resultUrl)}
             >
-              Facebook에서 광고 확인하기
+              Facebook으로 광고하러 하기
             </button>
 
             {error && (
@@ -518,9 +517,23 @@ function ImageGenerator() {
                 {error}
               </div>
             )}
+
+            {/* 진행 상태 메시지 표시용 (에러 없을때만) */}
+            {!error && isLoading && (
+              <div
+                style={{
+                  marginTop: "10px",
+                  color: "#6B7280",
+                  textAlign: "center",
+                  fontSize: "0.9rem",
+                }}
+              >
+                {statusMessage}
+              </div>
+            )}
           </div>
 
-          {/* ============ 오른쪽 패널: 결과 확인 (결과가 있을 때만 보임) ============ */}
+          {/* ============ 오른쪽 패널 ============ */}
           {resultUrl && (
             <div style={resultCardStyle}>
               <h2 style={{ ...titleStyle, marginBottom: "30px" }}>합성 결과</h2>
@@ -551,7 +564,6 @@ function ImageGenerator() {
             </div>
           )}
         </div>
-        {/* Wrapper 끝 */}
       </main>
 
       <Footer />

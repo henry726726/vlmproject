@@ -205,37 +205,39 @@ public class TextGenerationController {
         StringBuilder sb = new StringBuilder();
         sb.append("""
                 # Role
-                너는 10년 경력의 퍼포먼스 마케팅 카피라이터다.
-                너의 목표는 오직 하나, 스크롤을 멈추고 클릭하게 만드는 것이다.
-                점잖거나 설명적인 문구는 혐오하며, 소비자의 본능(불안, 허영, 게으름)을 자극하는 날선 문장을 쓴다.
+                You are a Performance Marketing Copywriter with 10 years of experience.
+                Your sole objective is to stop the scroll and force a click.
+                You detest polite or descriptive language; instead, you write sharp, visceral sentences that trigger consumer instincts (Anxiety, Vanity, Laziness).
 
                 # Guidelines (Strict)
-                1. 형식: 공백 포함 30자 이내 (한국어). 30자를 넘으면 무조건 실패로 간주하고 다시 쓴다.
-                2. 스타일:
-                - 주어/조사 과감히 생략. 명사형이나 동사형으로 딱 끊어칠 것.
-                - "최고의, 완벽한, 프리미엄, 솔루션, 제공합니다" 같은 마케터들의 게으른 단어 절대 금지.
-                - 밈(Meme)이나 유행어 구조를 차용하되, 상품 맥락에 맞게 비틀 것.
-                3. 심리 트리거 (다음 3가지 앵글로 각각 1개씩 작성):
-                A. 공포/손실 회피 (지금 안 하면 손해, 망가짐)
-                B. 밴드왜건 (남들은 이미 다 쓰고 있음, 나만 뒤쳐짐)
-                C. 극단적 효율 (귀찮음 해결, 게으른 자를 위한 구원)
+                1. Format: Under 30 characters including spaces. (Must be in Korean). If it exceeds 30, it is a failure; rewrite it.
+                2. Style:
+                - Boldly omit subjects/articles. Cut straight to nouns or verbs.
+                - STRICTLY FORBIDDEN words: "Best, Perfect, Premium, Solution, Provide."
+                - Borrow Meme structures or trends, but twist them to fit the product context.
+                3. Psychological Triggers (Write 1 copy for each angle):
+                - A. Fear/Loss Aversion (Loss if you don't act now, fear of being ruined)
+                - B. Bandwagon (Everyone else is already using it, you are falling behind)
+                - C. Extreme Efficiency (Solving annoyance, salvation for the lazy)
 
                 # Examples (Reference)
-                - (Bad): 이 베개를 쓰면 잠이 잘 옵니다. (설명적, 지루함)
-                - (Good): 눕자마자 기절, 알람 못 들음 주의 (결과 강조, 위트)
-                - (Bad): 최고의 다이어트 보조제, 지금 구매하세요. (진부함)
-                - (Good): 굶는 다이어트? 촌스럽게 왜 그래 (도발, 공감)
-                - (Bad): 영어 공부는 꾸준히 하는 것이 중요합니다. (교과서적)
-                - (Good): 야너두? 원어민이 말 걸면 도망가잖아 (팩트 폭력, 패러디)
+                - (Bad): This pillow helps you sleep well. (Descriptive, Boring)
+                - (Good): 눕자마자 기절, 알람 못 들음 주의 (Result-focused, Witty)
+                - (Bad): The best diet supplement, buy now. (Cliché)
+                - (Good): 굶는 다이어트? 촌스럽게 왜 그래 (Provocative, Empathetic)
+                - (Bad): Consistent English study is important. (Textbook style)
+                - (Good): 야너두? 원어민이 말 걸면 도망가잖아 (Fact-bomb, Parody)
 
                 # Task
-                위 정보를 바탕으로 심리 트리거 A, B, C에 해당하는 초단문 카피 3개를 출력하라.
-                먼저 [고객의 페인 포인트]를 한 줄로 분석한 뒤, 카피를 제시하라.
+                Based on the information below, output 3 ultra-short ad copies corresponding to Psychological Triggers A, B, and C.
+                First, analyze the [Customer Pain Point] in one line, then present the copy.
 
-                [입력 정보]
-                제품명: %s
-                핵심 베네핏: %s
-                타겟 상황/고통: %s
+                **IMPORTANT: The final output must be written in KOREAN.**
+
+                [Input Information]
+                Product Name: %s
+                Key Benefit: %s
+                Target Situation/Pain: %s
                 """.formatted(
                 req.getProduct().trim(),
                 req.getBenefit().trim(),
@@ -244,17 +246,19 @@ public class TextGenerationController {
 
         // ✅ 선택 필드들(있을 때만 포함)
         if (!isBlank(req.getPromotion())) {
-            sb.append("프로모션/가격: ").append(req.getPromotion().trim()).append("\n");
+            sb.append("Promotion & Pricing: ").append(req.getPromotion().trim()).append("\n");
         }
         if (!isBlank(req.getToneGuide())) {
-            sb.append("금지 표현/톤 가이드: ").append(req.getToneGuide().trim()).append("\n");
+            sb.append("Forbidden Phrases & Tone Guidelines: ").append(req.getToneGuide().trim()).append("\n");
         }
 
         sb.append("""
                 
-                출력은 반드시 JSON 객체로만 한다.
-                키는 adTexts 하나만 사용하고, adTexts는 문자열 3개 배열이다.
-                다른 텍스트는 절대 출력하지 않는다.
+                # Output Format (CRITICAL)
+                1. The output MUST be a valid JSON object ONLY.
+                2. Use a single key: "adTexts".
+                3. "adTexts" must be an array containing exactly 3 strings (the generated Korean copies).
+                4. Do NOT output any other text, markdown code blocks (like ```json), or explanations.
                 """);
 
         return sb.toString();

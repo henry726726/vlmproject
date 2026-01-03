@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./LoginSignup.css"; // LoginSignup.css와 공통 다크 테마 스타일 사용
+
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
 

@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-// ===================== RunPod 설정 (본인 값으로 변경 필수!) =====================
+// ===================== RunPod 설정 (환경 변수 사용) =====================
+// .env 파일이나 Vercel 설정에서 값을 가져옵니다.
+const RUNPOD_API_KEY = process.env.REACT_APP_RUNPOD_API_KEY;
+const RUNPOD_ENDPOINT_ID = process.env.REACT_APP_RUNPOD_ENDPOINT_ID;
+// Endpoint ID가 있으면 URL을 조립하고, 없으면 빈 문자열 혹은 기본값(없음) 처리
+const RUNPOD_URL = RUNPOD_ENDPOINT_ID
+  ? `https://api.runpod.ai/v2/${RUNPOD_ENDPOINT_ID}`
+  : "";
 
 // ===================== Header (기존 동일) =====================
 function Header({ isLoggedIn, onLogout }) {
@@ -162,7 +169,7 @@ function ImageGenerator() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        // 미리보기용 저장 (헤더 제외한 순수 Base64 저장도 가능하지만 여기선 Full String 사용)
+        // 미리보기용 저장
         const base64Full = reader.result;
         const base64Raw = base64Full.split(",")[1];
         setOriginalBase64(base64Raw);
@@ -171,12 +178,20 @@ function ImageGenerator() {
     }
   };
 
-  // ★★★ RunPod과 통신하는 핵심 함수 수정됨 ★★★
+  // ★★★ RunPod과 통신하는 핵심 함수 ★★★
   const handleCompose = async () => {
     try {
       setError("");
       setIsLoading(true);
       setStatusMessage("이미지 업로드 및 작업 요청 중...");
+
+      if (!RUNPOD_API_KEY || !RUNPOD_URL) {
+        setError(
+          "서버 설정 오류: API Key 또는 Endpoint ID가 설정되지 않았습니다."
+        );
+        setIsLoading(false);
+        return;
+      }
 
       if (!imageFile) {
         setError("이미지를 먼저 선택해주세요.");
@@ -193,10 +208,10 @@ function ImageGenerator() {
       // 1. 이미지를 Base64로 변환
       const imageBase64Full = await convertToBase64(imageFile);
 
-      // 2. 요청 Payload 구성 (handler.py가 기대하는 키값: image, product_name, headline)
+      // 2. 요청 Payload 구성
       const payload = {
         input: {
-          image: imageBase64Full, // data:image... 헤더 포함해서 보내도 handler가 처리함
+          image: imageBase64Full,
           product_name: textGenParams?.product || "Product",
           headline: selectedAdText,
         },
@@ -244,9 +259,8 @@ function ImageGenerator() {
         if (finalOutput.error) {
           setError(`서버 내부 오류: ${finalOutput.error}`);
         } else if (finalOutput.image) {
-          // handler.py는 순수 base64 문자열을 리턴하므로 앞에 헤더 붙임
           setResultUrl(`data:image/png;base64,${finalOutput.image}`);
-          setResultLayout(finalOutput.layout); // 필요시 저장
+          setResultLayout(finalOutput.layout);
           setStatusMessage("완료!");
         } else {
           setError("결과 이미지가 없습니다.");
@@ -274,8 +288,6 @@ function ImageGenerator() {
     });
   };
 
-  // ★★★ 기존 백엔드에 저장하는 함수 (수정 불필요하지만 흐름 확인) ★★★
-  // RunPod에서 받은 결과(resultUrl)를 기존 백엔드(/api/ad-content/save)로 보냄
   const handleSaveContent = async () => {
     if (!resultUrl) {
       alert("저장할 합성된 이미지가 없습니다. 이미지를 먼저 생성해주세요! 🙅‍♀️");
@@ -292,7 +304,6 @@ function ImageGenerator() {
     }
 
     try {
-      // resultUrl은 "data:image/png;base64,..." 형태이므로 콤마 뒤만 잘라냄
       const cleanedBase64Image = resultUrl.split(",")[1];
 
       const savePayload = {
@@ -302,8 +313,8 @@ function ImageGenerator() {
         keyword: textGenParams?.keyword || "",
         duration: textGenParams?.duration || "",
         adText: selectedAdText,
-        generatedImageBase64: cleanedBase64Image, // RunPod 결과
-        originalImageBase64: originalBase64, // 원본
+        generatedImageBase64: cleanedBase64Image,
+        originalImageBase64: originalBase64,
       };
 
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
@@ -337,7 +348,7 @@ function ImageGenerator() {
     );
   }
 
-  // ================= 스타일 객체 (기존 동일) =================
+  // ================= 스타일 객체 =================
   const pageContainerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -518,7 +529,6 @@ function ImageGenerator() {
               </div>
             )}
 
-            {/* 진행 상태 메시지 표시용 (에러 없을때만) */}
             {!error && isLoading && (
               <div
                 style={{
